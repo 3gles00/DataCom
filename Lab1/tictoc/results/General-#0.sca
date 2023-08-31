@@ -1,14 +1,14 @@
 version 2
-run General-0-20230831-18:00:58-27157
+run General-0-20230831-15:17:46-2470
 attr configname General
-attr datetime 20230831-18:00:58
+attr datetime 20230831-15:17:46
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
-attr processid 27157
+attr processid 2470
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -17,8 +17,8 @@ attr seedset 0
 param Tictoc.tic.delayTime exponential(1s)
 param Tictoc.toc.delayTime exponential(0.1s)
 
-scalar Tictoc1.tic #sent 11
-scalar Tictoc1.tic #received 10
-scalar Tictoc1.toc #sent 10
-scalar Tictoc1.toc #received 11
+scalar Tictoc1.tic #sent 24057
+scalar Tictoc1.tic #received 24057
+scalar Tictoc1.toc #sent 24057
+scalar Tictoc1.toc #received 24057
 
