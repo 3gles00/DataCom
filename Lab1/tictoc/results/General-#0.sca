@@ -1,0 +1,22 @@
+version 2
+run General-0-20230831-15:43:49-25891
+attr configname General
+attr datetime 20230831-15:43:49
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc1
+attr processid 25891
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Tictoc1.tic #sent 30
+scalar Tictoc1.tic #received 29
+scalar Tictoc1.toc #sent 29
+scalar Tictoc1.toc #received 29
+
