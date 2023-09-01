@@ -74,7 +74,9 @@ void Txc1::handleMessage(cMessage *msg){
 			//tictocMsg = nullptr;
 			cancelEvent(event);
 			tictocMsg = new cMessage("DATA");
-			scheduleAt(simTime() + par("delayTime"), event);
+			//scheduleAt(simTime() + par("delayTime"), event);
+			scheduleAt(simTime() + exponential(2), event);
+			//scheduleAt(simTime()+1.0, event);
 		}else{
 			if(uniform(0,1)<lossProbability){
 				EV << "Message is lost";
