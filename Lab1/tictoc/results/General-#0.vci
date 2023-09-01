@@ -1,15 +1,15 @@
-file 6372 1693534764                                            
+file 4646 1693541375                                            
 version 2
-run General-0-20230901-02:19:09-1666
+run General-0-20230901-04:09:21-2683
 attr configname General
-attr datetime 20230901-02:19:09
+attr datetime 20230901-04:09:21
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
-attr processid 1666
+attr processid 2683
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -31,8 +31,8 @@ attr title "tx_t, vector"
 vector 3 Tictoc1.tic receptionSignal:vector ETV
 attr source receptionSignal
 attr title "rx_t, vector"
-0	895 2045 1 263 1 98.910918359288 85 0 47 2089 67307
-1	2940 1150 2 264 1.1 99.010918359288 48 1 48 1176 38024
-2	4090 1121 3 265 1.189856038848 99.18295152506 48 0 0 0 0
-3	5211 1160 4 266 1.289856038848 99.28295152506 48 1 48 1176 38024
+0	895 1340 1 177 0.548813502304 98.33019390404 56 0 33 959 21493
+1	2235 811 2 178 0.648813502304 98.43019390404 34 1 34 595 13685
+2	3046 786 3 179 0.774406578109 98.541253648609 34 0 0 0 0
+3	3832 813 4 180 0.874406578109 98.641253648609 34 1 34 595 13685
 
