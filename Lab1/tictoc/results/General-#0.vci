@@ -1,3 +1,4 @@
+file 764 1693504900                                             
 version 2
 run General-0-20230831-18:00:58-27157
 attr configname General
@@ -17,8 +18,8 @@ attr seedset 0
 param Tictoc.tic.delayTime exponential(1s)
 param Tictoc.toc.delayTime exponential(0.1s)
 
-scalar Tictoc1.tic #sent 11
-scalar Tictoc1.tic #received 10
-scalar Tictoc1.toc #sent 10
-scalar Tictoc1.toc #received 11
+vector 0 Tictoc1.tic receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+0	544 219 4 40 1.779587450457 13.687895843776 10 1 10 55 385
 

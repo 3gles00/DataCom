@@ -17,8 +17,17 @@ attr seedset 0
 param Tictoc.tic.delayTime exponential(1s)
 param Tictoc.toc.delayTime exponential(0.1s)
 
-scalar Tictoc1.tic #sent 11
-scalar Tictoc1.tic #received 10
-scalar Tictoc1.toc #sent 10
-scalar Tictoc1.toc #received 11
+vector 0 Tictoc1.tic receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+0	4	1.779587450457	1
+0	8	3.069443489305	2
+0	12	4.39503656511	3
+0	16	5.780996986317	4
+0	20	7.073319299464	5
+0	24	8.468473833052	6
+0	28	9.74719394705	7
+0	32	11.13509035247	8
+0	36	12.390195201137	9
+0	40	13.687895843776	10
 
