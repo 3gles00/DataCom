@@ -1,14 +1,24 @@
 version 2
+<<<<<<< HEAD
 run General-0-20230906-11:21:25-1448
 attr configname General
 attr datetime 20230906-11:21:25
+=======
+run General-0-20230831-20:52:22-28873
+attr configname General
+attr datetime 20230831-20:52:22
+>>>>>>> 1b7b6e5cb683a56741018e371b50d1efbf17c7e5
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
+<<<<<<< HEAD
 attr processid 1448
+=======
+attr processid 28873
+>>>>>>> 1b7b6e5cb683a56741018e371b50d1efbf17c7e5
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -17,12 +27,19 @@ attr seedset 0
 param Tictoc.tic.delayTime exponential(1s)
 param Tictoc.toc.delayTime exponential(0.1s)
 
-vector 0 Tictoc1.toc receptionSignal:vector ETV
+vector 0 Tictoc1.tic transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 1 Tictoc1.toc receptionSignal:vector ETV
 attr source receptionSignal
 attr title "rx_t, vector"
-vector 1 Tictoc1.tic receptionSignal:vector ETV
+vector 2 Tictoc1.toc transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 3 Tictoc1.tic receptionSignal:vector ETV
 attr source receptionSignal
 attr title "rx_t, vector"
+<<<<<<< HEAD
 0	2	1.1	1
 0	6	2.379587450457	2
 0	10	3.669443489305	3
@@ -37785,4 +37802,21 @@ attr title "rx_t, vector"
 1	75516	24530.826308181768	18879
 1	75520	24532.381647493265	18880
 1	75524	24533.634216470652	18881
+=======
+0	1	0.7	1
+0	5	1.979587450457	2
+0	9	3.269443489305	3
+0	13	4.59503656511	4
+1	2	0.8	1
+1	6	2.079587450457	2
+1	10	3.369443489305	3
+1	14	4.69503656511	4
+2	3	0.879587450457	1
+2	7	2.169443489305	2
+2	11	3.49503656511	3
+2	15	4.880996986317	4
+3	4	0.979587450457	1
+3	8	2.269443489305	2
+3	12	3.59503656511	3
+>>>>>>> 1b7b6e5cb683a56741018e371b50d1efbf17c7e5
 

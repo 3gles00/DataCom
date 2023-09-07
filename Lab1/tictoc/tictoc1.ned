@@ -2,9 +2,9 @@ simple Txc1{
 	parameters:
 		volatile double delayTime @unit(s);
 		@signal[transmissionSignal](type="long");
-		@statistic[transmissionSignal](title="tx_t"; source="transmissionSignal"; record);
+		@statistic[transmissionSignal](title="tx_t";source="transmissionSignal";record=vector);
 		@signal[receptionSignal](type="long");
-		@statistic[receptionSignal](title="rx_t"; source="receptionSignal"; record=vector);
+		@statistic[receptionSignal](title="rx_t";source="receptionSignal";record=vector);
 	gates:
 		input in;
 		output out;

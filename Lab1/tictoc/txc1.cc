@@ -46,18 +46,18 @@ void Txc1::initialize(){
 }
 
 void Txc1::handleMessage(cMessage *msg){
-	if(msg==event){
+	if(msg == event){
 		EV << "Timeout is over, sending message";
 		send(tictocMsg, "out");
 		tictocMsg = nullptr;
 		numSent++;
-		emit(transmissionSignal, numSent);
+		emit(transmissionSignal,numSent);
 
 	}else{
-		if(strcmp("tic", getName()) == 0){
+		if(strcmp("tic",getName()) == 0){
 			EV << "Acknowledgement arrived";
 			numReceived++;
-			emit(receptionSignal, numReceived);
+			emit(receptionSignal,numReceived);
 			delete msg;
 			tictocMsg = nullptr;
 			cancelEvent(event);
@@ -66,7 +66,7 @@ void Txc1::handleMessage(cMessage *msg){
 		}else{
 			EV << "Message arrived. Sending ACK";
 			numReceived++;
-			emit(receptionSignal, numReceived);
+			emit(receptionSignal,numReceived);
 			delete msg;
 			tictocMsg = new cMessage("ACK");
 			scheduleAt(simTime()+exponential(0.1), event);
