@@ -75,8 +75,8 @@ void Txc1::handleMessage(cMessage *msg){
 			numReceived++;
 			emit(receptionSignal,numReceived);
 			delete msg;
-			tictocMsg = new cMessage("ACK");
-			scheduleAt(simTime()+exponential(0.1), event);*/
+			//tictocMsg = new cMessage("ACK");
+			//scheduleAt(simTime()+exponential(0.1), event);*/
 			if(uniform(0,1)<lossProbability){
 				EV << "Message is lost";
 				delete msg;
@@ -86,7 +86,7 @@ void Txc1::handleMessage(cMessage *msg){
 				emit(receptionSignal,numReceived);
 				delete msg;
 			}
-		}
+		}	
 	}
 }
 
