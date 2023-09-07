@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for tictoc
+# OMNeT++/OMNEST Makefile for tictocP3
 #
 # This file was generated with the command:
 #  opp_makemake -f
 #
 
 # Name of target to be created (-o option)
-TARGET = tictoc$(D)$(EXE_SUFFIX)
+TARGET = tictocP3$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
