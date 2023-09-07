@@ -13,8 +13,10 @@ class Txc1 : public cSimpleModule{
 		double lossProbability;
 		simsignal_t transmissionSignal;
 		simsignal_t receptionSignal;
+
 	public:
 		virtual ~Txc1();
+
 	protected:
 		virtual void initialize();
 		virtual void handleMessage(cMessage *msg);
@@ -57,8 +59,8 @@ void Txc1::handleMessage(cMessage *msg){
 			tictocMsg = new cMessage("DATA");
 			scheduleAt(simTime()+1.0,event);
 		}
-	}
-	else{
+
+	}else{
 		if(strcmp("tic",getName()) == 0){
 			EV << "Acknowledgement arrived";
 			numReceived++;
@@ -68,26 +70,24 @@ void Txc1::handleMessage(cMessage *msg){
 			delete tictocMsg;
 			cancelEvent(event);
 			tictocMsg = new cMessage("DATA");
-			scheduleAt(simTime() + par("delayTime"),event);
-		}
-		else{
-			EV << "Message arrived. Sending ACK";
+			scheduleAt(simTime() + par("delayTime"), event);
+		}else{
+			/*EV << "Message arrived. Sending ACK";
 			numReceived++;
 			emit(receptionSignal,numReceived);
 			delete msg;
 			//tictocMsg = new cMessage("ACK");
-			//scheduleAt(simTime()+exponential(0.1), event);
+			//scheduleAt(simTime()+exponential(0.1), event);*/
 			if(uniform(0,1)<lossProbability){
 				EV << "Message is lost";
 				delete msg;
-			}
-			else{
+			}else{
 				EV << "Message arrived. Sending ACK";
 				numReceived++;
 				emit(receptionSignal,numReceived);
 				delete msg;
-			}	
-		}
+			}
+		}	
 	}
 }
 
