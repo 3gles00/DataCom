@@ -9,6 +9,7 @@ class Txc1 : public cSimpleModule{
 		cMessage *tictocMsg = nullptr;
 		long numSent;
 		long numReceived;
+		double lossProbability;
 		simsignal_t transmissionSignal;
 		simsignal_t receptionSignal;
 
@@ -33,6 +34,7 @@ void Txc1::initialize(){
 	numReceived = 0;
 	event = new cMessage("event");
 	tictocMsg = nullptr;
+	lossProbability = par("lossProbability");
 	WATCH(numSent);
 	WATCH(numReceived);
 	transmissionSignal = registerSignal("transmissionSignal");
@@ -52,9 +54,14 @@ void Txc1::handleMessage(cMessage *msg){
 		tictocMsg = nullptr;
 		numSent++;
 		emit(transmissionSignal,numSent);
+		if(strcmp("tic",getName()) == 0){
+			tictocMsg = new cMessage("DATA");
+			scheduleAt(simTime()+1.0,event);
+		}
 
 	}else{
-		if(strcmp("tic",getName()) == 0){
+		/*if(strcmp("tic",getName()) == 0){
+
 			EV << "Acknowledgement arrived";
 			numReceived++;
 			emit(receptionSignal,numReceived);
@@ -68,8 +75,17 @@ void Txc1::handleMessage(cMessage *msg){
 			numReceived++;
 			emit(receptionSignal,numReceived);
 			delete msg;
-			tictocMsg = new cMessage("ACK");
-			scheduleAt(simTime()+exponential(0.1), event);
+			//tictocMsg = new cMessage("ACK");
+			//scheduleAt(simTime()+exponential(0.1), event);
+		}*/
+		if(uniform(0,1)<lossProbability){
+			EV << "Message is lost";
+			delete msg;
+		}else{
+			EV << "Message arrived. Sending ACK";
+			numReceived++;
+			emit(receptionSignal,numReceived);
+			delete msg;
 		}
 	}
 }
