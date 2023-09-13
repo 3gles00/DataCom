@@ -1,38 +1,47 @@
-file 4646 1693541375                                            
-version 2
-run General-0-20230901-04:09:21-2683
+file 3998 1694615933                                            
+version 3
+run General-0-20230913-16:38:29-6310
 attr configname General
-attr datetime 20230901-04:09:21
+attr datetime 20230913-16:38:29
+attr datetimef 20230913-163829
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
+attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
-attr processid 2683
+attr processid 6310
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-param Tictoc.tic.delayTime exponential(1s)
-param Tictoc.toc.delayTime exponential(0.1s)
-param Tictoc.*.lossProbability 0.2
+config network Tictoc1
+config Tictoc.tic.delayTime exponential(1s)
+config Tictoc.toc.delayTime exponential(0.1s)
+config Tictoc.*.lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 100s
 
 vector 0 Tictoc1.tic transmissionSignal:vector ETV
+attr recordingmode vector
 attr source transmissionSignal
-attr title "tx_t, vector"
+attr title tx_t
 vector 1 Tictoc1.toc receptionSignal:vector ETV
+attr recordingmode vector
 attr source receptionSignal
-attr title "rx_t, vector"
+attr title rx_t
 vector 2 Tictoc1.toc transmissionSignal:vector ETV
+attr recordingmode vector
 attr source transmissionSignal
-attr title "tx_t, vector"
+attr title tx_t
 vector 3 Tictoc1.tic receptionSignal:vector ETV
+attr recordingmode vector
 attr source receptionSignal
-attr title "rx_t, vector"
-0	895 1340 1 177 0.548813502304 98.33019390404 56 0 33 959 21493
-1	2235 811 2 178 0.648813502304 98.43019390404 34 1 34 595 13685
-2	3046 786 3 179 0.774406578109 98.541253648609 34 0 0 0 0
-3	3832 813 4 180 0.874406578109 98.641253648609 34 1 34 595 13685
+attr title rx_t
+0	1094 2267 1 211 0.548813502304 99.700059882283 97 0 9 388 2278
+1	3361 212 32 208 15.648813502304 98.280765218078 9 1 9 45 285
+2	3573 212 33 209 15.680649116388 98.600059882283 9 0 0 0 0
+3	3785 212 34 210 15.780649116388 98.700059882283 9 1 9 45 285
 
