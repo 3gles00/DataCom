@@ -33,6 +33,8 @@ Txc1::~Txc1(){
 void Txc1::initialize(){
 	numSent = 0;
 	numReceived = 0;
+	msgCounter = 0;
+	
 	event = new cMessage("event");
 	tictocMsg = nullptr;
 	lossProbability = par("lossProbability");
@@ -44,7 +46,8 @@ void Txc1::initialize(){
 	if (strcmp("tic",getName()) == 0){
 		EV << "Scheduling the first send to a random time\n";
 		tictocMsg = new cMessage("DATA");
-		scheduleAt(par("delayTime"), event);
+		//scheduleAt(par("delayTime"), event);
+		scheduleAt(uniform(0,1), event);
 	}
 }
 
@@ -65,19 +68,14 @@ void Txc1::handleMessage(cMessage *msg){
 			EV << "Acknowledgement arrived";
 			numReceived++;
 			msgCounter++;
-			emit(receptionSignal,numReceived);
+			emit(receptionSignal,msgCounter);
 			delete msg;
 			delete tictocMsg;
+			//tictocMsg = nullptr;
 			cancelEvent(event);
 			tictocMsg = new cMessage("DATA");
 			scheduleAt(simTime() + par("delayTime"), event);
 		}else{
-			/*EV << "Message arrived. Sending ACK";
-			numReceived++;
-			emit(receptionSignal,numReceived);
-			delete msg;
-			//tictocMsg = new cMessage("ACK");
-			//scheduleAt(simTime()+exponential(0.1), event);*/
 			if(uniform(0,1)<lossProbability){
 				EV << "Message is lost";
 				delete msg;
@@ -86,6 +84,9 @@ void Txc1::handleMessage(cMessage *msg){
 				numReceived++;
 				emit(receptionSignal,numReceived);
 				delete msg;
+
+				tictocMsg = new cMessage("ACK");
+				scheduleAt(simTime()+exponential(0.1), event);				
 			}
 		}	
 	}
@@ -94,7 +95,9 @@ void Txc1::handleMessage(cMessage *msg){
 void Txc1::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
+	EV << "msgCounter: " << msgCounter << endl;
 
 	recordScalar("#sent", numSent);
 	recordScalar("#received", numReceived);
+	recordScalar("#counter", msgCounter);
 }
