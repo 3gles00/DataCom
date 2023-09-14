@@ -9,6 +9,7 @@ class Txc1 : public cSimpleModule{
         cMessage *tictocMsg = nullptr;
         long numSent;
         long numRecieved;
+        double lossProbability;
         simsignal_t transmissionSignal;
         simsignal_t receptionSignal;
     public:
@@ -29,9 +30,9 @@ Txc1::~Txc1(){
 void Txc1::initialize(){
     numSent = 0;
     numRecieved = 0;
-    
     event = new cMessage("event");
     tictocMsg = nullptr;
+    lossProbability = par("lossProbability");
     WATCH(numSent);
     WATCH(numRecieved);
     transmissionSignal = registerSignal("transmissionSignal");
@@ -40,7 +41,6 @@ void Txc1::initialize(){
     if(strcmp("tic", getName()) == 0){
         EV << "Scheduling first send to a random time\n";
         tictocMsg = new cMessage("DATA");
-        // scheduleAt(uniform(0, 1), event);
         scheduleAt(par("delayTime"), event);
     }
 }
@@ -52,25 +52,37 @@ void Txc1::handleMessage(cMessage *msg){
         tictocMsg = nullptr;
         numSent++;
         emit(transmissionSignal, numSent);
+        if(strcmp("tic", getName()) == 0){
+            tictocMsg = new cMessage("DATA");
+            scheduleAt(simTime()+1.0, event);
+        }
     }
     else{
         if(strcmp("tic", getName()) == 0){
             EV << "Acknowledgement arrived";
-            numRecieved++;
             emit(receptionSignal, numRecieved);
+            numRecieved++;
             delete msg;
-            //tictocMsg = nullptr;
-            //cancelEvent(event);
+            tictocMsg = nullptr;
+            cancelEvent(event);
             tictocMsg = new cMessage("DATA");
-            scheduleAt(simTime() + par("delayTime"), event);
-        } 
+            scheduleAt(simTime() + 1.0, event);
+        }
         else{
-            EV << "Message Arrived. Sending ACK";
-            numRecieved++;
-            delete msg;
-            tictocMsg = new cMessage("ACK");
-            emit(receptionSignal, numRecieved);
-            scheduleAt(simTime() + exponential(0.1), event);
+            if(uniform(0, 1) < lossProbability){
+                EV << "Message is lost";
+                delete msg;
+            }
+            else{
+                EV << "Message Arrived, Sending ACK";
+                numRecieved++;
+                emit(receptionSignal, numRecieved);
+                delete msg;
+
+            }
+            // tictocMsg = new cMessage("ACK");
+            // scheduleAt(simTime() + exponential(0.1), event);
+            // scheduleAt(simTime() + par("delayTime"), event);        
         }
     }
 }
@@ -82,4 +94,5 @@ void Txc1::finish(){
     
     recordScalar("#sent", numSent);
     recordScalar("#received", numRecieved);
+
 }
