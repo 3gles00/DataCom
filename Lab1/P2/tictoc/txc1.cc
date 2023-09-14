@@ -37,7 +37,7 @@ void Txc1::initialize(){
     WATCH(numRecieved);
     transmissionSignal = registerSignal("transmissionSignal");
     receptionSignal = registerSignal("receptionSignal");
-    //Determine if I am Toc or Toc
+    //Determine if I am Tic or Toc
     if(strcmp("tic", getName()) == 0){
         EV << "Scheduling first send to a random time\n";
         tictocMsg = new cMessage("DATA");
@@ -60,8 +60,8 @@ void Txc1::handleMessage(cMessage *msg){
     else{
         if(strcmp("tic", getName()) == 0){
             EV << "Acknowledgement arrived";
-            emit(receptionSignal, numRecieved);
             numRecieved++;
+            emit(receptionSignal, numRecieved);
             delete msg;
             tictocMsg = nullptr;
             cancelEvent(event);
@@ -74,7 +74,7 @@ void Txc1::handleMessage(cMessage *msg){
                 delete msg;
             }
             else{
-                EV << "Message Arrived, Sending ACK";
+                EV << "Message Arrived. Sending ACK";
                 numRecieved++;
                 emit(receptionSignal, numRecieved);
                 delete msg;
