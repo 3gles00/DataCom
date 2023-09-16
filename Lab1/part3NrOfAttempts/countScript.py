@@ -24,5 +24,6 @@ with open(f) as csvFile:
     countValues = list(count.values())
 
     #print("Values: " + countValues)
+    #print(lineCount)
     print("Standard deviation of number of attempts: ")
     print(statistics.stdev(countValues))
