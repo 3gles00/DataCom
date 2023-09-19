@@ -54,7 +54,7 @@ void Txc1::handleMessage(cMessage *msg){
         emit(transmissionSignal, numSent);
         if(strcmp("tic", getName()) == 0){
             tictocMsg = new cMessage("DATA");
-            scheduleAt(simTime()+1.0, event);
+            scheduleAt(simTime() + par("delayTime"), event);
         }
     }
     else{
@@ -66,7 +66,7 @@ void Txc1::handleMessage(cMessage *msg){
             tictocMsg = nullptr;
             cancelEvent(event);
             tictocMsg = new cMessage("DATA");
-            scheduleAt(simTime() + 1.0, event);
+            scheduleAt(simTime() + par("delayTime"), event);
         }
         else{
             if(uniform(0, 1) < lossProbability){
