@@ -1,38 +1,47 @@
-file 3794 1693555882                                            
-version 2
-run General-0-20230901-08:11:11-7318
+file 5173 1695210138                                            
+version 3
+run General-0-20230920-13:42:18-15878
 attr configname General
-attr datetime 20230901-08:11:11
+attr datetime 20230920-13:42:18
+attr datetimef 20230920-134218
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
+attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
-attr processid 7318
+attr processid 15878
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-param Tictoc.tic.delayTime exponential(1s)
-param Tictoc.toc.delayTime exponential(0.1s)
-param Tictoc.*.lossProbability 0.2
+config network Tictoc1
+config Tictoc1.tic.delayTime exponential(1s)
+config Tictoc1.toc.delayTime exponential(0.1s)
+config Tictoc1.*.lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 100s
 
 vector 0 Tictoc1.tic transmissionSignal:vector ETV
+attr recordingmode vector
 attr source transmissionSignal
-attr title "tx_t, vector"
+attr title tx_t
 vector 1 Tictoc1.toc receptionSignal:vector ETV
+attr recordingmode vector
 attr source receptionSignal
-attr title "rx_t, vector"
+attr title rx_t
 vector 2 Tictoc1.toc transmissionSignal:vector ETV
+attr recordingmode vector
 attr source transmissionSignal
-attr title "tx_t, vector"
+attr title tx_t
 vector 3 Tictoc1.tic receptionSignal:vector ETV
+attr recordingmode vector
 attr source receptionSignal
-attr title "rx_t, vector"
-0	895 2196 1 207 0.548813502304 99.685275027072 94 0 10 398 2498
-1	3091 237 32 204 15.648813502304 97.735569048312 10 1 10 55 385
-2	3328 232 33 205 15.680649116388 97.841443319821 10 0 0 0 0
-3	3560 233 34 206 15.780649116388 97.941443319821 10 1 10 55 385
+attr title rx_t
+0	1099 1123 1 173 0.548813502304 99.326981911411 47 0 40 929 24687
+1	2222 984 2 174 0.648813502304 99.426981911411 41 1 41 861 23821
+2	3206 983 3 175 0.774406578109 99.448869971062 41 1 41 861 23821
+3	4189 983 4 176 0.874406578109 99.548869971062 41 1 41 861 23821
 
