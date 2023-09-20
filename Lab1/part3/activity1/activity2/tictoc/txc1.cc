@@ -83,6 +83,7 @@ void Txc1::handleMessage(cMessage *msg){
 			}else{
 				EV << "Message arrived. Sending ACK";
 				numReceived++;
+				msgCounter++;
 				emit(receptionSignal,numReceived);
 				delete msg;
 
