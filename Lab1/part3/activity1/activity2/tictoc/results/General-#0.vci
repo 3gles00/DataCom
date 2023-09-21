@@ -1,0 +1,47 @@
+file 5173 1695210679                                            
+version 3
+run General-0-20230920-13:51:19-17113
+attr configname General
+attr datetime 20230920-13:51:19
+attr datetimef 20230920-135119
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc1
+attr processid 17113
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Tictoc1
+config Tictoc1.tic.delayTime exponential(1s)
+config Tictoc1.toc.delayTime exponential(0.1s)
+config Tictoc1.*.lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 100s
+
+vector 0 Tictoc1.tic transmissionSignal:vector ETV
+attr recordingmode vector
+attr source transmissionSignal
+attr title tx_t
+vector 1 Tictoc1.toc receptionSignal:vector ETV
+attr recordingmode vector
+attr source receptionSignal
+attr title rx_t
+vector 2 Tictoc1.toc transmissionSignal:vector ETV
+attr recordingmode vector
+attr source transmissionSignal
+attr title tx_t
+vector 3 Tictoc1.tic receptionSignal:vector ETV
+attr recordingmode vector
+attr source receptionSignal
+attr title rx_t
+0	1099 1123 1 173 0.548813502304 99.326981911411 47 0 40 929 24687
+1	2222 984 2 174 0.648813502304 99.426981911411 41 1 41 861 23821
+2	3206 983 3 175 0.774406578109 99.448869971062 41 1 41 861 23821
+3	4189 983 4 176 0.874406578109 99.548869971062 41 1 41 861 23821
+
