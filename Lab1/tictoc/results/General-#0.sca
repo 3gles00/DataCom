@@ -1,8 +1,8 @@
 version 3
-run General-0-20230913-16:38:29-6310
+run General-0-20230921-14:28:51-5969
 attr configname General
-attr datetime 20230913-16:38:29
-attr datetimef 20230913-163829
+attr datetime 20230921-14:28:51
+attr datetimef 20230921-142851
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,16 +10,16 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Tictoc1
-attr processid 6310
+attr processid 5969
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 config network Tictoc1
-config Tictoc.tic.delayTime exponential(1s)
-config Tictoc.toc.delayTime exponential(0.1s)
-config Tictoc.*.lossProbability 0.2
+config Tictoc1.tic.delayTime exponential(1s)
+config Tictoc1.toc.delayTime exponential(0.1s)
+config Tictoc1.*.lossProbability 0.2
 config record-eventlog true
 config sim-time-limit 100s
 
@@ -36,18 +36,18 @@ par Tictoc1.toc.out.channel delay 0.1s
 attr mutable ""
 attr unit s
 par Tictoc1.tic typename "\"Txc1\""
-par Tictoc1.tic delayTime 1s
+par Tictoc1.tic delayTime exponential(1s)
 attr unit s
-par Tictoc1.tic lossProbability 0
-scalar Tictoc1.tic #sent 97
-scalar Tictoc1.tic #received 9
-scalar Tictoc1.tic #counter 9
+par Tictoc1.tic lossProbability 0.2
+scalar Tictoc1.tic #sent 73
+scalar Tictoc1.tic #received 57
+scalar Tictoc1.tic #counter 57
 par Tictoc1.toc typename "\"Txc1\""
-par Tictoc1.toc delayTime 0s
+par Tictoc1.toc delayTime exponential(0.1s)
 attr unit s
-par Tictoc1.toc lossProbability 0.9
-scalar Tictoc1.toc #sent 9
-scalar Tictoc1.toc #received 9
-scalar Tictoc1.toc #counter 0
+par Tictoc1.toc lossProbability 0.2
+scalar Tictoc1.toc #sent 57
+scalar Tictoc1.toc #received 57
+scalar Tictoc1.toc #counter 57
 par Tictoc1 typename "\"Tictoc1\""
 

@@ -1,4 +1,4 @@
-SB ov 1536 ev 2 rid General-0-20230913-16:38:29-6310
+SB ov 1536 ev 2 rid General-0-20230921-14:28:51-5969
 
 E # 0 t 0 m 1 ce -1 msg -1
 MC id 1 c omnetpp::cModule t Tictoc1 n Tictoc1 cm 1
@@ -17,7 +17,6 @@ CC sm 3 sg 3 dm 2 dg 0
 CDC sm 3 sg 3 d ""
 CMB sm 1 tm 2 m initialize(0)
 CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe -1
-- INFO: Scheduling the first send to a random time
 CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA pe -1
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0 am 2 at 0.548813502304 pe 0
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0 am 2 at 0.548813502304 pe 0
@@ -30,1530 +29,1716 @@ E # 1 t 0.548813502304 m 2 ce 0 msg 0
 BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA m 2 pe 0
 SH sm 2 sg 3 pd 0.1
 ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA sm 2 sg 3 st 0.548813502304 am 3 ag 0 at 0.648813502304 pe 1
-CL id 3 tid 1 eid 3 etid 1 c omnetpp::cMessage n DATA m 2 pe -1 cid 1
 CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA pe -1
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0.548813502304 am 2 at 1.548813502304 pe 1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0.548813502304 am 2 at 1.548813502304 pe 1
-- INFO: Timeout is over, sending message
 
 E # 2 t 0.648813502304 m 3 ce 1 msg 1
 DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA m 3 pe 2
-- INFO: Message is lost
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 0.648813502304 am 3 at 0.774406578109 pe 2
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 0.648813502304 am 3 at 0.774406578109 pe 2
 
-E # 3 t 1.548813502304 m 2 ce 1 msg 0
-BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA m 2 pe 1
-SH sm 2 sg 3 pd 0.1
-ES id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA sm 2 sg 3 st 1.548813502304 am 3 ag 0 at 1.648813502304 pe 3
-CL id 4 tid 3 eid 4 etid 3 c omnetpp::cMessage n DATA m 2 pe -1 cid 3
-CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 1.548813502304 am 2 at 2.548813502304 pe 3
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 1.548813502304 am 2 at 2.548813502304 pe 3
-- INFO: Timeout is over, sending message
+E # 3 t 0.774406578109 m 3 ce 2 msg 2
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n ACK m 3 pe 2
+SH sm 3 sg 3 pd 0.1
+ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n ACK sm 3 sg 3 st 0.774406578109 am 2 ag 0 at 0.874406578109 pe 3
 
-E # 4 t 1.648813502304 m 3 ce 3 msg 3
-DM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA m 3 pe 4
-- INFO: Message is lost
-
-E # 5 t 2.548813502304 m 2 ce 3 msg 0
-BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA m 2 pe 3
-SH sm 2 sg 3 pd 0.1
-ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA sm 2 sg 3 st 2.548813502304 am 3 ag 0 at 2.648813502304 pe 5
-CL id 5 tid 4 eid 5 etid 4 c omnetpp::cMessage n DATA m 2 pe -1 cid 4
+E # 4 t 0.874406578109 m 2 ce 3 msg 4
+DM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n ACK m 2 pe 4
+DM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA m 2 pe 1
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 1
 CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 2.548813502304 am 2 at 3.548813502304 pe 5
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 2.548813502304 am 2 at 3.548813502304 pe 5
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0.874406578109 am 2 at 2.734010790184 pe 4
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 0.874406578109 am 2 at 2.734010790184 pe 4
 
-E # 6 t 2.648813502304 m 3 ce 5 msg 4
-DM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA m 3 pe 6
-- INFO: Message is lost
-
-E # 7 t 3.548813502304 m 2 ce 5 msg 0
-BS id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA m 2 pe 5
+E # 5 t 2.734010790184 m 2 ce 4 msg 0
+BS id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA m 2 pe 4
 SH sm 2 sg 3 pd 0.1
-ES id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA sm 2 sg 3 st 3.548813502304 am 3 ag 0 at 3.648813502304 pe 7
-CL id 6 tid 5 eid 6 etid 5 c omnetpp::cMessage n DATA m 2 pe -1 cid 5
+ES id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA sm 2 sg 3 st 2.734010790184 am 3 ag 0 at 2.834010790184 pe 5
 CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.548813502304 am 2 at 4.548813502304 pe 7
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.548813502304 am 2 at 4.548813502304 pe 7
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 2.734010790184 am 2 at 3.734010790184 pe 5
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 2.734010790184 am 2 at 3.734010790184 pe 5
 
-E # 8 t 3.648813502304 m 3 ce 7 msg 5
-DM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA m 3 pe 8
-- INFO: Message is lost
+E # 6 t 2.834010790184 m 3 ce 5 msg 5
+DM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA m 3 pe 6
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 2.834010790184 am 3 at 3.029165323772 pe 6
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 2.834010790184 am 3 at 3.029165323772 pe 6
 
-E # 9 t 4.548813502304 m 2 ce 7 msg 0
-BS id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n DATA m 2 pe 7
-SH sm 2 sg 3 pd 0.1
-ES id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n DATA sm 2 sg 3 st 4.548813502304 am 3 ag 0 at 4.648813502304 pe 9
-CL id 7 tid 6 eid 7 etid 6 c omnetpp::cMessage n DATA m 2 pe -1 cid 6
-CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 4.548813502304 am 2 at 5.548813502304 pe 9
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 4.548813502304 am 2 at 5.548813502304 pe 9
-- INFO: Timeout is over, sending message
+E # 7 t 3.029165323772 m 3 ce 6 msg 2
+BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n ACK m 3 pe 6
+SH sm 3 sg 3 pd 0.1
+ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n ACK sm 3 sg 3 st 3.029165323772 am 2 ag 0 at 3.129165323772 pe 7
 
-E # 10 t 4.648813502304 m 3 ce 9 msg 6
-DM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n DATA m 3 pe 10
-- INFO: Message is lost
-
-E # 11 t 5.548813502304 m 2 ce 9 msg 0
-BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA m 2 pe 9
-SH sm 2 sg 3 pd 0.1
-ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA sm 2 sg 3 st 5.548813502304 am 3 ag 0 at 5.648813502304 pe 11
-CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n DATA m 2 pe -1 cid 7
+E # 8 t 3.129165323772 m 2 ce 7 msg 7
+DM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n ACK m 2 pe 8
+DM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n DATA m 2 pe 5
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 5
 CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.548813502304 am 2 at 6.548813502304 pe 11
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.548813502304 am 2 at 6.548813502304 pe 11
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.129165323772 am 2 at 3.916366463754 pe 8
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.129165323772 am 2 at 3.916366463754 pe 8
 
-E # 12 t 5.648813502304 m 3 ce 11 msg 7
-DM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA m 3 pe 12
-- INFO: Message is lost
-
-E # 13 t 6.548813502304 m 2 ce 11 msg 0
-BS id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA m 2 pe 11
+E # 9 t 3.916366463754 m 2 ce 8 msg 0
+BS id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA m 2 pe 8
 SH sm 2 sg 3 pd 0.1
-ES id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA sm 2 sg 3 st 6.548813502304 am 3 ag 0 at 6.648813502304 pe 13
-CL id 9 tid 8 eid 9 etid 8 c omnetpp::cMessage n DATA m 2 pe -1 cid 8
+ES id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA sm 2 sg 3 st 3.916366463754 am 3 ag 0 at 4.016366463754 pe 9
 CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.548813502304 am 2 at 7.548813502304 pe 13
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.548813502304 am 2 at 7.548813502304 pe 13
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.916366463754 am 2 at 4.916366463754 pe 9
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.916366463754 am 2 at 4.916366463754 pe 9
 
-E # 14 t 6.648813502304 m 3 ce 13 msg 8
-DM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA m 3 pe 14
-- INFO: Message is lost
+E # 10 t 4.016366463754 m 3 ce 9 msg 8
+DM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n DATA m 3 pe 10
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 4.016366463754 am 3 at 4.071471312421 pe 10
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 4.016366463754 am 3 at 4.071471312421 pe 10
 
-E # 15 t 7.548813502304 m 2 ce 13 msg 0
-BS id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n DATA m 2 pe 13
-SH sm 2 sg 3 pd 0.1
-ES id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n DATA sm 2 sg 3 st 7.548813502304 am 3 ag 0 at 7.648813502304 pe 15
-CL id 10 tid 9 eid 10 etid 9 c omnetpp::cMessage n DATA m 2 pe -1 cid 9
-CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.548813502304 am 2 at 8.548813502304 pe 15
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.548813502304 am 2 at 8.548813502304 pe 15
-- INFO: Timeout is over, sending message
+E # 11 t 4.071471312421 m 3 ce 10 msg 2
+BS id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n ACK m 3 pe 10
+SH sm 3 sg 3 pd 0.1
+ES id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n ACK sm 3 sg 3 st 4.071471312421 am 2 ag 0 at 4.171471312421 pe 11
 
-E # 16 t 7.648813502304 m 3 ce 15 msg 9
-DM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n DATA m 3 pe 16
-- INFO: Message is lost
-
-E # 17 t 8.548813502304 m 2 ce 15 msg 0
-BS id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n DATA m 2 pe 15
-SH sm 2 sg 3 pd 0.1
-ES id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n DATA sm 2 sg 3 st 8.548813502304 am 3 ag 0 at 8.648813502304 pe 17
-CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n DATA m 2 pe -1 cid 10
+E # 12 t 4.171471312421 m 2 ce 11 msg 10
+DM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n ACK m 2 pe 12
+DM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n DATA m 2 pe 9
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 9
 CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 8.548813502304 am 2 at 9.548813502304 pe 17
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 8.548813502304 am 2 at 9.548813502304 pe 17
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 4.171471312421 am 2 at 5.148477738814 pe 12
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 4.171471312421 am 2 at 5.148477738814 pe 12
 
-E # 18 t 8.648813502304 m 3 ce 17 msg 10
-DM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n DATA m 3 pe 18
-- INFO: Message is lost
-
-E # 19 t 9.548813502304 m 2 ce 17 msg 0
-BS id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA m 2 pe 17
+E # 13 t 5.148477738814 m 2 ce 12 msg 0
+BS id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA m 2 pe 12
 SH sm 2 sg 3 pd 0.1
-ES id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA sm 2 sg 3 st 9.548813502304 am 3 ag 0 at 9.648813502304 pe 19
-CL id 12 tid 11 eid 12 etid 11 c omnetpp::cMessage n DATA m 2 pe -1 cid 11
+ES id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA sm 2 sg 3 st 5.148477738814 am 3 ag 0 at 5.248477738814 pe 13
 CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.548813502304 am 2 at 10.548813502304 pe 19
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.548813502304 am 2 at 10.548813502304 pe 19
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.148477738814 am 2 at 6.148477738814 pe 13
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.148477738814 am 2 at 6.148477738814 pe 13
 
-E # 20 t 9.648813502304 m 3 ce 19 msg 11
-DM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA m 3 pe 20
-- INFO: Message is lost
+E # 14 t 5.248477738814 m 3 ce 13 msg 11
+DM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n DATA m 3 pe 14
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 5.248477738814 am 3 at 5.296990555186 pe 14
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 5.248477738814 am 3 at 5.296990555186 pe 14
 
-E # 21 t 10.548813502304 m 2 ce 19 msg 0
-BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA m 2 pe 19
-SH sm 2 sg 3 pd 0.1
-ES id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA sm 2 sg 3 st 10.548813502304 am 3 ag 0 at 10.648813502304 pe 21
-CL id 13 tid 12 eid 13 etid 12 c omnetpp::cMessage n DATA m 2 pe -1 cid 12
-CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.548813502304 am 2 at 11.548813502304 pe 21
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.548813502304 am 2 at 11.548813502304 pe 21
-- INFO: Timeout is over, sending message
+E # 15 t 5.296990555186 m 3 ce 14 msg 2
+BS id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n ACK m 3 pe 14
+SH sm 3 sg 3 pd 0.1
+ES id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n ACK sm 3 sg 3 st 5.296990555186 am 2 ag 0 at 5.396990555186 pe 15
 
-E # 22 t 10.648813502304 m 3 ce 21 msg 12
-DM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA m 3 pe 22
-- INFO: Message is lost
-
-E # 23 t 11.548813502304 m 2 ce 21 msg 0
-BS id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n DATA m 2 pe 21
-SH sm 2 sg 3 pd 0.1
-ES id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n DATA sm 2 sg 3 st 11.548813502304 am 3 ag 0 at 11.648813502304 pe 23
-CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n DATA m 2 pe -1 cid 13
+E # 16 t 5.396990555186 m 2 ce 15 msg 13
+DM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n ACK m 2 pe 16
+DM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA m 2 pe 13
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 13
 CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 11.548813502304 am 2 at 12.548813502304 pe 23
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 11.548813502304 am 2 at 12.548813502304 pe 23
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.396990555186 am 2 at 5.972509752069 pe 16
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.396990555186 am 2 at 5.972509752069 pe 16
 
-E # 24 t 11.648813502304 m 3 ce 23 msg 13
-DM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n DATA m 3 pe 24
-- INFO: Message is lost
-
-E # 25 t 12.548813502304 m 2 ce 23 msg 0
-BS id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA m 2 pe 23
+E # 17 t 5.972509752069 m 2 ce 16 msg 0
+BS id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA m 2 pe 16
 SH sm 2 sg 3 pd 0.1
-ES id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA sm 2 sg 3 st 12.548813502304 am 3 ag 0 at 12.648813502304 pe 25
-CL id 15 tid 14 eid 15 etid 14 c omnetpp::cMessage n DATA m 2 pe -1 cid 14
+ES id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA sm 2 sg 3 st 5.972509752069 am 3 ag 0 at 6.072509752069 pe 17
 CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 12.548813502304 am 2 at 13.548813502304 pe 25
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 12.548813502304 am 2 at 13.548813502304 pe 25
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.972509752069 am 2 at 6.972509752069 pe 17
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 5.972509752069 am 2 at 6.972509752069 pe 17
 
-E # 26 t 12.648813502304 m 3 ce 25 msg 14
-DM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA m 3 pe 26
-- INFO: Message is lost
+E # 18 t 6.072509752069 m 3 ce 17 msg 14
+DM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n DATA m 3 pe 18
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 6.072509752069 am 3 at 6.294862194273 pe 18
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 6.072509752069 am 3 at 6.294862194273 pe 18
 
-E # 27 t 13.548813502304 m 2 ce 25 msg 0
-BS id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n DATA m 2 pe 25
-SH sm 2 sg 3 pd 0.1
-ES id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n DATA sm 2 sg 3 st 13.548813502304 am 3 ag 0 at 13.648813502304 pe 27
-CL id 16 tid 15 eid 16 etid 15 c omnetpp::cMessage n DATA m 2 pe -1 cid 15
-CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.548813502304 am 2 at 14.548813502304 pe 27
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.548813502304 am 2 at 14.548813502304 pe 27
-- INFO: Timeout is over, sending message
+E # 19 t 6.294862194273 m 3 ce 18 msg 2
+BS id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n ACK m 3 pe 18
+SH sm 3 sg 3 pd 0.1
+ES id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n ACK sm 3 sg 3 st 6.294862194273 am 2 ag 0 at 6.394862194273 pe 19
 
-E # 28 t 13.648813502304 m 3 ce 27 msg 15
-DM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n DATA m 3 pe 28
-- INFO: Message is lost
-
-E # 29 t 14.548813502304 m 2 ce 27 msg 0
-BS id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n DATA m 2 pe 27
-SH sm 2 sg 3 pd 0.1
-ES id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n DATA sm 2 sg 3 st 14.548813502304 am 3 ag 0 at 14.648813502304 pe 29
-CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n DATA m 2 pe -1 cid 16
+E # 20 t 6.394862194273 m 2 ce 19 msg 16
+DM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n ACK m 2 pe 20
+DM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n DATA m 2 pe 17
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 17
 CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 14.548813502304 am 2 at 15.548813502304 pe 29
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 14.548813502304 am 2 at 15.548813502304 pe 29
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.394862194273 am 2 at 6.453246863366 pe 20
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.394862194273 am 2 at 6.453246863366 pe 20
 
-E # 30 t 14.648813502304 m 3 ce 29 msg 16
-DM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n DATA m 3 pe 30
-- INFO: Message is lost
-
-E # 31 t 15.548813502304 m 2 ce 29 msg 0
-BS id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA m 2 pe 29
+E # 21 t 6.453246863366 m 2 ce 20 msg 0
+BS id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA m 2 pe 20
 SH sm 2 sg 3 pd 0.1
-ES id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA sm 2 sg 3 st 15.548813502304 am 3 ag 0 at 15.648813502304 pe 31
-CL id 18 tid 17 eid 18 etid 17 c omnetpp::cMessage n DATA m 2 pe -1 cid 17
+ES id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA sm 2 sg 3 st 6.453246863366 am 3 ag 0 at 6.553246863366 pe 21
 CM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.548813502304 am 2 at 16.548813502304 pe 31
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.548813502304 am 2 at 16.548813502304 pe 31
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.453246863366 am 2 at 7.453246863366 pe 21
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.453246863366 am 2 at 7.453246863366 pe 21
 
-E # 32 t 15.648813502304 m 3 ce 31 msg 17
-DM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA m 3 pe 32
+E # 22 t 6.553246863366 m 3 ce 21 msg 17
+DM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n DATA m 3 pe 22
 CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 15.648813502304 am 3 at 15.680649116388 pe 32
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 15.648813502304 am 3 at 15.680649116388 pe 32
-- INFO: Message arrived. Sending ACK
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 6.553246863366 am 3 at 6.58508247745 pe 22
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 6.553246863366 am 3 at 6.58508247745 pe 22
 
-E # 33 t 15.680649116388 m 3 ce 32 msg 2
-BS id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK m 3 pe 32
+E # 23 t 6.58508247745 m 3 ce 22 msg 2
+BS id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK m 3 pe 22
 SH sm 3 sg 3 pd 0.1
-ES id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK sm 3 sg 3 st 15.680649116388 am 2 ag 0 at 15.780649116388 pe 33
-CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n ACK m 3 pe -1 cid 19
-- INFO: Timeout is over, sending message
+ES id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK sm 3 sg 3 st 6.58508247745 am 2 ag 0 at 6.68508247745 pe 23
 
-E # 34 t 15.780649116388 m 2 ce 33 msg 19
-DM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK m 2 pe 34
-DM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n DATA m 2 pe 31
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 31
+E # 24 t 6.68508247745 m 2 ce 23 msg 19
+DM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n ACK m 2 pe 24
+DM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n DATA m 2 pe 21
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 21
 CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.780649116388 am 2 at 16.780649116388 pe 34
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.780649116388 am 2 at 16.780649116388 pe 34
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.68508247745 am 2 at 7.168684582398 pe 24
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 6.68508247745 am 2 at 7.168684582398 pe 24
 
-E # 35 t 16.780649116388 m 2 ce 34 msg 0
-BS id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA m 2 pe 34
+E # 25 t 7.168684582398 m 2 ce 24 msg 0
+BS id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA m 2 pe 24
 SH sm 2 sg 3 pd 0.1
-ES id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA sm 2 sg 3 st 16.780649116388 am 3 ag 0 at 16.880649116388 pe 35
-CL id 21 tid 20 eid 21 etid 20 c omnetpp::cMessage n DATA m 2 pe -1 cid 20
+ES id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA sm 2 sg 3 st 7.168684582398 am 3 ag 0 at 7.268684582398 pe 25
 CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 16.780649116388 am 2 at 17.780649116388 pe 35
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 16.780649116388 am 2 at 17.780649116388 pe 35
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.168684582398 am 2 at 8.168684582398 pe 25
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.168684582398 am 2 at 8.168684582398 pe 25
 
-E # 36 t 16.880649116388 m 3 ce 35 msg 20
-DM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA m 3 pe 36
-- INFO: Message is lost
+E # 26 t 7.268684582398 m 3 ce 25 msg 20
+DM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA m 3 pe 26
+CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 7.268684582398 am 3 at 7.42557419416 pe 26
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 7.268684582398 am 3 at 7.42557419416 pe 26
 
-E # 37 t 17.780649116388 m 2 ce 35 msg 0
-BS id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n DATA m 2 pe 35
-SH sm 2 sg 3 pd 0.1
-ES id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n DATA sm 2 sg 3 st 17.780649116388 am 3 ag 0 at 17.880649116388 pe 37
-CL id 22 tid 21 eid 22 etid 21 c omnetpp::cMessage n DATA m 2 pe -1 cid 21
-CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 17.780649116388 am 2 at 18.780649116388 pe 37
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 17.780649116388 am 2 at 18.780649116388 pe 37
-- INFO: Timeout is over, sending message
+E # 27 t 7.42557419416 m 3 ce 26 msg 2
+BS id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n ACK m 3 pe 26
+SH sm 3 sg 3 pd 0.1
+ES id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n ACK sm 3 sg 3 st 7.42557419416 am 2 ag 0 at 7.52557419416 pe 27
 
-E # 38 t 17.880649116388 m 3 ce 37 msg 21
-DM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n DATA m 3 pe 38
-- INFO: Message is lost
-
-E # 39 t 18.780649116388 m 2 ce 37 msg 0
-BS id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n DATA m 2 pe 37
-SH sm 2 sg 3 pd 0.1
-ES id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n DATA sm 2 sg 3 st 18.780649116388 am 3 ag 0 at 18.880649116388 pe 39
-CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n DATA m 2 pe -1 cid 22
+E # 28 t 7.52557419416 m 2 ce 27 msg 22
+DM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n ACK m 2 pe 28
+DM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n DATA m 2 pe 25
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 25
 CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 18.780649116388 am 2 at 19.780649116388 pe 39
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 18.780649116388 am 2 at 19.780649116388 pe 39
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.52557419416 am 2 at 9.197785394485 pe 28
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.52557419416 am 2 at 9.197785394485 pe 28
 
-E # 40 t 18.880649116388 m 3 ce 39 msg 22
-DM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n DATA m 3 pe 40
-- INFO: Message is lost
-
-E # 41 t 19.780649116388 m 2 ce 39 msg 0
-BS id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA m 2 pe 39
+E # 29 t 9.197785394485 m 2 ce 28 msg 0
+BS id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA m 2 pe 28
 SH sm 2 sg 3 pd 0.1
-ES id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA sm 2 sg 3 st 19.780649116388 am 3 ag 0 at 19.880649116388 pe 41
-CL id 24 tid 23 eid 24 etid 23 c omnetpp::cMessage n DATA m 2 pe -1 cid 23
+ES id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA sm 2 sg 3 st 9.197785394485 am 3 ag 0 at 9.297785394485 pe 29
 CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.780649116388 am 2 at 20.780649116388 pe 41
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.780649116388 am 2 at 20.780649116388 pe 41
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.197785394485 am 2 at 10.197785394485 pe 29
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.197785394485 am 2 at 10.197785394485 pe 29
 
-E # 42 t 19.880649116388 m 3 ce 41 msg 23
-DM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA m 3 pe 42
-- INFO: Message is lost
+E # 30 t 9.297785394485 m 3 ce 29 msg 23
+DM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n DATA m 3 pe 30
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 9.297785394485 am 3 at 9.363173651207 pe 30
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 9.297785394485 am 3 at 9.363173651207 pe 30
 
-E # 43 t 20.780649116388 m 2 ce 41 msg 0
-BS id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n DATA m 2 pe 41
-SH sm 2 sg 3 pd 0.1
-ES id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n DATA sm 2 sg 3 st 20.780649116388 am 3 ag 0 at 20.880649116388 pe 43
-CL id 25 tid 24 eid 25 etid 24 c omnetpp::cMessage n DATA m 2 pe -1 cid 24
-CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 20.780649116388 am 2 at 21.780649116388 pe 43
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 20.780649116388 am 2 at 21.780649116388 pe 43
-- INFO: Timeout is over, sending message
+E # 31 t 9.363173651207 m 3 ce 30 msg 2
+BS id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n ACK m 3 pe 30
+SH sm 3 sg 3 pd 0.1
+ES id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n ACK sm 3 sg 3 st 9.363173651207 am 2 ag 0 at 9.463173651207 pe 31
 
-E # 44 t 20.880649116388 m 3 ce 43 msg 24
-DM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n DATA m 3 pe 44
-- INFO: Message is lost
-
-E # 45 t 21.780649116388 m 2 ce 43 msg 0
-BS id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA m 2 pe 43
-SH sm 2 sg 3 pd 0.1
-ES id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA sm 2 sg 3 st 21.780649116388 am 3 ag 0 at 21.880649116388 pe 45
-CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n DATA m 2 pe -1 cid 25
+E # 32 t 9.463173651207 m 2 ce 31 msg 25
+DM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n ACK m 2 pe 32
+DM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n DATA m 2 pe 29
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 29
 CM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 21.780649116388 am 2 at 22.780649116388 pe 45
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 21.780649116388 am 2 at 22.780649116388 pe 45
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.463173651207 am 2 at 10.302606504107 pe 32
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 9.463173651207 am 2 at 10.302606504107 pe 32
 
-E # 46 t 21.880649116388 m 3 ce 45 msg 25
-DM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA m 3 pe 46
-- INFO: Message is lost
-
-E # 47 t 22.780649116388 m 2 ce 45 msg 0
-BS id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA m 2 pe 45
+E # 33 t 10.302606504107 m 2 ce 32 msg 0
+BS id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA m 2 pe 32
 SH sm 2 sg 3 pd 0.1
-ES id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA sm 2 sg 3 st 22.780649116388 am 3 ag 0 at 22.880649116388 pe 47
-CL id 27 tid 26 eid 27 etid 26 c omnetpp::cMessage n DATA m 2 pe -1 cid 26
+ES id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA sm 2 sg 3 st 10.302606504107 am 3 ag 0 at 10.402606504107 pe 33
 CM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.780649116388 am 2 at 23.780649116388 pe 47
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.780649116388 am 2 at 23.780649116388 pe 47
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.302606504107 am 2 at 11.302606504107 pe 33
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.302606504107 am 2 at 11.302606504107 pe 33
 
-E # 48 t 22.880649116388 m 3 ce 47 msg 26
-DM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA m 3 pe 48
-- INFO: Message is lost
+E # 34 t 10.402606504107 m 3 ce 33 msg 26
+DM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n DATA m 3 pe 34
+CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 10.402606504107 am 3 at 10.662431912692 pe 34
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 10.402606504107 am 3 at 10.662431912692 pe 34
 
-E # 49 t 23.780649116388 m 2 ce 47 msg 0
-BS id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n DATA m 2 pe 47
-SH sm 2 sg 3 pd 0.1
-ES id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n DATA sm 2 sg 3 st 23.780649116388 am 3 ag 0 at 23.880649116388 pe 49
-CL id 28 tid 27 eid 28 etid 27 c omnetpp::cMessage n DATA m 2 pe -1 cid 27
-CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.780649116388 am 2 at 24.780649116388 pe 49
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.780649116388 am 2 at 24.780649116388 pe 49
-- INFO: Timeout is over, sending message
+E # 35 t 10.662431912692 m 3 ce 34 msg 2
+BS id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n ACK m 3 pe 34
+SH sm 3 sg 3 pd 0.1
+ES id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n ACK sm 3 sg 3 st 10.662431912692 am 2 ag 0 at 10.762431912692 pe 35
 
-E # 50 t 23.880649116388 m 3 ce 49 msg 27
-DM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n DATA m 3 pe 50
-- INFO: Message is lost
-
-E # 51 t 24.780649116388 m 2 ce 49 msg 0
-BS id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n DATA m 2 pe 49
-SH sm 2 sg 3 pd 0.1
-ES id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n DATA sm 2 sg 3 st 24.780649116388 am 3 ag 0 at 24.880649116388 pe 51
-CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n DATA m 2 pe -1 cid 28
+E # 36 t 10.762431912692 m 2 ce 35 msg 28
+DM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n ACK m 2 pe 36
+DM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n DATA m 2 pe 33
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 33
 CM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 24.780649116388 am 2 at 25.780649116388 pe 51
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 24.780649116388 am 2 at 25.780649116388 pe 51
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.762431912692 am 2 at 12.570801176967 pe 36
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 10.762431912692 am 2 at 12.570801176967 pe 36
 
-E # 52 t 24.880649116388 m 3 ce 51 msg 28
-DM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n DATA m 3 pe 52
-CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 24.880649116388 am 3 at 25.061486042815 pe 52
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 24.880649116388 am 3 at 25.061486042815 pe 52
-- INFO: Message arrived. Sending ACK
+E # 37 t 12.570801176967 m 2 ce 36 msg 0
+BS id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n DATA m 2 pe 36
+SH sm 2 sg 3 pd 0.1
+ES id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n DATA sm 2 sg 3 st 12.570801176967 am 3 ag 0 at 12.670801176967 pe 37
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 12.570801176967 am 2 at 13.570801176967 pe 37
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 12.570801176967 am 2 at 13.570801176967 pe 37
 
-E # 53 t 25.061486042815 m 3 ce 52 msg 2
-BS id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n ACK m 3 pe 52
-SH sm 3 sg 3 pd 0.1
-ES id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n ACK sm 3 sg 3 st 25.061486042815 am 2 ag 0 at 25.161486042815 pe 53
-CL id 31 tid 30 eid 31 etid 30 c omnetpp::cMessage n ACK m 3 pe -1 cid 30
-- INFO: Timeout is over, sending message
+E # 38 t 12.670801176967 m 3 ce 37 msg 29
+DM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n DATA m 3 pe 38
 
-E # 54 t 25.161486042815 m 2 ce 53 msg 30
-DM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n ACK m 2 pe 54
-DM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n DATA m 2 pe 51
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 51
+E # 39 t 13.570801176967 m 2 ce 37 msg 0
+BS id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA m 2 pe 37
+SH sm 2 sg 3 pd 0.1
+ES id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA sm 2 sg 3 st 13.570801176967 am 3 ag 0 at 13.670801176967 pe 39
 CM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 25.161486042815 am 2 at 26.161486042815 pe 54
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 25.161486042815 am 2 at 26.161486042815 pe 54
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.570801176967 am 2 at 14.570801176967 pe 39
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.570801176967 am 2 at 14.570801176967 pe 39
 
-E # 55 t 26.161486042815 m 2 ce 54 msg 0
-BS id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n DATA m 2 pe 54
-SH sm 2 sg 3 pd 0.1
-ES id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n DATA sm 2 sg 3 st 26.161486042815 am 3 ag 0 at 26.261486042815 pe 55
-CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n DATA m 2 pe -1 cid 31
-CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.161486042815 am 2 at 27.161486042815 pe 55
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.161486042815 am 2 at 27.161486042815 pe 55
-- INFO: Timeout is over, sending message
+E # 40 t 13.670801176967 m 3 ce 39 msg 30
+DM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA m 3 pe 40
+CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 13.670801176967 am 3 at 13.679917279579 pe 40
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 13.670801176967 am 3 at 13.679917279579 pe 40
 
-E # 56 t 26.261486042815 m 3 ce 55 msg 31
-DM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n DATA m 3 pe 56
-- INFO: Message is lost
+E # 41 t 13.679917279579 m 3 ce 40 msg 2
+BS id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n ACK m 3 pe 40
+SH sm 3 sg 3 pd 0.1
+ES id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n ACK sm 3 sg 3 st 13.679917279579 am 2 ag 0 at 13.779917279579 pe 41
 
-E # 57 t 27.161486042815 m 2 ce 55 msg 0
-BS id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n DATA m 2 pe 55
-SH sm 2 sg 3 pd 0.1
-ES id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n DATA sm 2 sg 3 st 27.161486042815 am 3 ag 0 at 27.261486042815 pe 57
-CL id 33 tid 32 eid 33 etid 32 c omnetpp::cMessage n DATA m 2 pe -1 cid 32
+E # 42 t 13.779917279579 m 2 ce 41 msg 32
+DM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n ACK m 2 pe 42
+DM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n DATA m 2 pe 39
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 39
 CM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 27.161486042815 am 2 at 28.161486042815 pe 57
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 27.161486042815 am 2 at 28.161486042815 pe 57
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.779917279579 am 2 at 14.824529787887 pe 42
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 13.779917279579 am 2 at 14.824529787887 pe 42
 
-E # 58 t 27.261486042815 m 3 ce 57 msg 32
-DM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n DATA m 3 pe 58
-- INFO: Message is lost
-
-E # 59 t 28.161486042815 m 2 ce 57 msg 0
-BS id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA m 2 pe 57
+E # 43 t 14.824529787887 m 2 ce 42 msg 0
+BS id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA m 2 pe 42
 SH sm 2 sg 3 pd 0.1
-ES id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA sm 2 sg 3 st 28.161486042815 am 3 ag 0 at 28.261486042815 pe 59
-CL id 34 tid 33 eid 34 etid 33 c omnetpp::cMessage n DATA m 2 pe -1 cid 33
+ES id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA sm 2 sg 3 st 14.824529787887 am 3 ag 0 at 14.924529787887 pe 43
 CM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.161486042815 am 2 at 29.161486042815 pe 59
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.161486042815 am 2 at 29.161486042815 pe 59
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 14.824529787887 am 2 at 15.824529787887 pe 43
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 14.824529787887 am 2 at 15.824529787887 pe 43
 
-E # 60 t 28.261486042815 m 3 ce 59 msg 33
-DM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA m 3 pe 60
-- INFO: Message is lost
+E # 44 t 14.924529787887 m 3 ce 43 msg 33
+DM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n DATA m 3 pe 44
 
-E # 61 t 29.161486042815 m 2 ce 59 msg 0
-BS id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA m 2 pe 59
+E # 45 t 15.824529787887 m 2 ce 43 msg 0
+BS id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA m 2 pe 43
 SH sm 2 sg 3 pd 0.1
-ES id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA sm 2 sg 3 st 29.161486042815 am 3 ag 0 at 29.261486042815 pe 61
-CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n DATA m 2 pe -1 cid 34
+ES id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA sm 2 sg 3 st 15.824529787887 am 3 ag 0 at 15.924529787887 pe 45
 CM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 29.161486042815 am 2 at 30.161486042815 pe 61
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 29.161486042815 am 2 at 30.161486042815 pe 61
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.824529787887 am 2 at 16.824529787887 pe 45
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 15.824529787887 am 2 at 16.824529787887 pe 45
 
-E # 62 t 29.261486042815 m 3 ce 61 msg 34
-DM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA m 3 pe 62
-- INFO: Message is lost
+E # 46 t 15.924529787887 m 3 ce 45 msg 34
+DM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n DATA m 3 pe 46
+CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 15.924529787887 am 3 at 16.103278554231 pe 46
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 15.924529787887 am 3 at 16.103278554231 pe 46
 
-E # 63 t 30.161486042815 m 2 ce 61 msg 0
-BS id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n DATA m 2 pe 61
-SH sm 2 sg 3 pd 0.1
-ES id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n DATA sm 2 sg 3 st 30.161486042815 am 3 ag 0 at 30.261486042815 pe 63
-CL id 36 tid 35 eid 36 etid 35 c omnetpp::cMessage n DATA m 2 pe -1 cid 35
-CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.161486042815 am 2 at 31.161486042815 pe 63
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.161486042815 am 2 at 31.161486042815 pe 63
-- INFO: Timeout is over, sending message
+E # 47 t 16.103278554231 m 3 ce 46 msg 2
+BS id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n ACK m 3 pe 46
+SH sm 3 sg 3 pd 0.1
+ES id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n ACK sm 3 sg 3 st 16.103278554231 am 2 ag 0 at 16.203278554231 pe 47
 
-E # 64 t 30.261486042815 m 3 ce 63 msg 35
-DM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n DATA m 3 pe 64
-- INFO: Message is lost
-
-E # 65 t 31.161486042815 m 2 ce 63 msg 0
-BS id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n DATA m 2 pe 63
-SH sm 2 sg 3 pd 0.1
-ES id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n DATA sm 2 sg 3 st 31.161486042815 am 3 ag 0 at 31.261486042815 pe 65
-CL id 37 tid 36 eid 37 etid 36 c omnetpp::cMessage n DATA m 2 pe -1 cid 36
+E # 48 t 16.203278554231 m 2 ce 47 msg 36
+DM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n ACK m 2 pe 48
+DM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n DATA m 2 pe 45
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 45
 CM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.161486042815 am 2 at 32.161486042815 pe 65
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.161486042815 am 2 at 32.161486042815 pe 65
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 16.203278554231 am 2 at 19.353448482907 pe 48
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 16.203278554231 am 2 at 19.353448482907 pe 48
 
-E # 66 t 31.261486042815 m 3 ce 65 msg 36
-DM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n DATA m 3 pe 66
-- INFO: Message is lost
-
-E # 67 t 32.161486042815 m 2 ce 65 msg 0
-BS id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA m 2 pe 65
+E # 49 t 19.353448482907 m 2 ce 48 msg 0
+BS id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA m 2 pe 48
 SH sm 2 sg 3 pd 0.1
-ES id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA sm 2 sg 3 st 32.161486042815 am 3 ag 0 at 32.261486042815 pe 67
-CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n DATA m 2 pe -1 cid 37
+ES id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA sm 2 sg 3 st 19.353448482907 am 3 ag 0 at 19.453448482907 pe 49
 CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.161486042815 am 2 at 33.161486042815 pe 67
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.161486042815 am 2 at 33.161486042815 pe 67
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.353448482907 am 2 at 20.353448482907 pe 49
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.353448482907 am 2 at 20.353448482907 pe 49
 
-E # 68 t 32.261486042815 m 3 ce 67 msg 37
-DM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA m 3 pe 68
-- INFO: Message is lost
+E # 50 t 19.453448482907 m 3 ce 49 msg 37
+DM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n DATA m 3 pe 50
+CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 19.453448482907 am 3 at 19.468571568273 pe 50
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 19.453448482907 am 3 at 19.468571568273 pe 50
 
-E # 69 t 33.161486042815 m 2 ce 67 msg 0
-BS id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA m 2 pe 67
-SH sm 2 sg 3 pd 0.1
-ES id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA sm 2 sg 3 st 33.161486042815 am 3 ag 0 at 33.261486042815 pe 69
-CL id 39 tid 38 eid 39 etid 38 c omnetpp::cMessage n DATA m 2 pe -1 cid 38
-CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.161486042815 am 2 at 34.161486042815 pe 69
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.161486042815 am 2 at 34.161486042815 pe 69
-- INFO: Timeout is over, sending message
-
-E # 70 t 33.261486042815 m 3 ce 69 msg 38
-DM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA m 3 pe 70
-CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 33.261486042815 am 3 at 33.412064468679 pe 70
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 33.261486042815 am 3 at 33.412064468679 pe 70
-- INFO: Message arrived. Sending ACK
-
-E # 71 t 33.412064468679 m 3 ce 70 msg 2
-BS id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n ACK m 3 pe 70
+E # 51 t 19.468571568273 m 3 ce 50 msg 2
+BS id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n ACK m 3 pe 50
 SH sm 3 sg 3 pd 0.1
-ES id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n ACK sm 3 sg 3 st 33.412064468679 am 2 ag 0 at 33.512064468679 pe 71
-CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n ACK m 3 pe -1 cid 40
-- INFO: Timeout is over, sending message
+ES id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n ACK sm 3 sg 3 st 19.468571568273 am 2 ag 0 at 19.568571568273 pe 51
 
-E # 72 t 33.512064468679 m 2 ce 71 msg 40
-DM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n ACK m 2 pe 72
-DM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n DATA m 2 pe 69
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 69
+E # 52 t 19.568571568273 m 2 ce 51 msg 39
+DM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n ACK m 2 pe 52
+DM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA m 2 pe 49
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 49
+CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.568571568273 am 2 at 21.608885826215 pe 52
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 19.568571568273 am 2 at 21.608885826215 pe 52
+
+E # 53 t 21.608885826215 m 2 ce 52 msg 0
+BS id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n DATA m 2 pe 52
+SH sm 2 sg 3 pd 0.1
+ES id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n DATA sm 2 sg 3 st 21.608885826215 am 3 ag 0 at 21.708885826215 pe 53
 CM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.512064468679 am 2 at 34.512064468679 pe 72
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.512064468679 am 2 at 34.512064468679 pe 72
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 21.608885826215 am 2 at 22.608885826215 pe 53
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 21.608885826215 am 2 at 22.608885826215 pe 53
 
-E # 73 t 34.512064468679 m 2 ce 72 msg 0
-BS id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n DATA m 2 pe 72
-SH sm 2 sg 3 pd 0.1
-ES id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n DATA sm 2 sg 3 st 34.512064468679 am 3 ag 0 at 34.612064468679 pe 73
-CL id 42 tid 41 eid 42 etid 41 c omnetpp::cMessage n DATA m 2 pe -1 cid 41
-CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.512064468679 am 2 at 35.512064468679 pe 73
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.512064468679 am 2 at 35.512064468679 pe 73
-- INFO: Timeout is over, sending message
+E # 54 t 21.708885826215 m 3 ce 53 msg 40
+DM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n DATA m 3 pe 54
+CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 21.708885826215 am 3 at 22.093408013129 pe 54
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 21.708885826215 am 3 at 22.093408013129 pe 54
 
-E # 74 t 34.612064468679 m 3 ce 73 msg 41
-DM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n DATA m 3 pe 74
-- INFO: Message is lost
+E # 55 t 22.093408013129 m 3 ce 54 msg 2
+BS id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n ACK m 3 pe 54
+SH sm 3 sg 3 pd 0.1
+ES id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n ACK sm 3 sg 3 st 22.093408013129 am 2 ag 0 at 22.193408013129 pe 55
 
-E # 75 t 35.512064468679 m 2 ce 73 msg 0
-BS id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n DATA m 2 pe 73
-SH sm 2 sg 3 pd 0.1
-ES id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n DATA sm 2 sg 3 st 35.512064468679 am 3 ag 0 at 35.612064468679 pe 75
-CL id 43 tid 42 eid 43 etid 42 c omnetpp::cMessage n DATA m 2 pe -1 cid 42
+E # 56 t 22.193408013129 m 2 ce 55 msg 42
+DM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n ACK m 2 pe 56
+DM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n DATA m 2 pe 53
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 53
 CM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 35.512064468679 am 2 at 36.512064468679 pe 75
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 35.512064468679 am 2 at 36.512064468679 pe 75
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.193408013129 am 2 at 22.835117185807 pe 56
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.193408013129 am 2 at 22.835117185807 pe 56
 
-E # 76 t 35.612064468679 m 3 ce 75 msg 42
-DM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n DATA m 3 pe 76
-- INFO: Message is lost
-
-E # 77 t 36.512064468679 m 2 ce 75 msg 0
-BS id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA m 2 pe 75
+E # 57 t 22.835117185807 m 2 ce 56 msg 0
+BS id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA m 2 pe 56
 SH sm 2 sg 3 pd 0.1
-ES id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA sm 2 sg 3 st 36.512064468679 am 3 ag 0 at 36.612064468679 pe 77
-CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n DATA m 2 pe -1 cid 43
+ES id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA sm 2 sg 3 st 22.835117185807 am 3 ag 0 at 22.935117185807 pe 57
 CM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 36.512064468679 am 2 at 37.512064468679 pe 77
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 36.512064468679 am 2 at 37.512064468679 pe 77
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.835117185807 am 2 at 23.835117185807 pe 57
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 22.835117185807 am 2 at 23.835117185807 pe 57
 
-E # 78 t 36.612064468679 m 3 ce 77 msg 43
-DM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA m 3 pe 78
-- INFO: Message is lost
+E # 58 t 22.935117185807 m 3 ce 57 msg 43
+DM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n DATA m 3 pe 58
+CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 22.935117185807 am 3 at 23.096517393296 pe 58
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 22.935117185807 am 3 at 23.096517393296 pe 58
 
-E # 79 t 37.512064468679 m 2 ce 77 msg 0
-BS id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n DATA m 2 pe 77
-SH sm 2 sg 3 pd 0.1
-ES id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n DATA sm 2 sg 3 st 37.512064468679 am 3 ag 0 at 37.612064468679 pe 79
-CL id 45 tid 44 eid 45 etid 44 c omnetpp::cMessage n DATA m 2 pe -1 cid 44
-CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 37.512064468679 am 2 at 38.512064468679 pe 79
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 37.512064468679 am 2 at 38.512064468679 pe 79
-- INFO: Timeout is over, sending message
-
-E # 80 t 37.612064468679 m 3 ce 79 msg 44
-DM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n DATA m 3 pe 80
-CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 37.612064468679 am 3 at 37.676235385947 pe 80
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 37.612064468679 am 3 at 37.676235385947 pe 80
-- INFO: Message arrived. Sending ACK
-
-E # 81 t 37.676235385947 m 3 ce 80 msg 2
-BS id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n ACK m 3 pe 80
+E # 59 t 23.096517393296 m 3 ce 58 msg 2
+BS id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n ACK m 3 pe 58
 SH sm 3 sg 3 pd 0.1
-ES id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n ACK sm 3 sg 3 st 37.676235385947 am 2 ag 0 at 37.776235385947 pe 81
-CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n ACK m 3 pe -1 cid 46
-- INFO: Timeout is over, sending message
+ES id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n ACK sm 3 sg 3 st 23.096517393296 am 2 ag 0 at 23.196517393296 pe 59
 
-E # 82 t 37.776235385947 m 2 ce 81 msg 46
-DM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n ACK m 2 pe 82
-DM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n DATA m 2 pe 79
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 79
+E # 60 t 23.196517393296 m 2 ce 59 msg 45
+DM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n ACK m 2 pe 60
+DM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n DATA m 2 pe 57
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 57
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.196517393296 am 2 at 23.815446852923 pe 60
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.196517393296 am 2 at 23.815446852923 pe 60
+
+E # 61 t 23.815446852923 m 2 ce 60 msg 0
+BS id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA m 2 pe 60
+SH sm 2 sg 3 pd 0.1
+ES id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA sm 2 sg 3 st 23.815446852923 am 3 ag 0 at 23.915446852923 pe 61
 CM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 37.776235385947 am 2 at 38.776235385947 pe 82
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 37.776235385947 am 2 at 38.776235385947 pe 82
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.815446852923 am 2 at 24.815446852923 pe 61
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 23.815446852923 am 2 at 24.815446852923 pe 61
 
-E # 83 t 38.776235385947 m 2 ce 82 msg 0
-BS id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n DATA m 2 pe 82
-SH sm 2 sg 3 pd 0.1
-ES id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n DATA sm 2 sg 3 st 38.776235385947 am 3 ag 0 at 38.876235385947 pe 83
-CL id 48 tid 47 eid 48 etid 47 c omnetpp::cMessage n DATA m 2 pe -1 cid 47
-CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.776235385947 am 2 at 39.776235385947 pe 83
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.776235385947 am 2 at 39.776235385947 pe 83
-- INFO: Timeout is over, sending message
+E # 62 t 23.915446852923 m 3 ce 61 msg 46
+DM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA m 3 pe 62
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 23.915446852923 am 3 at 24.067100450322 pe 62
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 23.915446852923 am 3 at 24.067100450322 pe 62
 
-E # 84 t 38.876235385947 m 3 ce 83 msg 47
-DM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n DATA m 3 pe 84
-- INFO: Message is lost
+E # 63 t 24.067100450322 m 3 ce 62 msg 2
+BS id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n ACK m 3 pe 62
+SH sm 3 sg 3 pd 0.1
+ES id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n ACK sm 3 sg 3 st 24.067100450322 am 2 ag 0 at 24.167100450322 pe 63
 
-E # 85 t 39.776235385947 m 2 ce 83 msg 0
-BS id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n DATA m 2 pe 83
-SH sm 2 sg 3 pd 0.1
-ES id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n DATA sm 2 sg 3 st 39.776235385947 am 3 ag 0 at 39.876235385947 pe 85
-CL id 49 tid 48 eid 49 etid 48 c omnetpp::cMessage n DATA m 2 pe -1 cid 48
+E # 64 t 24.167100450322 m 2 ce 63 msg 48
+DM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n ACK m 2 pe 64
+DM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n DATA m 2 pe 61
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 61
 CM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.776235385947 am 2 at 40.776235385947 pe 85
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.776235385947 am 2 at 40.776235385947 pe 85
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 24.167100450322 am 2 at 25.303039392032 pe 64
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 24.167100450322 am 2 at 25.303039392032 pe 64
 
-E # 86 t 39.876235385947 m 3 ce 85 msg 48
-DM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n DATA m 3 pe 86
-- INFO: Message is lost
-
-E # 87 t 40.776235385947 m 2 ce 85 msg 0
-BS id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA m 2 pe 85
+E # 65 t 25.303039392032 m 2 ce 64 msg 0
+BS id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA m 2 pe 64
 SH sm 2 sg 3 pd 0.1
-ES id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA sm 2 sg 3 st 40.776235385947 am 3 ag 0 at 40.876235385947 pe 87
-CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n DATA m 2 pe -1 cid 49
+ES id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA sm 2 sg 3 st 25.303039392032 am 3 ag 0 at 25.403039392032 pe 65
 CM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 40.776235385947 am 2 at 41.776235385947 pe 87
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 40.776235385947 am 2 at 41.776235385947 pe 87
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 25.303039392032 am 2 at 26.303039392032 pe 65
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 25.303039392032 am 2 at 26.303039392032 pe 65
 
-E # 88 t 40.876235385947 m 3 ce 87 msg 49
-DM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA m 3 pe 88
-- INFO: Message is lost
+E # 66 t 25.403039392032 m 3 ce 65 msg 49
+DM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n DATA m 3 pe 66
 
-E # 89 t 41.776235385947 m 2 ce 87 msg 0
-BS id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA m 2 pe 87
+E # 67 t 26.303039392032 m 2 ce 65 msg 0
+BS id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA m 2 pe 65
 SH sm 2 sg 3 pd 0.1
-ES id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA sm 2 sg 3 st 41.776235385947 am 3 ag 0 at 41.876235385947 pe 89
-CL id 51 tid 50 eid 51 etid 50 c omnetpp::cMessage n DATA m 2 pe -1 cid 50
+ES id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA sm 2 sg 3 st 26.303039392032 am 3 ag 0 at 26.403039392032 pe 67
 CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.776235385947 am 2 at 42.776235385947 pe 89
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.776235385947 am 2 at 42.776235385947 pe 89
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.303039392032 am 2 at 27.303039392032 pe 67
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.303039392032 am 2 at 27.303039392032 pe 67
 
-E # 90 t 41.876235385947 m 3 ce 89 msg 50
-DM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA m 3 pe 90
-- INFO: Message is lost
+E # 68 t 26.403039392032 m 3 ce 67 msg 50
+DM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n DATA m 3 pe 68
+CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 26.403039392032 am 3 at 26.505182579467 pe 68
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 26.403039392032 am 3 at 26.505182579467 pe 68
 
-E # 91 t 42.776235385947 m 2 ce 89 msg 0
-BS id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA m 2 pe 89
-SH sm 2 sg 3 pd 0.1
-ES id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA sm 2 sg 3 st 42.776235385947 am 3 ag 0 at 42.876235385947 pe 91
-CL id 52 tid 51 eid 52 etid 51 c omnetpp::cMessage n DATA m 2 pe -1 cid 51
-CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 42.776235385947 am 2 at 43.776235385947 pe 91
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 42.776235385947 am 2 at 43.776235385947 pe 91
-- INFO: Timeout is over, sending message
+E # 69 t 26.505182579467 m 3 ce 68 msg 2
+BS id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n ACK m 3 pe 68
+SH sm 3 sg 3 pd 0.1
+ES id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n ACK sm 3 sg 3 st 26.505182579467 am 2 ag 0 at 26.605182579467 pe 69
 
-E # 92 t 42.876235385947 m 3 ce 91 msg 51
-DM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA m 3 pe 92
-- INFO: Message is lost
-
-E # 93 t 43.776235385947 m 2 ce 91 msg 0
-BS id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n DATA m 2 pe 91
-SH sm 2 sg 3 pd 0.1
-ES id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n DATA sm 2 sg 3 st 43.776235385947 am 3 ag 0 at 43.876235385947 pe 93
-CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n DATA m 2 pe -1 cid 52
+E # 70 t 26.605182579467 m 2 ce 69 msg 52
+DM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n ACK m 2 pe 70
+DM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA m 2 pe 67
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 67
 CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.776235385947 am 2 at 44.776235385947 pe 93
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.776235385947 am 2 at 44.776235385947 pe 93
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.605182579467 am 2 at 27.477503774509 pe 70
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 26.605182579467 am 2 at 27.477503774509 pe 70
 
-E # 94 t 43.876235385947 m 3 ce 93 msg 52
-DM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n DATA m 3 pe 94
-- INFO: Message is lost
-
-E # 95 t 44.776235385947 m 2 ce 93 msg 0
-BS id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA m 2 pe 93
+E # 71 t 27.477503774509 m 2 ce 70 msg 0
+BS id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA m 2 pe 70
 SH sm 2 sg 3 pd 0.1
-ES id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA sm 2 sg 3 st 44.776235385947 am 3 ag 0 at 44.876235385947 pe 95
-CL id 54 tid 53 eid 54 etid 53 c omnetpp::cMessage n DATA m 2 pe -1 cid 53
+ES id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA sm 2 sg 3 st 27.477503774509 am 3 ag 0 at 27.577503774509 pe 71
 CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 44.776235385947 am 2 at 45.776235385947 pe 95
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 44.776235385947 am 2 at 45.776235385947 pe 95
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 27.477503774509 am 2 at 28.477503774509 pe 71
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 27.477503774509 am 2 at 28.477503774509 pe 71
 
-E # 96 t 44.876235385947 m 3 ce 95 msg 53
-DM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA m 3 pe 96
-- INFO: Message is lost
+E # 72 t 27.577503774509 m 3 ce 71 msg 53
+DM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA m 3 pe 72
 
-E # 97 t 45.776235385947 m 2 ce 95 msg 0
-BS id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA m 2 pe 95
+E # 73 t 28.477503774509 m 2 ce 71 msg 0
+BS id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA m 2 pe 71
 SH sm 2 sg 3 pd 0.1
-ES id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA sm 2 sg 3 st 45.776235385947 am 3 ag 0 at 45.876235385947 pe 97
-CL id 55 tid 54 eid 55 etid 54 c omnetpp::cMessage n DATA m 2 pe -1 cid 54
+ES id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA sm 2 sg 3 st 28.477503774509 am 3 ag 0 at 28.577503774509 pe 73
 CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.776235385947 am 2 at 46.776235385947 pe 97
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.776235385947 am 2 at 46.776235385947 pe 97
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.477503774509 am 2 at 29.477503774509 pe 73
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.477503774509 am 2 at 29.477503774509 pe 73
 
-E # 98 t 45.876235385947 m 3 ce 97 msg 54
-DM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA m 3 pe 98
-- INFO: Message is lost
+E # 74 t 28.577503774509 m 3 ce 73 msg 54
+DM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n DATA m 3 pe 74
+CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 28.577503774509 am 3 at 28.866945822308 pe 74
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 28.577503774509 am 3 at 28.866945822308 pe 74
 
-E # 99 t 46.776235385947 m 2 ce 97 msg 0
-BS id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n DATA m 2 pe 97
-SH sm 2 sg 3 pd 0.1
-ES id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n DATA sm 2 sg 3 st 46.776235385947 am 3 ag 0 at 46.876235385947 pe 99
-CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n DATA m 2 pe -1 cid 55
-CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.776235385947 am 2 at 47.776235385947 pe 99
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.776235385947 am 2 at 47.776235385947 pe 99
-- INFO: Timeout is over, sending message
+E # 75 t 28.866945822308 m 3 ce 74 msg 2
+BS id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n ACK m 3 pe 74
+SH sm 3 sg 3 pd 0.1
+ES id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n ACK sm 3 sg 3 st 28.866945822308 am 2 ag 0 at 28.966945822308 pe 75
 
-E # 100 t 46.876235385947 m 3 ce 99 msg 55
-DM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n DATA m 3 pe 100
-- INFO: Message is lost
-
-E # 101 t 47.776235385947 m 2 ce 99 msg 0
-BS id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n DATA m 2 pe 99
-SH sm 2 sg 3 pd 0.1
-ES id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n DATA sm 2 sg 3 st 47.776235385947 am 3 ag 0 at 47.876235385947 pe 101
-CL id 57 tid 56 eid 57 etid 56 c omnetpp::cMessage n DATA m 2 pe -1 cid 56
+E # 76 t 28.966945822308 m 2 ce 75 msg 56
+DM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n ACK m 2 pe 76
+DM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n DATA m 2 pe 73
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 73
 CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 47.776235385947 am 2 at 48.776235385947 pe 101
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 47.776235385947 am 2 at 48.776235385947 pe 101
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.966945822308 am 2 at 30.388310502402 pe 76
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 28.966945822308 am 2 at 30.388310502402 pe 76
 
-E # 102 t 47.876235385947 m 3 ce 101 msg 56
-DM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n DATA m 3 pe 102
-- INFO: Message is lost
-
-E # 103 t 48.776235385947 m 2 ce 101 msg 0
-BS id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA m 2 pe 101
+E # 77 t 30.388310502402 m 2 ce 76 msg 0
+BS id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA m 2 pe 76
 SH sm 2 sg 3 pd 0.1
-ES id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA sm 2 sg 3 st 48.776235385947 am 3 ag 0 at 48.876235385947 pe 103
-CL id 58 tid 57 eid 58 etid 57 c omnetpp::cMessage n DATA m 2 pe -1 cid 57
+ES id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA sm 2 sg 3 st 30.388310502402 am 3 ag 0 at 30.488310502402 pe 77
 CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 48.776235385947 am 2 at 49.776235385947 pe 103
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 48.776235385947 am 2 at 49.776235385947 pe 103
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.388310502402 am 2 at 31.388310502402 pe 77
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.388310502402 am 2 at 31.388310502402 pe 77
 
-E # 104 t 48.876235385947 m 3 ce 103 msg 57
-DM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA m 3 pe 104
-- INFO: Message is lost
+E # 78 t 30.488310502402 m 3 ce 77 msg 57
+DM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n DATA m 3 pe 78
+CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 30.488310502402 am 3 at 30.499505118465 pe 78
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 30.488310502402 am 3 at 30.499505118465 pe 78
 
-E # 105 t 49.776235385947 m 2 ce 103 msg 0
-BS id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n DATA m 2 pe 103
-SH sm 2 sg 3 pd 0.1
-ES id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n DATA sm 2 sg 3 st 49.776235385947 am 3 ag 0 at 49.876235385947 pe 105
-CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n DATA m 2 pe -1 cid 58
-CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 49.776235385947 am 2 at 50.776235385947 pe 105
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 49.776235385947 am 2 at 50.776235385947 pe 105
-- INFO: Timeout is over, sending message
+E # 79 t 30.499505118465 m 3 ce 78 msg 2
+BS id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n ACK m 3 pe 78
+SH sm 3 sg 3 pd 0.1
+ES id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n ACK sm 3 sg 3 st 30.499505118465 am 2 ag 0 at 30.599505118465 pe 79
 
-E # 106 t 49.876235385947 m 3 ce 105 msg 58
-DM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n DATA m 3 pe 106
-- INFO: Message is lost
-
-E # 107 t 50.776235385947 m 2 ce 105 msg 0
-BS id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n DATA m 2 pe 105
-SH sm 2 sg 3 pd 0.1
-ES id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n DATA sm 2 sg 3 st 50.776235385947 am 3 ag 0 at 50.876235385947 pe 107
-CL id 60 tid 59 eid 60 etid 59 c omnetpp::cMessage n DATA m 2 pe -1 cid 59
+E # 80 t 30.599505118465 m 2 ce 79 msg 59
+DM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n ACK m 2 pe 80
+DM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n DATA m 2 pe 77
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 77
 CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 50.776235385947 am 2 at 51.776235385947 pe 107
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 50.776235385947 am 2 at 51.776235385947 pe 107
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.599505118465 am 2 at 31.135070838693 pe 80
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 30.599505118465 am 2 at 31.135070838693 pe 80
 
-E # 108 t 50.876235385947 m 3 ce 107 msg 59
-DM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n DATA m 3 pe 108
-CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 50.876235385947 am 3 at 51.018371853956 pe 108
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 50.876235385947 am 3 at 51.018371853956 pe 108
-- INFO: Message arrived. Sending ACK
-
-E # 109 t 51.018371853956 m 3 ce 108 msg 2
-BS id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n ACK m 3 pe 108
-SH sm 3 sg 3 pd 0.1
-ES id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n ACK sm 3 sg 3 st 51.018371853956 am 2 ag 0 at 51.118371853956 pe 109
-CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n ACK m 3 pe -1 cid 61
-- INFO: Timeout is over, sending message
-
-E # 110 t 51.118371853956 m 2 ce 109 msg 61
-DM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n ACK m 2 pe 110
-DM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n DATA m 2 pe 107
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 107
-CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.118371853956 am 2 at 52.118371853956 pe 110
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.118371853956 am 2 at 52.118371853956 pe 110
-- INFO: Acknowledgement arrived
-
-E # 111 t 52.118371853956 m 2 ce 110 msg 0
-BS id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n DATA m 2 pe 110
+E # 81 t 31.135070838693 m 2 ce 80 msg 0
+BS id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n DATA m 2 pe 80
 SH sm 2 sg 3 pd 0.1
-ES id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n DATA sm 2 sg 3 st 52.118371853956 am 3 ag 0 at 52.218371853956 pe 111
-CL id 63 tid 62 eid 63 etid 62 c omnetpp::cMessage n DATA m 2 pe -1 cid 62
+ES id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n DATA sm 2 sg 3 st 31.135070838693 am 3 ag 0 at 31.235070838693 pe 81
+CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.135070838693 am 2 at 32.135070838693 pe 81
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.135070838693 am 2 at 32.135070838693 pe 81
+
+E # 82 t 31.235070838693 m 3 ce 81 msg 60
+DM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n DATA m 3 pe 82
+CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 31.235070838693 am 3 at 31.265798873908 pe 82
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 31.235070838693 am 3 at 31.265798873908 pe 82
+
+E # 83 t 31.265798873908 m 3 ce 82 msg 2
+BS id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n ACK m 3 pe 82
+SH sm 3 sg 3 pd 0.1
+ES id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n ACK sm 3 sg 3 st 31.265798873908 am 2 ag 0 at 31.365798873908 pe 83
+
+E # 84 t 31.365798873908 m 2 ce 83 msg 62
+DM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n ACK m 2 pe 84
+DM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n DATA m 2 pe 81
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 81
 CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.118371853956 am 2 at 53.118371853956 pe 111
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.118371853956 am 2 at 53.118371853956 pe 111
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.365798873908 am 2 at 31.572002155938 pe 84
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.365798873908 am 2 at 31.572002155938 pe 84
 
-E # 112 t 52.218371853956 m 3 ce 111 msg 62
-DM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n DATA m 3 pe 112
-- INFO: Message is lost
-
-E # 113 t 53.118371853956 m 2 ce 111 msg 0
-BS id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA m 2 pe 111
+E # 85 t 31.572002155938 m 2 ce 84 msg 0
+BS id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA m 2 pe 84
 SH sm 2 sg 3 pd 0.1
-ES id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA sm 2 sg 3 st 53.118371853956 am 3 ag 0 at 53.218371853956 pe 113
-CL id 64 tid 63 eid 64 etid 63 c omnetpp::cMessage n DATA m 2 pe -1 cid 63
+ES id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA sm 2 sg 3 st 31.572002155938 am 3 ag 0 at 31.672002155938 pe 85
 CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 53.118371853956 am 2 at 54.118371853956 pe 113
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 53.118371853956 am 2 at 54.118371853956 pe 113
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.572002155938 am 2 at 32.572002155938 pe 85
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.572002155938 am 2 at 32.572002155938 pe 85
 
-E # 114 t 53.218371853956 m 3 ce 113 msg 63
-DM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA m 3 pe 114
-- INFO: Message is lost
+E # 86 t 31.672002155938 m 3 ce 85 msg 63
+DM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n DATA m 3 pe 86
+CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 31.672002155938 am 3 at 31.8055311744 pe 86
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 31.672002155938 am 3 at 31.8055311744 pe 86
 
-E # 115 t 54.118371853956 m 2 ce 113 msg 0
-BS id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA m 2 pe 113
-SH sm 2 sg 3 pd 0.1
-ES id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA sm 2 sg 3 st 54.118371853956 am 3 ag 0 at 54.218371853956 pe 115
-CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n DATA m 2 pe -1 cid 64
-CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.118371853956 am 2 at 55.118371853956 pe 115
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.118371853956 am 2 at 55.118371853956 pe 115
-- INFO: Timeout is over, sending message
+E # 87 t 31.8055311744 m 3 ce 86 msg 2
+BS id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n ACK m 3 pe 86
+SH sm 3 sg 3 pd 0.1
+ES id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n ACK sm 3 sg 3 st 31.8055311744 am 2 ag 0 at 31.9055311744 pe 87
 
-E # 116 t 54.218371853956 m 3 ce 115 msg 64
-DM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA m 3 pe 116
-- INFO: Message is lost
-
-E # 117 t 55.118371853956 m 2 ce 115 msg 0
-BS id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n DATA m 2 pe 115
-SH sm 2 sg 3 pd 0.1
-ES id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n DATA sm 2 sg 3 st 55.118371853956 am 3 ag 0 at 55.218371853956 pe 117
-CL id 66 tid 65 eid 66 etid 65 c omnetpp::cMessage n DATA m 2 pe -1 cid 65
+E # 88 t 31.9055311744 m 2 ce 87 msg 65
+DM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n ACK m 2 pe 88
+DM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA m 2 pe 85
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 85
 CM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.118371853956 am 2 at 56.118371853956 pe 117
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.118371853956 am 2 at 56.118371853956 pe 117
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.9055311744 am 2 at 32.514613597583 pe 88
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 31.9055311744 am 2 at 32.514613597583 pe 88
 
-E # 118 t 55.218371853956 m 3 ce 117 msg 65
-DM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n DATA m 3 pe 118
-- INFO: Message is lost
-
-E # 119 t 56.118371853956 m 2 ce 117 msg 0
-BS id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA m 2 pe 117
+E # 89 t 32.514613597583 m 2 ce 88 msg 0
+BS id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA m 2 pe 88
 SH sm 2 sg 3 pd 0.1
-ES id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA sm 2 sg 3 st 56.118371853956 am 3 ag 0 at 56.218371853956 pe 119
-CL id 67 tid 66 eid 67 etid 66 c omnetpp::cMessage n DATA m 2 pe -1 cid 66
+ES id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA sm 2 sg 3 st 32.514613597583 am 3 ag 0 at 32.614613597583 pe 89
 CM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 56.118371853956 am 2 at 57.118371853956 pe 119
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 56.118371853956 am 2 at 57.118371853956 pe 119
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.514613597583 am 2 at 33.514613597583 pe 89
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.514613597583 am 2 at 33.514613597583 pe 89
 
-E # 120 t 56.218371853956 m 3 ce 119 msg 66
-DM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA m 3 pe 120
-- INFO: Message is lost
+E # 90 t 32.614613597583 m 3 ce 89 msg 66
+DM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n DATA m 3 pe 90
+CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 32.614613597583 am 3 at 32.698647068144 pe 90
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 32.614613597583 am 3 at 32.698647068144 pe 90
 
-E # 121 t 57.118371853956 m 2 ce 119 msg 0
-BS id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n DATA m 2 pe 119
-SH sm 2 sg 3 pd 0.1
-ES id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n DATA sm 2 sg 3 st 57.118371853956 am 3 ag 0 at 57.218371853956 pe 121
-CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n DATA m 2 pe -1 cid 67
-CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.118371853956 am 2 at 58.118371853956 pe 121
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.118371853956 am 2 at 58.118371853956 pe 121
-- INFO: Timeout is over, sending message
+E # 91 t 32.698647068144 m 3 ce 90 msg 2
+BS id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n ACK m 3 pe 90
+SH sm 3 sg 3 pd 0.1
+ES id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n ACK sm 3 sg 3 st 32.698647068144 am 2 ag 0 at 32.798647068144 pe 91
 
-E # 122 t 57.218371853956 m 3 ce 121 msg 67
-DM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n DATA m 3 pe 122
-- INFO: Message is lost
-
-E # 123 t 58.118371853956 m 2 ce 121 msg 0
-BS id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n DATA m 2 pe 121
-SH sm 2 sg 3 pd 0.1
-ES id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n DATA sm 2 sg 3 st 58.118371853956 am 3 ag 0 at 58.218371853956 pe 123
-CL id 69 tid 68 eid 69 etid 68 c omnetpp::cMessage n DATA m 2 pe -1 cid 68
+E # 92 t 32.798647068144 m 2 ce 91 msg 68
+DM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n ACK m 2 pe 92
+DM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n DATA m 2 pe 89
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 89
 CM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.118371853956 am 2 at 59.118371853956 pe 123
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.118371853956 am 2 at 59.118371853956 pe 123
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.798647068144 am 2 at 32.943925095436 pe 92
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.798647068144 am 2 at 32.943925095436 pe 92
 
-E # 124 t 58.218371853956 m 3 ce 123 msg 68
-DM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n DATA m 3 pe 124
-- INFO: Message is lost
-
-E # 125 t 59.118371853956 m 2 ce 123 msg 0
-BS id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA m 2 pe 123
+E # 93 t 32.943925095436 m 2 ce 92 msg 0
+BS id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA m 2 pe 92
 SH sm 2 sg 3 pd 0.1
-ES id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA sm 2 sg 3 st 59.118371853956 am 3 ag 0 at 59.218371853956 pe 125
-CL id 70 tid 69 eid 70 etid 69 c omnetpp::cMessage n DATA m 2 pe -1 cid 69
+ES id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA sm 2 sg 3 st 32.943925095436 am 3 ag 0 at 33.043925095436 pe 93
 CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 59.118371853956 am 2 at 60.118371853956 pe 125
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 59.118371853956 am 2 at 60.118371853956 pe 125
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.943925095436 am 2 at 33.943925095436 pe 93
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 32.943925095436 am 2 at 33.943925095436 pe 93
 
-E # 126 t 59.218371853956 m 3 ce 125 msg 69
-DM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA m 3 pe 126
-- INFO: Message is lost
+E # 94 t 33.043925095436 m 3 ce 93 msg 69
+DM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n DATA m 3 pe 94
 
-E # 127 t 60.118371853956 m 2 ce 125 msg 0
-BS id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA m 2 pe 125
+E # 95 t 33.943925095436 m 2 ce 93 msg 0
+BS id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA m 2 pe 93
 SH sm 2 sg 3 pd 0.1
-ES id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA sm 2 sg 3 st 60.118371853956 am 3 ag 0 at 60.218371853956 pe 127
-CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n DATA m 2 pe -1 cid 70
+ES id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA sm 2 sg 3 st 33.943925095436 am 3 ag 0 at 34.043925095436 pe 95
 CM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 60.118371853956 am 2 at 61.118371853956 pe 127
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 60.118371853956 am 2 at 61.118371853956 pe 127
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.943925095436 am 2 at 34.943925095436 pe 95
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 33.943925095436 am 2 at 34.943925095436 pe 95
 
-E # 128 t 60.218371853956 m 3 ce 127 msg 70
-DM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA m 3 pe 128
-- INFO: Message is lost
+E # 96 t 34.043925095436 m 3 ce 95 msg 70
+DM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n DATA m 3 pe 96
+CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 34.043925095436 am 3 at 34.140063189343 pe 96
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 34.043925095436 am 3 at 34.140063189343 pe 96
 
-E # 129 t 61.118371853956 m 2 ce 127 msg 0
-BS id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n DATA m 2 pe 127
-SH sm 2 sg 3 pd 0.1
-ES id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n DATA sm 2 sg 3 st 61.118371853956 am 3 ag 0 at 61.218371853956 pe 129
-CL id 72 tid 71 eid 72 etid 71 c omnetpp::cMessage n DATA m 2 pe -1 cid 71
-CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 61.118371853956 am 2 at 62.118371853956 pe 129
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 61.118371853956 am 2 at 62.118371853956 pe 129
-- INFO: Timeout is over, sending message
+E # 97 t 34.140063189343 m 3 ce 96 msg 2
+BS id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n ACK m 3 pe 96
+SH sm 3 sg 3 pd 0.1
+ES id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n ACK sm 3 sg 3 st 34.140063189343 am 2 ag 0 at 34.240063189343 pe 97
 
-E # 130 t 61.218371853956 m 3 ce 129 msg 71
-DM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n DATA m 3 pe 130
-- INFO: Message is lost
-
-E # 131 t 62.118371853956 m 2 ce 129 msg 0
-BS id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA m 2 pe 129
-SH sm 2 sg 3 pd 0.1
-ES id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA sm 2 sg 3 st 62.118371853956 am 3 ag 0 at 62.218371853956 pe 131
-CL id 73 tid 72 eid 73 etid 72 c omnetpp::cMessage n DATA m 2 pe -1 cid 72
+E # 98 t 34.240063189343 m 2 ce 97 msg 72
+DM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n ACK m 2 pe 98
+DM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n DATA m 2 pe 95
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 95
 CM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.118371853956 am 2 at 63.118371853956 pe 131
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.118371853956 am 2 at 63.118371853956 pe 131
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.240063189343 am 2 at 34.402199678789 pe 98
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.240063189343 am 2 at 34.402199678789 pe 98
 
-E # 132 t 62.218371853956 m 3 ce 131 msg 72
-DM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA m 3 pe 132
-- INFO: Message is lost
-
-E # 133 t 63.118371853956 m 2 ce 131 msg 0
-BS id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA m 2 pe 131
+E # 99 t 34.402199678789 m 2 ce 98 msg 0
+BS id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA m 2 pe 98
 SH sm 2 sg 3 pd 0.1
-ES id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA sm 2 sg 3 st 63.118371853956 am 3 ag 0 at 63.218371853956 pe 133
-CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n DATA m 2 pe -1 cid 73
+ES id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA sm 2 sg 3 st 34.402199678789 am 3 ag 0 at 34.502199678789 pe 99
 CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 63.118371853956 am 2 at 64.118371853956 pe 133
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 63.118371853956 am 2 at 64.118371853956 pe 133
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.402199678789 am 2 at 35.402199678789 pe 99
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.402199678789 am 2 at 35.402199678789 pe 99
 
-E # 134 t 63.218371853956 m 3 ce 133 msg 73
-DM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA m 3 pe 134
-- INFO: Message is lost
+E # 100 t 34.502199678789 m 3 ce 99 msg 73
+DM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n DATA m 3 pe 100
+CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 34.502199678789 am 3 at 34.527343871996 pe 100
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 34.502199678789 am 3 at 34.527343871996 pe 100
 
-E # 135 t 64.118371853956 m 2 ce 133 msg 0
-BS id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA m 2 pe 133
-SH sm 2 sg 3 pd 0.1
-ES id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA sm 2 sg 3 st 64.118371853956 am 3 ag 0 at 64.218371853956 pe 135
-CL id 75 tid 74 eid 75 etid 74 c omnetpp::cMessage n DATA m 2 pe -1 cid 74
-CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 64.118371853956 am 2 at 65.118371853956 pe 135
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 64.118371853956 am 2 at 65.118371853956 pe 135
-- INFO: Timeout is over, sending message
+E # 101 t 34.527343871996 m 3 ce 100 msg 2
+BS id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n ACK m 3 pe 100
+SH sm 3 sg 3 pd 0.1
+ES id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n ACK sm 3 sg 3 st 34.527343871996 am 2 ag 0 at 34.627343871996 pe 101
 
-E # 136 t 64.218371853956 m 3 ce 135 msg 74
-DM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA m 3 pe 136
-- INFO: Message is lost
-
-E # 137 t 65.118371853956 m 2 ce 135 msg 0
-BS id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n DATA m 2 pe 135
-SH sm 2 sg 3 pd 0.1
-ES id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n DATA sm 2 sg 3 st 65.118371853956 am 3 ag 0 at 65.218371853956 pe 137
-CL id 76 tid 75 eid 76 etid 75 c omnetpp::cMessage n DATA m 2 pe -1 cid 75
+E # 102 t 34.627343871996 m 2 ce 101 msg 75
+DM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n ACK m 2 pe 102
+DM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA m 2 pe 99
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 99
 CM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 65.118371853956 am 2 at 66.118371853956 pe 137
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 65.118371853956 am 2 at 66.118371853956 pe 137
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.627343871996 am 2 at 35.586891849364 pe 102
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 34.627343871996 am 2 at 35.586891849364 pe 102
 
-E # 138 t 65.218371853956 m 3 ce 137 msg 75
-DM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n DATA m 3 pe 138
-- INFO: Message is lost
-
-E # 139 t 66.118371853956 m 2 ce 137 msg 0
-BS id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA m 2 pe 137
+E # 103 t 35.586891849364 m 2 ce 102 msg 0
+BS id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA m 2 pe 102
 SH sm 2 sg 3 pd 0.1
-ES id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA sm 2 sg 3 st 66.118371853956 am 3 ag 0 at 66.218371853956 pe 139
-CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n DATA m 2 pe -1 cid 76
+ES id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA sm 2 sg 3 st 35.586891849364 am 3 ag 0 at 35.686891849364 pe 103
 CM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.118371853956 am 2 at 67.118371853956 pe 139
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.118371853956 am 2 at 67.118371853956 pe 139
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 35.586891849364 am 2 at 36.586891849364 pe 103
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 35.586891849364 am 2 at 36.586891849364 pe 103
 
-E # 140 t 66.218371853956 m 3 ce 139 msg 76
-DM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA m 3 pe 140
-- INFO: Message is lost
+E # 104 t 35.686891849364 m 3 ce 103 msg 76
+DM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n DATA m 3 pe 104
+CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 35.686891849364 am 3 at 35.974683351492 pe 104
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 35.686891849364 am 3 at 35.974683351492 pe 104
 
-E # 141 t 67.118371853956 m 2 ce 139 msg 0
-BS id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n DATA m 2 pe 139
-SH sm 2 sg 3 pd 0.1
-ES id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n DATA sm 2 sg 3 st 67.118371853956 am 3 ag 0 at 67.218371853956 pe 141
-CL id 78 tid 77 eid 78 etid 77 c omnetpp::cMessage n DATA m 2 pe -1 cid 77
-CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 67.118371853956 am 2 at 68.118371853956 pe 141
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 67.118371853956 am 2 at 68.118371853956 pe 141
-- INFO: Timeout is over, sending message
+E # 105 t 35.974683351492 m 3 ce 104 msg 2
+BS id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n ACK m 3 pe 104
+SH sm 3 sg 3 pd 0.1
+ES id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n ACK sm 3 sg 3 st 35.974683351492 am 2 ag 0 at 36.074683351492 pe 105
 
-E # 142 t 67.218371853956 m 3 ce 141 msg 77
-DM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n DATA m 3 pe 142
-- INFO: Message is lost
-
-E # 143 t 68.118371853956 m 2 ce 141 msg 0
-BS id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n DATA m 2 pe 141
-SH sm 2 sg 3 pd 0.1
-ES id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n DATA sm 2 sg 3 st 68.118371853956 am 3 ag 0 at 68.218371853956 pe 143
-CL id 79 tid 78 eid 79 etid 78 c omnetpp::cMessage n DATA m 2 pe -1 cid 78
+E # 106 t 36.074683351492 m 2 ce 105 msg 78
+DM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n ACK m 2 pe 106
+DM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n DATA m 2 pe 103
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 103
 CM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 68.118371853956 am 2 at 69.118371853956 pe 143
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 68.118371853956 am 2 at 69.118371853956 pe 143
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 36.074683351492 am 2 at 38.403596725706 pe 106
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 36.074683351492 am 2 at 38.403596725706 pe 106
 
-E # 144 t 68.218371853956 m 3 ce 143 msg 78
-DM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n DATA m 3 pe 144
-- INFO: Message is lost
-
-E # 145 t 69.118371853956 m 2 ce 143 msg 0
-BS id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA m 2 pe 143
+E # 107 t 38.403596725706 m 2 ce 106 msg 0
+BS id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA m 2 pe 106
 SH sm 2 sg 3 pd 0.1
-ES id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA sm 2 sg 3 st 69.118371853956 am 3 ag 0 at 69.218371853956 pe 145
-CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n DATA m 2 pe -1 cid 79
+ES id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA sm 2 sg 3 st 38.403596725706 am 3 ag 0 at 38.503596725706 pe 107
 CM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 69.118371853956 am 2 at 70.118371853956 pe 145
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 69.118371853956 am 2 at 70.118371853956 pe 145
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.403596725706 am 2 at 39.403596725706 pe 107
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.403596725706 am 2 at 39.403596725706 pe 107
 
-E # 146 t 69.218371853956 m 3 ce 145 msg 79
-DM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA m 3 pe 146
-- INFO: Message is lost
+E # 108 t 38.503596725706 m 3 ce 107 msg 79
+DM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n DATA m 3 pe 108
+CM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 38.503596725706 am 3 at 38.563371333388 pe 108
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 38.503596725706 am 3 at 38.563371333388 pe 108
 
-E # 147 t 70.118371853956 m 2 ce 145 msg 0
-BS id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n DATA m 2 pe 145
-SH sm 2 sg 3 pd 0.1
-ES id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n DATA sm 2 sg 3 st 70.118371853956 am 3 ag 0 at 70.218371853956 pe 147
-CL id 81 tid 80 eid 81 etid 80 c omnetpp::cMessage n DATA m 2 pe -1 cid 80
-CM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 70.118371853956 am 2 at 71.118371853956 pe 147
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 70.118371853956 am 2 at 71.118371853956 pe 147
-- INFO: Timeout is over, sending message
+E # 109 t 38.563371333388 m 3 ce 108 msg 2
+BS id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n ACK m 3 pe 108
+SH sm 3 sg 3 pd 0.1
+ES id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n ACK sm 3 sg 3 st 38.563371333388 am 2 ag 0 at 38.663371333388 pe 109
 
-E # 148 t 70.218371853956 m 3 ce 147 msg 80
-DM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n DATA m 3 pe 148
-- INFO: Message is lost
-
-E # 149 t 71.118371853956 m 2 ce 147 msg 0
-BS id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n DATA m 2 pe 147
-SH sm 2 sg 3 pd 0.1
-ES id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n DATA sm 2 sg 3 st 71.118371853956 am 3 ag 0 at 71.218371853956 pe 149
-CL id 82 tid 81 eid 82 etid 81 c omnetpp::cMessage n DATA m 2 pe -1 cid 81
+E # 110 t 38.663371333388 m 2 ce 109 msg 81
+DM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n ACK m 2 pe 110
+DM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n DATA m 2 pe 107
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 107
 CM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.118371853956 am 2 at 72.118371853956 pe 149
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.118371853956 am 2 at 72.118371853956 pe 149
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.663371333388 am 2 at 39.108889828439 pe 110
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 38.663371333388 am 2 at 39.108889828439 pe 110
 
-E # 150 t 71.218371853956 m 3 ce 149 msg 81
-DM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n DATA m 3 pe 150
-- INFO: Message is lost
-
-E # 151 t 72.118371853956 m 2 ce 149 msg 0
-BS id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA m 2 pe 149
+E # 111 t 39.108889828439 m 2 ce 110 msg 0
+BS id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA m 2 pe 110
 SH sm 2 sg 3 pd 0.1
-ES id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA sm 2 sg 3 st 72.118371853956 am 3 ag 0 at 72.218371853956 pe 151
-CL id 83 tid 82 eid 83 etid 82 c omnetpp::cMessage n DATA m 2 pe -1 cid 82
+ES id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA sm 2 sg 3 st 39.108889828439 am 3 ag 0 at 39.208889828439 pe 111
 CM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 72.118371853956 am 2 at 73.118371853956 pe 151
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 72.118371853956 am 2 at 73.118371853956 pe 151
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.108889828439 am 2 at 40.108889828439 pe 111
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.108889828439 am 2 at 40.108889828439 pe 111
 
-E # 152 t 72.218371853956 m 3 ce 151 msg 82
-DM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA m 3 pe 152
+E # 112 t 39.208889828439 m 3 ce 111 msg 82
+DM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n DATA m 3 pe 112
 CM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 72.218371853956 am 3 at 72.451263191377 pe 152
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 72.218371853956 am 3 at 72.451263191377 pe 152
-- INFO: Message arrived. Sending ACK
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 39.208889828439 am 3 at 39.266343069113 pe 112
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 39.208889828439 am 3 at 39.266343069113 pe 112
 
-E # 153 t 72.451263191377 m 3 ce 152 msg 2
-BS id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK m 3 pe 152
+E # 113 t 39.266343069113 m 3 ce 112 msg 2
+BS id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK m 3 pe 112
 SH sm 3 sg 3 pd 0.1
-ES id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK sm 3 sg 3 st 72.451263191377 am 2 ag 0 at 72.551263191377 pe 153
-CL id 85 tid 84 eid 85 etid 84 c omnetpp::cMessage n ACK m 3 pe -1 cid 84
-- INFO: Timeout is over, sending message
+ES id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK sm 3 sg 3 st 39.266343069113 am 2 ag 0 at 39.366343069113 pe 113
 
-E # 154 t 72.551263191377 m 2 ce 153 msg 84
-DM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK m 2 pe 154
-DM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n DATA m 2 pe 151
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 151
+E # 114 t 39.366343069113 m 2 ce 113 msg 84
+DM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n ACK m 2 pe 114
+DM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n DATA m 2 pe 111
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 111
 CM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 72.551263191377 am 2 at 73.551263191377 pe 154
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 72.551263191377 am 2 at 73.551263191377 pe 154
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.366343069113 am 2 at 41.692694130807 pe 114
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 39.366343069113 am 2 at 41.692694130807 pe 114
 
-E # 155 t 73.551263191377 m 2 ce 154 msg 0
-BS id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA m 2 pe 154
+E # 115 t 41.692694130807 m 2 ce 114 msg 0
+BS id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA m 2 pe 114
 SH sm 2 sg 3 pd 0.1
-ES id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA sm 2 sg 3 st 73.551263191377 am 3 ag 0 at 73.651263191377 pe 155
-CL id 86 tid 85 eid 86 etid 85 c omnetpp::cMessage n DATA m 2 pe -1 cid 85
+ES id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA sm 2 sg 3 st 41.692694130807 am 3 ag 0 at 41.792694130807 pe 115
 CM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 73.551263191377 am 2 at 74.551263191377 pe 155
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 73.551263191377 am 2 at 74.551263191377 pe 155
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.692694130807 am 2 at 42.692694130807 pe 115
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.692694130807 am 2 at 42.692694130807 pe 115
 
-E # 156 t 73.651263191377 m 3 ce 155 msg 85
-DM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA m 3 pe 156
-- INFO: Message is lost
+E # 116 t 41.792694130807 m 3 ce 115 msg 85
+DM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n DATA m 3 pe 116
+CM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 41.792694130807 am 3 at 41.803150253385 pe 116
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 41.792694130807 am 3 at 41.803150253385 pe 116
 
-E # 157 t 74.551263191377 m 2 ce 155 msg 0
-BS id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n DATA m 2 pe 155
-SH sm 2 sg 3 pd 0.1
-ES id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n DATA sm 2 sg 3 st 74.551263191377 am 3 ag 0 at 74.651263191377 pe 157
-CL id 87 tid 86 eid 87 etid 86 c omnetpp::cMessage n DATA m 2 pe -1 cid 86
-CM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 74.551263191377 am 2 at 75.551263191377 pe 157
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 74.551263191377 am 2 at 75.551263191377 pe 157
-- INFO: Timeout is over, sending message
+E # 117 t 41.803150253385 m 3 ce 116 msg 2
+BS id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n ACK m 3 pe 116
+SH sm 3 sg 3 pd 0.1
+ES id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n ACK sm 3 sg 3 st 41.803150253385 am 2 ag 0 at 41.903150253385 pe 117
 
-E # 158 t 74.651263191377 m 3 ce 157 msg 86
-DM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n DATA m 3 pe 158
-- INFO: Message is lost
-
-E # 159 t 75.551263191377 m 2 ce 157 msg 0
-BS id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n DATA m 2 pe 157
-SH sm 2 sg 3 pd 0.1
-ES id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n DATA sm 2 sg 3 st 75.551263191377 am 3 ag 0 at 75.651263191377 pe 159
-CL id 88 tid 87 eid 88 etid 87 c omnetpp::cMessage n DATA m 2 pe -1 cid 87
+E # 118 t 41.903150253385 m 2 ce 117 msg 87
+DM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n ACK m 2 pe 118
+DM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n DATA m 2 pe 115
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 115
 CM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 75.551263191377 am 2 at 76.551263191377 pe 159
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 75.551263191377 am 2 at 76.551263191377 pe 159
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.903150253385 am 2 at 41.965265543851 pe 118
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.903150253385 am 2 at 41.965265543851 pe 118
 
-E # 160 t 75.651263191377 m 3 ce 159 msg 87
-DM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n DATA m 3 pe 160
-- INFO: Message is lost
-
-E # 161 t 76.551263191377 m 2 ce 159 msg 0
-BS id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA m 2 pe 159
+E # 119 t 41.965265543851 m 2 ce 118 msg 0
+BS id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA m 2 pe 118
 SH sm 2 sg 3 pd 0.1
-ES id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA sm 2 sg 3 st 76.551263191377 am 3 ag 0 at 76.651263191377 pe 161
-CL id 89 tid 88 eid 89 etid 88 c omnetpp::cMessage n DATA m 2 pe -1 cid 88
+ES id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA sm 2 sg 3 st 41.965265543851 am 3 ag 0 at 42.065265543851 pe 119
 CM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.551263191377 am 2 at 77.551263191377 pe 161
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.551263191377 am 2 at 77.551263191377 pe 161
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.965265543851 am 2 at 42.965265543851 pe 119
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 41.965265543851 am 2 at 42.965265543851 pe 119
 
-E # 162 t 76.651263191377 m 3 ce 161 msg 88
-DM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA m 3 pe 162
-- INFO: Message is lost
+E # 120 t 42.065265543851 m 3 ce 119 msg 88
+DM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n DATA m 3 pe 120
+CM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 42.065265543851 am 3 at 42.175156790606 pe 120
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 42.065265543851 am 3 at 42.175156790606 pe 120
 
-E # 163 t 77.551263191377 m 2 ce 161 msg 0
-BS id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n DATA m 2 pe 161
-SH sm 2 sg 3 pd 0.1
-ES id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n DATA sm 2 sg 3 st 77.551263191377 am 3 ag 0 at 77.651263191377 pe 163
-CL id 90 tid 89 eid 90 etid 89 c omnetpp::cMessage n DATA m 2 pe -1 cid 89
-CM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 77.551263191377 am 2 at 78.551263191377 pe 163
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 77.551263191377 am 2 at 78.551263191377 pe 163
-- INFO: Timeout is over, sending message
+E # 121 t 42.175156790606 m 3 ce 120 msg 2
+BS id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n ACK m 3 pe 120
+SH sm 3 sg 3 pd 0.1
+ES id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n ACK sm 3 sg 3 st 42.175156790606 am 2 ag 0 at 42.275156790606 pe 121
 
-E # 164 t 77.651263191377 m 3 ce 163 msg 89
-DM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n DATA m 3 pe 164
-- INFO: Message is lost
-
-E # 165 t 78.551263191377 m 2 ce 163 msg 0
-BS id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n DATA m 2 pe 163
-SH sm 2 sg 3 pd 0.1
-ES id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n DATA sm 2 sg 3 st 78.551263191377 am 3 ag 0 at 78.651263191377 pe 165
-CL id 91 tid 90 eid 91 etid 90 c omnetpp::cMessage n DATA m 2 pe -1 cid 90
+E # 122 t 42.275156790606 m 2 ce 121 msg 90
+DM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n ACK m 2 pe 122
+DM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n DATA m 2 pe 119
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 119
 CM id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.551263191377 am 2 at 79.551263191377 pe 165
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.551263191377 am 2 at 79.551263191377 pe 165
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 42.275156790606 am 2 at 43.333990922094 pe 122
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 42.275156790606 am 2 at 43.333990922094 pe 122
 
-E # 166 t 78.651263191377 m 3 ce 165 msg 90
-DM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n DATA m 3 pe 166
-CM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 78.651263191377 am 3 at 78.770873971323 pe 166
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 78.651263191377 am 3 at 78.770873971323 pe 166
-- INFO: Message arrived. Sending ACK
-
-E # 167 t 78.770873971323 m 3 ce 166 msg 2
-BS id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n ACK m 3 pe 166
-SH sm 3 sg 3 pd 0.1
-ES id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n ACK sm 3 sg 3 st 78.770873971323 am 2 ag 0 at 78.870873971323 pe 167
-CL id 93 tid 92 eid 93 etid 92 c omnetpp::cMessage n ACK m 3 pe -1 cid 92
-- INFO: Timeout is over, sending message
-
-E # 168 t 78.870873971323 m 2 ce 167 msg 92
-DM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n ACK m 2 pe 168
-DM id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n DATA m 2 pe 165
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 165
-CM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.870873971323 am 2 at 79.870873971323 pe 168
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.870873971323 am 2 at 79.870873971323 pe 168
-- INFO: Acknowledgement arrived
-
-E # 169 t 79.870873971323 m 2 ce 168 msg 0
-BS id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n DATA m 2 pe 168
+E # 123 t 43.333990922094 m 2 ce 122 msg 0
+BS id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n DATA m 2 pe 122
 SH sm 2 sg 3 pd 0.1
-ES id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n DATA sm 2 sg 3 st 79.870873971323 am 3 ag 0 at 79.970873971323 pe 169
-CL id 94 tid 93 eid 94 etid 93 c omnetpp::cMessage n DATA m 2 pe -1 cid 93
+ES id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n DATA sm 2 sg 3 st 43.333990922094 am 3 ag 0 at 43.433990922094 pe 123
+CM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.333990922094 am 2 at 44.333990922094 pe 123
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.333990922094 am 2 at 44.333990922094 pe 123
+
+E # 124 t 43.433990922094 m 3 ce 123 msg 91
+DM id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n DATA m 3 pe 124
+CM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 43.433990922094 am 3 at 43.452733528696 pe 124
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 43.433990922094 am 3 at 43.452733528696 pe 124
+
+E # 125 t 43.452733528696 m 3 ce 124 msg 2
+BS id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n ACK m 3 pe 124
+SH sm 3 sg 3 pd 0.1
+ES id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n ACK sm 3 sg 3 st 43.452733528696 am 2 ag 0 at 43.552733528696 pe 125
+
+E # 126 t 43.552733528696 m 2 ce 125 msg 93
+DM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n ACK m 2 pe 126
+DM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n DATA m 2 pe 123
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 123
 CM id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 79.870873971323 am 2 at 80.870873971323 pe 169
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 79.870873971323 am 2 at 80.870873971323 pe 169
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.552733528696 am 2 at 43.788940234779 pe 126
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.552733528696 am 2 at 43.788940234779 pe 126
 
-E # 170 t 79.970873971323 m 3 ce 169 msg 93
-DM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n DATA m 3 pe 170
-- INFO: Message is lost
-
-E # 171 t 80.870873971323 m 2 ce 169 msg 0
-BS id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA m 2 pe 169
+E # 127 t 43.788940234779 m 2 ce 126 msg 0
+BS id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA m 2 pe 126
 SH sm 2 sg 3 pd 0.1
-ES id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA sm 2 sg 3 st 80.870873971323 am 3 ag 0 at 80.970873971323 pe 171
-CL id 95 tid 94 eid 95 etid 94 c omnetpp::cMessage n DATA m 2 pe -1 cid 94
+ES id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA sm 2 sg 3 st 43.788940234779 am 3 ag 0 at 43.888940234779 pe 127
 CM id 95 tid 95 eid 95 etid 95 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.870873971323 am 2 at 81.870873971323 pe 171
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.870873971323 am 2 at 81.870873971323 pe 171
-- INFO: Timeout is over, sending message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.788940234779 am 2 at 44.788940234779 pe 127
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 43.788940234779 am 2 at 44.788940234779 pe 127
 
-E # 172 t 80.970873971323 m 3 ce 171 msg 94
-DM id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA m 3 pe 172
-- INFO: Message is lost
+E # 128 t 43.888940234779 m 3 ce 127 msg 94
+DM id 94 tid 94 eid 94 etid 94 c omnetpp::cMessage n DATA m 3 pe 128
+CM id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 43.888940234779 am 3 at 43.902743103622 pe 128
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 43.888940234779 am 3 at 43.902743103622 pe 128
 
-E # 173 t 81.870873971323 m 2 ce 171 msg 0
-BS id 95 tid 95 eid 95 etid 95 c omnetpp::cMessage n DATA m 2 pe 171
-SH sm 2 sg 3 pd 0.1
-ES id 95 tid 95 eid 95 etid 95 c omnetpp::cMessage n DATA sm 2 sg 3 st 81.870873971323 am 3 ag 0 at 81.970873971323 pe 173
-CL id 96 tid 95 eid 96 etid 95 c omnetpp::cMessage n DATA m 2 pe -1 cid 95
-CM id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 81.870873971323 am 2 at 82.870873971323 pe 173
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 81.870873971323 am 2 at 82.870873971323 pe 173
-- INFO: Timeout is over, sending message
-
-E # 174 t 81.970873971323 m 3 ce 173 msg 95
-DM id 95 tid 95 eid 95 etid 95 c omnetpp::cMessage n DATA m 3 pe 174
-CM id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 81.970873971323 am 3 at 82.080765218078 pe 174
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 81.970873971323 am 3 at 82.080765218078 pe 174
-- INFO: Message arrived. Sending ACK
-
-E # 175 t 82.080765218078 m 3 ce 174 msg 2
-BS id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n ACK m 3 pe 174
+E # 129 t 43.902743103622 m 3 ce 128 msg 2
+BS id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n ACK m 3 pe 128
 SH sm 3 sg 3 pd 0.1
-ES id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n ACK sm 3 sg 3 st 82.080765218078 am 2 ag 0 at 82.180765218078 pe 175
-CL id 98 tid 97 eid 98 etid 97 c omnetpp::cMessage n ACK m 3 pe -1 cid 97
-- INFO: Timeout is over, sending message
+ES id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n ACK sm 3 sg 3 st 43.902743103622 am 2 ag 0 at 44.002743103622 pe 129
 
-E # 176 t 82.180765218078 m 2 ce 175 msg 97
-DM id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n ACK m 2 pe 176
-DM id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n DATA m 2 pe 173
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 173
+E # 130 t 44.002743103622 m 2 ce 129 msg 96
+DM id 96 tid 96 eid 96 etid 96 c omnetpp::cMessage n ACK m 2 pe 130
+DM id 95 tid 95 eid 95 etid 95 c omnetpp::cMessage n DATA m 2 pe 127
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 127
+CM id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 44.002743103622 am 2 at 45.391785793413 pe 130
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 44.002743103622 am 2 at 45.391785793413 pe 130
+
+E # 131 t 45.391785793413 m 2 ce 130 msg 0
+BS id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n DATA m 2 pe 130
+SH sm 2 sg 3 pd 0.1
+ES id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n DATA sm 2 sg 3 st 45.391785793413 am 3 ag 0 at 45.491785793413 pe 131
 CM id 98 tid 98 eid 98 etid 98 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 82.180765218078 am 2 at 83.180765218078 pe 176
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 82.180765218078 am 2 at 83.180765218078 pe 176
-- INFO: Acknowledgement arrived
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.391785793413 am 2 at 46.391785793413 pe 131
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.391785793413 am 2 at 46.391785793413 pe 131
 
-E # 177 t 83.180765218078 m 2 ce 176 msg 0
-BS id 98 tid 98 eid 98 etid 98 c omnetpp::cMessage n DATA m 2 pe 176
-SH sm 2 sg 3 pd 0.1
-ES id 98 tid 98 eid 98 etid 98 c omnetpp::cMessage n DATA sm 2 sg 3 st 83.180765218078 am 3 ag 0 at 83.280765218078 pe 177
-CL id 99 tid 98 eid 99 etid 98 c omnetpp::cMessage n DATA m 2 pe -1 cid 98
-CM id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 83.180765218078 am 2 at 84.180765218078 pe 177
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 83.180765218078 am 2 at 84.180765218078 pe 177
-- INFO: Timeout is over, sending message
+E # 132 t 45.491785793413 m 3 ce 131 msg 97
+DM id 97 tid 97 eid 97 etid 97 c omnetpp::cMessage n DATA m 3 pe 132
+CM id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 45.491785793413 am 3 at 45.58539194939 pe 132
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 45.491785793413 am 3 at 45.58539194939 pe 132
 
-E # 178 t 83.280765218078 m 3 ce 177 msg 98
-DM id 98 tid 98 eid 98 etid 98 c omnetpp::cMessage n DATA m 3 pe 178
-- INFO: Message is lost
-
-E # 179 t 84.180765218078 m 2 ce 177 msg 0
-BS id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n DATA m 2 pe 177
-SH sm 2 sg 3 pd 0.1
-ES id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n DATA sm 2 sg 3 st 84.180765218078 am 3 ag 0 at 84.280765218078 pe 179
-CL id 100 tid 99 eid 100 etid 99 c omnetpp::cMessage n DATA m 2 pe -1 cid 99
-CM id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 84.180765218078 am 2 at 85.180765218078 pe 179
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 84.180765218078 am 2 at 85.180765218078 pe 179
-- INFO: Timeout is over, sending message
-
-E # 180 t 84.280765218078 m 3 ce 179 msg 99
-DM id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n DATA m 3 pe 180
-- INFO: Message is lost
-
-E # 181 t 85.180765218078 m 2 ce 179 msg 0
-BS id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA m 2 pe 179
-SH sm 2 sg 3 pd 0.1
-ES id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA sm 2 sg 3 st 85.180765218078 am 3 ag 0 at 85.280765218078 pe 181
-CL id 101 tid 100 eid 101 etid 100 c omnetpp::cMessage n DATA m 2 pe -1 cid 100
-CM id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.180765218078 am 2 at 86.180765218078 pe 181
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.180765218078 am 2 at 86.180765218078 pe 181
-- INFO: Timeout is over, sending message
-
-E # 182 t 85.280765218078 m 3 ce 181 msg 100
-DM id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA m 3 pe 182
-- INFO: Message is lost
-
-E # 183 t 86.180765218078 m 2 ce 181 msg 0
-BS id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA m 2 pe 181
-SH sm 2 sg 3 pd 0.1
-ES id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA sm 2 sg 3 st 86.180765218078 am 3 ag 0 at 86.280765218078 pe 183
-CL id 102 tid 101 eid 102 etid 101 c omnetpp::cMessage n DATA m 2 pe -1 cid 101
-CM id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 86.180765218078 am 2 at 87.180765218078 pe 183
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 86.180765218078 am 2 at 87.180765218078 pe 183
-- INFO: Timeout is over, sending message
-
-E # 184 t 86.280765218078 m 3 ce 183 msg 101
-DM id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA m 3 pe 184
-- INFO: Message is lost
-
-E # 185 t 87.180765218078 m 2 ce 183 msg 0
-BS id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n DATA m 2 pe 183
-SH sm 2 sg 3 pd 0.1
-ES id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n DATA sm 2 sg 3 st 87.180765218078 am 3 ag 0 at 87.280765218078 pe 185
-CL id 103 tid 102 eid 103 etid 102 c omnetpp::cMessage n DATA m 2 pe -1 cid 102
-CM id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.180765218078 am 2 at 88.180765218078 pe 185
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.180765218078 am 2 at 88.180765218078 pe 185
-- INFO: Timeout is over, sending message
-
-E # 186 t 87.280765218078 m 3 ce 185 msg 102
-DM id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n DATA m 3 pe 186
-- INFO: Message is lost
-
-E # 187 t 88.180765218078 m 2 ce 185 msg 0
-BS id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA m 2 pe 185
-SH sm 2 sg 3 pd 0.1
-ES id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA sm 2 sg 3 st 88.180765218078 am 3 ag 0 at 88.280765218078 pe 187
-CL id 104 tid 103 eid 104 etid 103 c omnetpp::cMessage n DATA m 2 pe -1 cid 103
-CM id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 88.180765218078 am 2 at 89.180765218078 pe 187
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 88.180765218078 am 2 at 89.180765218078 pe 187
-- INFO: Timeout is over, sending message
-
-E # 188 t 88.280765218078 m 3 ce 187 msg 103
-DM id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA m 3 pe 188
-- INFO: Message is lost
-
-E # 189 t 89.180765218078 m 2 ce 187 msg 0
-BS id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA m 2 pe 187
-SH sm 2 sg 3 pd 0.1
-ES id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA sm 2 sg 3 st 89.180765218078 am 3 ag 0 at 89.280765218078 pe 189
-CL id 105 tid 104 eid 105 etid 104 c omnetpp::cMessage n DATA m 2 pe -1 cid 104
-CM id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.180765218078 am 2 at 90.180765218078 pe 189
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.180765218078 am 2 at 90.180765218078 pe 189
-- INFO: Timeout is over, sending message
-
-E # 190 t 89.280765218078 m 3 ce 189 msg 104
-DM id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA m 3 pe 190
-- INFO: Message is lost
-
-E # 191 t 90.180765218078 m 2 ce 189 msg 0
-BS id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n DATA m 2 pe 189
-SH sm 2 sg 3 pd 0.1
-ES id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n DATA sm 2 sg 3 st 90.180765218078 am 3 ag 0 at 90.280765218078 pe 191
-CL id 106 tid 105 eid 106 etid 105 c omnetpp::cMessage n DATA m 2 pe -1 cid 105
-CM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 90.180765218078 am 2 at 91.180765218078 pe 191
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 90.180765218078 am 2 at 91.180765218078 pe 191
-- INFO: Timeout is over, sending message
-
-E # 192 t 90.280765218078 m 3 ce 191 msg 105
-DM id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n DATA m 3 pe 192
-- INFO: Message is lost
-
-E # 193 t 91.180765218078 m 2 ce 191 msg 0
-BS id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA m 2 pe 191
-SH sm 2 sg 3 pd 0.1
-ES id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA sm 2 sg 3 st 91.180765218078 am 3 ag 0 at 91.280765218078 pe 193
-CL id 107 tid 106 eid 107 etid 106 c omnetpp::cMessage n DATA m 2 pe -1 cid 106
-CM id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.180765218078 am 2 at 92.180765218078 pe 193
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.180765218078 am 2 at 92.180765218078 pe 193
-- INFO: Timeout is over, sending message
-
-E # 194 t 91.280765218078 m 3 ce 193 msg 106
-DM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA m 3 pe 194
-- INFO: Message is lost
-
-E # 195 t 92.180765218078 m 2 ce 193 msg 0
-BS id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA m 2 pe 193
-SH sm 2 sg 3 pd 0.1
-ES id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA sm 2 sg 3 st 92.180765218078 am 3 ag 0 at 92.280765218078 pe 195
-CL id 108 tid 107 eid 108 etid 107 c omnetpp::cMessage n DATA m 2 pe -1 cid 107
-CM id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 92.180765218078 am 2 at 93.180765218078 pe 195
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 92.180765218078 am 2 at 93.180765218078 pe 195
-- INFO: Timeout is over, sending message
-
-E # 196 t 92.280765218078 m 3 ce 195 msg 107
-DM id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA m 3 pe 196
-- INFO: Message is lost
-
-E # 197 t 93.180765218078 m 2 ce 195 msg 0
-BS id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n DATA m 2 pe 195
-SH sm 2 sg 3 pd 0.1
-ES id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n DATA sm 2 sg 3 st 93.180765218078 am 3 ag 0 at 93.280765218078 pe 197
-CL id 109 tid 108 eid 109 etid 108 c omnetpp::cMessage n DATA m 2 pe -1 cid 108
-CM id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 93.180765218078 am 2 at 94.180765218078 pe 197
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 93.180765218078 am 2 at 94.180765218078 pe 197
-- INFO: Timeout is over, sending message
-
-E # 198 t 93.280765218078 m 3 ce 197 msg 108
-DM id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n DATA m 3 pe 198
-- INFO: Message is lost
-
-E # 199 t 94.180765218078 m 2 ce 197 msg 0
-BS id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA m 2 pe 197
-SH sm 2 sg 3 pd 0.1
-ES id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA sm 2 sg 3 st 94.180765218078 am 3 ag 0 at 94.280765218078 pe 199
-CL id 110 tid 109 eid 110 etid 109 c omnetpp::cMessage n DATA m 2 pe -1 cid 109
-CM id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 94.180765218078 am 2 at 95.180765218078 pe 199
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 94.180765218078 am 2 at 95.180765218078 pe 199
-- INFO: Timeout is over, sending message
-
-E # 200 t 94.280765218078 m 3 ce 199 msg 109
-DM id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA m 3 pe 200
-- INFO: Message is lost
-
-E # 201 t 95.180765218078 m 2 ce 199 msg 0
-BS id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA m 2 pe 199
-SH sm 2 sg 3 pd 0.1
-ES id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA sm 2 sg 3 st 95.180765218078 am 3 ag 0 at 95.280765218078 pe 201
-CL id 111 tid 110 eid 111 etid 110 c omnetpp::cMessage n DATA m 2 pe -1 cid 110
-CM id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.180765218078 am 2 at 96.180765218078 pe 201
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.180765218078 am 2 at 96.180765218078 pe 201
-- INFO: Timeout is over, sending message
-
-E # 202 t 95.280765218078 m 3 ce 201 msg 110
-DM id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA m 3 pe 202
-- INFO: Message is lost
-
-E # 203 t 96.180765218078 m 2 ce 201 msg 0
-BS id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n DATA m 2 pe 201
-SH sm 2 sg 3 pd 0.1
-ES id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n DATA sm 2 sg 3 st 96.180765218078 am 3 ag 0 at 96.280765218078 pe 203
-CL id 112 tid 111 eid 112 etid 111 c omnetpp::cMessage n DATA m 2 pe -1 cid 111
-CM id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.180765218078 am 2 at 97.180765218078 pe 203
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.180765218078 am 2 at 97.180765218078 pe 203
-- INFO: Timeout is over, sending message
-
-E # 204 t 96.280765218078 m 3 ce 203 msg 111
-DM id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n DATA m 3 pe 204
-- INFO: Message is lost
-
-E # 205 t 97.180765218078 m 2 ce 203 msg 0
-BS id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA m 2 pe 203
-SH sm 2 sg 3 pd 0.1
-ES id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA sm 2 sg 3 st 97.180765218078 am 3 ag 0 at 97.280765218078 pe 205
-CL id 113 tid 112 eid 113 etid 112 c omnetpp::cMessage n DATA m 2 pe -1 cid 112
-CM id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.180765218078 am 2 at 98.180765218078 pe 205
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.180765218078 am 2 at 98.180765218078 pe 205
-- INFO: Timeout is over, sending message
-
-E # 206 t 97.280765218078 m 3 ce 205 msg 112
-DM id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA m 3 pe 206
-- INFO: Message is lost
-
-E # 207 t 98.180765218078 m 2 ce 205 msg 0
-BS id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA m 2 pe 205
-SH sm 2 sg 3 pd 0.1
-ES id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA sm 2 sg 3 st 98.180765218078 am 3 ag 0 at 98.280765218078 pe 207
-CL id 114 tid 113 eid 114 etid 113 c omnetpp::cMessage n DATA m 2 pe -1 cid 113
-CM id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.180765218078 am 2 at 99.180765218078 pe 207
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.180765218078 am 2 at 99.180765218078 pe 207
-- INFO: Timeout is over, sending message
-
-E # 208 t 98.280765218078 m 3 ce 207 msg 113
-DM id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA m 3 pe 208
-CM id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n ACK pe -1
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 98.280765218078 am 3 at 98.600059882283 pe 208
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 98.280765218078 am 3 at 98.600059882283 pe 208
-- INFO: Message arrived. Sending ACK
-
-E # 209 t 98.600059882283 m 3 ce 208 msg 2
-BS id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n ACK m 3 pe 208
+E # 133 t 45.58539194939 m 3 ce 132 msg 2
+BS id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n ACK m 3 pe 132
 SH sm 3 sg 3 pd 0.1
-ES id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n ACK sm 3 sg 3 st 98.600059882283 am 2 ag 0 at 98.700059882283 pe 209
-CL id 116 tid 115 eid 116 etid 115 c omnetpp::cMessage n ACK m 3 pe -1 cid 115
-- INFO: Timeout is over, sending message
+ES id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n ACK sm 3 sg 3 st 45.58539194939 am 2 ag 0 at 45.68539194939 pe 133
 
-E # 210 t 98.700059882283 m 2 ce 209 msg 115
-DM id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n ACK m 2 pe 210
-DM id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n DATA m 2 pe 207
-CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 207
-CM id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.700059882283 am 2 at 99.700059882283 pe 210
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.700059882283 am 2 at 99.700059882283 pe 210
-- INFO: Acknowledgement arrived
+E # 134 t 45.68539194939 m 2 ce 133 msg 99
+DM id 99 tid 99 eid 99 etid 99 c omnetpp::cMessage n ACK m 2 pe 134
+DM id 98 tid 98 eid 98 etid 98 c omnetpp::cMessage n DATA m 2 pe 131
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 131
+CM id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.68539194939 am 2 at 46.137494009615 pe 134
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 45.68539194939 am 2 at 46.137494009615 pe 134
 
-E # 211 t 99.700059882283 m 2 ce 210 msg 0
-BS id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA m 2 pe 210
+E # 135 t 46.137494009615 m 2 ce 134 msg 0
+BS id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA m 2 pe 134
 SH sm 2 sg 3 pd 0.1
-ES id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA sm 2 sg 3 st 99.700059882283 am 3 ag 0 at 99.800059882283 pe 211
-CL id 117 tid 116 eid 117 etid 116 c omnetpp::cMessage n DATA m 2 pe -1 cid 116
-CM id 117 tid 117 eid 117 etid 117 c omnetpp::cMessage n DATA pe -1
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 99.700059882283 am 2 at 100.700059882283 pe 211
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 99.700059882283 am 2 at 100.700059882283 pe 211
-- INFO: Timeout is over, sending message
+ES id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA sm 2 sg 3 st 46.137494009615 am 3 ag 0 at 46.237494009615 pe 135
+CM id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.137494009615 am 2 at 47.137494009615 pe 135
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.137494009615 am 2 at 47.137494009615 pe 135
 
-E # 212 t 99.800059882283 m 3 ce 211 msg 116
-DM id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA m 3 pe 212
-- INFO: Message is lost
+E # 136 t 46.237494009615 m 3 ce 135 msg 100
+DM id 100 tid 100 eid 100 etid 100 c omnetpp::cMessage n DATA m 3 pe 136
+CM id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 46.237494009615 am 3 at 46.321936788968 pe 136
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 46.237494009615 am 3 at 46.321936788968 pe 136
+
+E # 137 t 46.321936788968 m 3 ce 136 msg 2
+BS id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n ACK m 3 pe 136
+SH sm 3 sg 3 pd 0.1
+ES id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n ACK sm 3 sg 3 st 46.321936788968 am 2 ag 0 at 46.421936788968 pe 137
+
+E # 138 t 46.421936788968 m 2 ce 137 msg 102
+DM id 102 tid 102 eid 102 etid 102 c omnetpp::cMessage n ACK m 2 pe 138
+DM id 101 tid 101 eid 101 etid 101 c omnetpp::cMessage n DATA m 2 pe 135
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 135
+CM id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.421936788968 am 2 at 46.461119945381 pe 138
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.421936788968 am 2 at 46.461119945381 pe 138
+
+E # 139 t 46.461119945381 m 2 ce 138 msg 0
+BS id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA m 2 pe 138
+SH sm 2 sg 3 pd 0.1
+ES id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA sm 2 sg 3 st 46.461119945381 am 3 ag 0 at 46.561119945381 pe 139
+CM id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.461119945381 am 2 at 47.461119945381 pe 139
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.461119945381 am 2 at 47.461119945381 pe 139
+
+E # 140 t 46.561119945381 m 3 ce 139 msg 103
+DM id 103 tid 103 eid 103 etid 103 c omnetpp::cMessage n DATA m 3 pe 140
+CM id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 46.561119945381 am 3 at 46.661707045898 pe 140
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 46.561119945381 am 3 at 46.661707045898 pe 140
+
+E # 141 t 46.661707045898 m 3 ce 140 msg 2
+BS id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n ACK m 3 pe 140
+SH sm 3 sg 3 pd 0.1
+ES id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n ACK sm 3 sg 3 st 46.661707045898 am 2 ag 0 at 46.761707045898 pe 141
+
+E # 142 t 46.761707045898 m 2 ce 141 msg 105
+DM id 105 tid 105 eid 105 etid 105 c omnetpp::cMessage n ACK m 2 pe 142
+DM id 104 tid 104 eid 104 etid 104 c omnetpp::cMessage n DATA m 2 pe 139
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 139
+CM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.761707045898 am 2 at 51.216203892074 pe 142
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 46.761707045898 am 2 at 51.216203892074 pe 142
+
+E # 143 t 51.216203892074 m 2 ce 142 msg 0
+BS id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA m 2 pe 142
+SH sm 2 sg 3 pd 0.1
+ES id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA sm 2 sg 3 st 51.216203892074 am 3 ag 0 at 51.316203892074 pe 143
+CM id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.216203892074 am 2 at 52.216203892074 pe 143
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.216203892074 am 2 at 52.216203892074 pe 143
+
+E # 144 t 51.316203892074 m 3 ce 143 msg 106
+DM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n DATA m 3 pe 144
+CM id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 51.316203892074 am 3 at 51.32696740289 pe 144
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 51.316203892074 am 3 at 51.32696740289 pe 144
+
+E # 145 t 51.32696740289 m 3 ce 144 msg 2
+BS id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n ACK m 3 pe 144
+SH sm 3 sg 3 pd 0.1
+ES id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n ACK sm 3 sg 3 st 51.32696740289 am 2 ag 0 at 51.42696740289 pe 145
+
+E # 146 t 51.42696740289 m 2 ce 145 msg 108
+DM id 108 tid 108 eid 108 etid 108 c omnetpp::cMessage n ACK m 2 pe 146
+DM id 107 tid 107 eid 107 etid 107 c omnetpp::cMessage n DATA m 2 pe 143
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 143
+CM id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.42696740289 am 2 at 52.484793816242 pe 146
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 51.42696740289 am 2 at 52.484793816242 pe 146
+
+E # 147 t 52.484793816242 m 2 ce 146 msg 0
+BS id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA m 2 pe 146
+SH sm 2 sg 3 pd 0.1
+ES id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA sm 2 sg 3 st 52.484793816242 am 3 ag 0 at 52.584793816242 pe 147
+CM id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.484793816242 am 2 at 53.484793816242 pe 147
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.484793816242 am 2 at 53.484793816242 pe 147
+
+E # 148 t 52.584793816242 m 3 ce 147 msg 109
+DM id 109 tid 109 eid 109 etid 109 c omnetpp::cMessage n DATA m 3 pe 148
+CM id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 52.584793816242 am 3 at 52.685595740784 pe 148
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 52.584793816242 am 3 at 52.685595740784 pe 148
+
+E # 149 t 52.685595740784 m 3 ce 148 msg 2
+BS id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n ACK m 3 pe 148
+SH sm 3 sg 3 pd 0.1
+ES id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n ACK sm 3 sg 3 st 52.685595740784 am 2 ag 0 at 52.785595740784 pe 149
+
+E # 150 t 52.785595740784 m 2 ce 149 msg 111
+DM id 111 tid 111 eid 111 etid 111 c omnetpp::cMessage n ACK m 2 pe 150
+DM id 110 tid 110 eid 110 etid 110 c omnetpp::cMessage n DATA m 2 pe 147
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 147
+CM id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.785595740784 am 2 at 52.96150928621 pe 150
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.785595740784 am 2 at 52.96150928621 pe 150
+
+E # 151 t 52.96150928621 m 2 ce 150 msg 0
+BS id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA m 2 pe 150
+SH sm 2 sg 3 pd 0.1
+ES id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA sm 2 sg 3 st 52.96150928621 am 3 ag 0 at 53.06150928621 pe 151
+CM id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.96150928621 am 2 at 53.96150928621 pe 151
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 52.96150928621 am 2 at 53.96150928621 pe 151
+
+E # 152 t 53.06150928621 m 3 ce 151 msg 112
+DM id 112 tid 112 eid 112 etid 112 c omnetpp::cMessage n DATA m 3 pe 152
+CM id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 53.06150928621 am 3 at 53.167383557719 pe 152
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 53.06150928621 am 3 at 53.167383557719 pe 152
+
+E # 153 t 53.167383557719 m 3 ce 152 msg 2
+BS id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n ACK m 3 pe 152
+SH sm 3 sg 3 pd 0.1
+ES id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n ACK sm 3 sg 3 st 53.167383557719 am 2 ag 0 at 53.267383557719 pe 153
+
+E # 154 t 53.267383557719 m 2 ce 153 msg 114
+DM id 114 tid 114 eid 114 etid 114 c omnetpp::cMessage n ACK m 2 pe 154
+DM id 113 tid 113 eid 113 etid 113 c omnetpp::cMessage n DATA m 2 pe 151
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 151
+CM id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 53.267383557719 am 2 at 54.139299411345 pe 154
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 53.267383557719 am 2 at 54.139299411345 pe 154
+
+E # 155 t 54.139299411345 m 2 ce 154 msg 0
+BS id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n DATA m 2 pe 154
+SH sm 2 sg 3 pd 0.1
+ES id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n DATA sm 2 sg 3 st 54.139299411345 am 3 ag 0 at 54.239299411345 pe 155
+CM id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.139299411345 am 2 at 55.139299411345 pe 155
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.139299411345 am 2 at 55.139299411345 pe 155
+
+E # 156 t 54.239299411345 m 3 ce 155 msg 115
+DM id 115 tid 115 eid 115 etid 115 c omnetpp::cMessage n DATA m 3 pe 156
+CM id 117 tid 117 eid 117 etid 117 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 54.239299411345 am 3 at 54.292805879053 pe 156
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 54.239299411345 am 3 at 54.292805879053 pe 156
+
+E # 157 t 54.292805879053 m 3 ce 156 msg 2
+BS id 117 tid 117 eid 117 etid 117 c omnetpp::cMessage n ACK m 3 pe 156
+SH sm 3 sg 3 pd 0.1
+ES id 117 tid 117 eid 117 etid 117 c omnetpp::cMessage n ACK sm 3 sg 3 st 54.292805879053 am 2 ag 0 at 54.392805879053 pe 157
+
+E # 158 t 54.392805879053 m 2 ce 157 msg 117
+DM id 117 tid 117 eid 117 etid 117 c omnetpp::cMessage n ACK m 2 pe 158
+DM id 116 tid 116 eid 116 etid 116 c omnetpp::cMessage n DATA m 2 pe 155
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 155
+CM id 118 tid 118 eid 118 etid 118 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.392805879053 am 2 at 55.020747460044 pe 158
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 54.392805879053 am 2 at 55.020747460044 pe 158
+
+E # 159 t 55.020747460044 m 2 ce 158 msg 0
+BS id 118 tid 118 eid 118 etid 118 c omnetpp::cMessage n DATA m 2 pe 158
+SH sm 2 sg 3 pd 0.1
+ES id 118 tid 118 eid 118 etid 118 c omnetpp::cMessage n DATA sm 2 sg 3 st 55.020747460044 am 3 ag 0 at 55.120747460044 pe 159
+CM id 119 tid 119 eid 119 etid 119 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.020747460044 am 2 at 56.020747460044 pe 159
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.020747460044 am 2 at 56.020747460044 pe 159
+
+E # 160 t 55.120747460044 m 3 ce 159 msg 118
+DM id 118 tid 118 eid 118 etid 118 c omnetpp::cMessage n DATA m 3 pe 160
+CM id 120 tid 120 eid 120 etid 120 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 55.120747460044 am 3 at 55.148775160892 pe 160
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 55.120747460044 am 3 at 55.148775160892 pe 160
+
+E # 161 t 55.148775160892 m 3 ce 160 msg 2
+BS id 120 tid 120 eid 120 etid 120 c omnetpp::cMessage n ACK m 3 pe 160
+SH sm 3 sg 3 pd 0.1
+ES id 120 tid 120 eid 120 etid 120 c omnetpp::cMessage n ACK sm 3 sg 3 st 55.148775160892 am 2 ag 0 at 55.248775160892 pe 161
+
+E # 162 t 55.248775160892 m 2 ce 161 msg 120
+DM id 120 tid 120 eid 120 etid 120 c omnetpp::cMessage n ACK m 2 pe 162
+DM id 119 tid 119 eid 119 etid 119 c omnetpp::cMessage n DATA m 2 pe 159
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 159
+CM id 121 tid 121 eid 121 etid 121 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.248775160892 am 2 at 56.225639234963 pe 162
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 55.248775160892 am 2 at 56.225639234963 pe 162
+
+E # 163 t 56.225639234963 m 2 ce 162 msg 0
+BS id 121 tid 121 eid 121 etid 121 c omnetpp::cMessage n DATA m 2 pe 162
+SH sm 2 sg 3 pd 0.1
+ES id 121 tid 121 eid 121 etid 121 c omnetpp::cMessage n DATA sm 2 sg 3 st 56.225639234963 am 3 ag 0 at 56.325639234963 pe 163
+CM id 122 tid 122 eid 122 etid 122 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 56.225639234963 am 2 at 57.225639234963 pe 163
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 56.225639234963 am 2 at 57.225639234963 pe 163
+
+E # 164 t 56.325639234963 m 3 ce 163 msg 121
+DM id 121 tid 121 eid 121 etid 121 c omnetpp::cMessage n DATA m 3 pe 164
+
+E # 165 t 57.225639234963 m 2 ce 163 msg 0
+BS id 122 tid 122 eid 122 etid 122 c omnetpp::cMessage n DATA m 2 pe 163
+SH sm 2 sg 3 pd 0.1
+ES id 122 tid 122 eid 122 etid 122 c omnetpp::cMessage n DATA sm 2 sg 3 st 57.225639234963 am 3 ag 0 at 57.325639234963 pe 165
+CM id 123 tid 123 eid 123 etid 123 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.225639234963 am 2 at 58.225639234963 pe 165
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.225639234963 am 2 at 58.225639234963 pe 165
+
+E # 166 t 57.325639234963 m 3 ce 165 msg 122
+DM id 122 tid 122 eid 122 etid 122 c omnetpp::cMessage n DATA m 3 pe 166
+CM id 124 tid 124 eid 124 etid 124 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 57.325639234963 am 3 at 57.337334775942 pe 166
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 57.325639234963 am 3 at 57.337334775942 pe 166
+
+E # 167 t 57.337334775942 m 3 ce 166 msg 2
+BS id 124 tid 124 eid 124 etid 124 c omnetpp::cMessage n ACK m 3 pe 166
+SH sm 3 sg 3 pd 0.1
+ES id 124 tid 124 eid 124 etid 124 c omnetpp::cMessage n ACK sm 3 sg 3 st 57.337334775942 am 2 ag 0 at 57.437334775942 pe 167
+
+E # 168 t 57.437334775942 m 2 ce 167 msg 124
+DM id 124 tid 124 eid 124 etid 124 c omnetpp::cMessage n ACK m 2 pe 168
+DM id 123 tid 123 eid 123 etid 123 c omnetpp::cMessage n DATA m 2 pe 165
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 165
+CM id 125 tid 125 eid 125 etid 125 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.437334775942 am 2 at 58.560503077475 pe 168
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 57.437334775942 am 2 at 58.560503077475 pe 168
+
+E # 169 t 58.560503077475 m 2 ce 168 msg 0
+BS id 125 tid 125 eid 125 etid 125 c omnetpp::cMessage n DATA m 2 pe 168
+SH sm 2 sg 3 pd 0.1
+ES id 125 tid 125 eid 125 etid 125 c omnetpp::cMessage n DATA sm 2 sg 3 st 58.560503077475 am 3 ag 0 at 58.660503077475 pe 169
+CM id 126 tid 126 eid 126 etid 126 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.560503077475 am 2 at 59.560503077475 pe 169
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.560503077475 am 2 at 59.560503077475 pe 169
+
+E # 170 t 58.660503077475 m 3 ce 169 msg 125
+DM id 125 tid 125 eid 125 etid 125 c omnetpp::cMessage n DATA m 3 pe 170
+CM id 127 tid 127 eid 127 etid 127 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 58.660503077475 am 3 at 58.698658661812 pe 170
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 58.660503077475 am 3 at 58.698658661812 pe 170
+
+E # 171 t 58.698658661812 m 3 ce 170 msg 2
+BS id 127 tid 127 eid 127 etid 127 c omnetpp::cMessage n ACK m 3 pe 170
+SH sm 3 sg 3 pd 0.1
+ES id 127 tid 127 eid 127 etid 127 c omnetpp::cMessage n ACK sm 3 sg 3 st 58.698658661812 am 2 ag 0 at 58.798658661812 pe 171
+
+E # 172 t 58.798658661812 m 2 ce 171 msg 127
+DM id 127 tid 127 eid 127 etid 127 c omnetpp::cMessage n ACK m 2 pe 172
+DM id 126 tid 126 eid 126 etid 126 c omnetpp::cMessage n DATA m 2 pe 169
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 169
+CM id 128 tid 128 eid 128 etid 128 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.798658661812 am 2 at 58.947370931064 pe 172
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.798658661812 am 2 at 58.947370931064 pe 172
+
+E # 173 t 58.947370931064 m 2 ce 172 msg 0
+BS id 128 tid 128 eid 128 etid 128 c omnetpp::cMessage n DATA m 2 pe 172
+SH sm 2 sg 3 pd 0.1
+ES id 128 tid 128 eid 128 etid 128 c omnetpp::cMessage n DATA sm 2 sg 3 st 58.947370931064 am 3 ag 0 at 59.047370931064 pe 173
+CM id 129 tid 129 eid 129 etid 129 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.947370931064 am 2 at 59.947370931064 pe 173
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 58.947370931064 am 2 at 59.947370931064 pe 173
+
+E # 174 t 59.047370931064 m 3 ce 173 msg 128
+DM id 128 tid 128 eid 128 etid 128 c omnetpp::cMessage n DATA m 3 pe 174
+CM id 130 tid 130 eid 130 etid 130 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 59.047370931064 am 3 at 59.069258990715 pe 174
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 59.047370931064 am 3 at 59.069258990715 pe 174
+
+E # 175 t 59.069258990715 m 3 ce 174 msg 2
+BS id 130 tid 130 eid 130 etid 130 c omnetpp::cMessage n ACK m 3 pe 174
+SH sm 3 sg 3 pd 0.1
+ES id 130 tid 130 eid 130 etid 130 c omnetpp::cMessage n ACK sm 3 sg 3 st 59.069258990715 am 2 ag 0 at 59.169258990715 pe 175
+
+E # 176 t 59.169258990715 m 2 ce 175 msg 130
+DM id 130 tid 130 eid 130 etid 130 c omnetpp::cMessage n ACK m 2 pe 176
+DM id 129 tid 129 eid 129 etid 129 c omnetpp::cMessage n DATA m 2 pe 173
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 173
+CM id 131 tid 131 eid 131 etid 131 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 59.169258990715 am 2 at 62.156448882567 pe 176
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 59.169258990715 am 2 at 62.156448882567 pe 176
+
+E # 177 t 62.156448882567 m 2 ce 176 msg 0
+BS id 131 tid 131 eid 131 etid 131 c omnetpp::cMessage n DATA m 2 pe 176
+SH sm 2 sg 3 pd 0.1
+ES id 131 tid 131 eid 131 etid 131 c omnetpp::cMessage n DATA sm 2 sg 3 st 62.156448882567 am 3 ag 0 at 62.256448882567 pe 177
+CM id 132 tid 132 eid 132 etid 132 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.156448882567 am 2 at 63.156448882567 pe 177
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.156448882567 am 2 at 63.156448882567 pe 177
+
+E # 178 t 62.256448882567 m 3 ce 177 msg 131
+DM id 131 tid 131 eid 131 etid 131 c omnetpp::cMessage n DATA m 3 pe 178
+CM id 133 tid 133 eid 133 etid 133 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 62.256448882567 am 3 at 62.365075820655 pe 178
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 62.256448882567 am 3 at 62.365075820655 pe 178
+
+E # 179 t 62.365075820655 m 3 ce 178 msg 2
+BS id 133 tid 133 eid 133 etid 133 c omnetpp::cMessage n ACK m 3 pe 178
+SH sm 3 sg 3 pd 0.1
+ES id 133 tid 133 eid 133 etid 133 c omnetpp::cMessage n ACK sm 3 sg 3 st 62.365075820655 am 2 ag 0 at 62.465075820655 pe 179
+
+E # 180 t 62.465075820655 m 2 ce 179 msg 133
+DM id 133 tid 133 eid 133 etid 133 c omnetpp::cMessage n ACK m 2 pe 180
+DM id 132 tid 132 eid 132 etid 132 c omnetpp::cMessage n DATA m 2 pe 177
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 177
+CM id 134 tid 134 eid 134 etid 134 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.465075820655 am 2 at 64.185407478372 pe 180
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 62.465075820655 am 2 at 64.185407478372 pe 180
+
+E # 181 t 64.185407478372 m 2 ce 180 msg 0
+BS id 134 tid 134 eid 134 etid 134 c omnetpp::cMessage n DATA m 2 pe 180
+SH sm 2 sg 3 pd 0.1
+ES id 134 tid 134 eid 134 etid 134 c omnetpp::cMessage n DATA sm 2 sg 3 st 64.185407478372 am 3 ag 0 at 64.285407478372 pe 181
+CM id 135 tid 135 eid 135 etid 135 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 64.185407478372 am 2 at 65.185407478372 pe 181
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 64.185407478372 am 2 at 65.185407478372 pe 181
+
+E # 182 t 64.285407478372 m 3 ce 181 msg 134
+DM id 134 tid 134 eid 134 etid 134 c omnetpp::cMessage n DATA m 3 pe 182
+
+E # 183 t 65.185407478372 m 2 ce 181 msg 0
+BS id 135 tid 135 eid 135 etid 135 c omnetpp::cMessage n DATA m 2 pe 181
+SH sm 2 sg 3 pd 0.1
+ES id 135 tid 135 eid 135 etid 135 c omnetpp::cMessage n DATA sm 2 sg 3 st 65.185407478372 am 3 ag 0 at 65.285407478372 pe 183
+CM id 136 tid 136 eid 136 etid 136 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 65.185407478372 am 2 at 66.185407478372 pe 183
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 65.185407478372 am 2 at 66.185407478372 pe 183
+
+E # 184 t 65.285407478372 m 3 ce 183 msg 135
+DM id 135 tid 135 eid 135 etid 135 c omnetpp::cMessage n DATA m 3 pe 184
+
+E # 185 t 66.185407478372 m 2 ce 183 msg 0
+BS id 136 tid 136 eid 136 etid 136 c omnetpp::cMessage n DATA m 2 pe 183
+SH sm 2 sg 3 pd 0.1
+ES id 136 tid 136 eid 136 etid 136 c omnetpp::cMessage n DATA sm 2 sg 3 st 66.185407478372 am 3 ag 0 at 66.285407478372 pe 185
+CM id 137 tid 137 eid 137 etid 137 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.185407478372 am 2 at 67.185407478372 pe 185
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.185407478372 am 2 at 67.185407478372 pe 185
+
+E # 186 t 66.285407478372 m 3 ce 185 msg 136
+DM id 136 tid 136 eid 136 etid 136 c omnetpp::cMessage n DATA m 3 pe 186
+CM id 138 tid 138 eid 138 etid 138 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 66.285407478372 am 3 at 66.4673893703 pe 186
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 66.285407478372 am 3 at 66.4673893703 pe 186
+
+E # 187 t 66.4673893703 m 3 ce 186 msg 2
+BS id 138 tid 138 eid 138 etid 138 c omnetpp::cMessage n ACK m 3 pe 186
+SH sm 3 sg 3 pd 0.1
+ES id 138 tid 138 eid 138 etid 138 c omnetpp::cMessage n ACK sm 3 sg 3 st 66.4673893703 am 2 ag 0 at 66.5673893703 pe 187
+
+E # 188 t 66.5673893703 m 2 ce 187 msg 138
+DM id 138 tid 138 eid 138 etid 138 c omnetpp::cMessage n ACK m 2 pe 188
+DM id 137 tid 137 eid 137 etid 137 c omnetpp::cMessage n DATA m 2 pe 185
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 185
+CM id 139 tid 139 eid 139 etid 139 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.5673893703 am 2 at 67.687203736054 pe 188
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 66.5673893703 am 2 at 67.687203736054 pe 188
+
+E # 189 t 67.687203736054 m 2 ce 188 msg 0
+BS id 139 tid 139 eid 139 etid 139 c omnetpp::cMessage n DATA m 2 pe 188
+SH sm 2 sg 3 pd 0.1
+ES id 139 tid 139 eid 139 etid 139 c omnetpp::cMessage n DATA sm 2 sg 3 st 67.687203736054 am 3 ag 0 at 67.787203736054 pe 189
+CM id 140 tid 140 eid 140 etid 140 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 67.687203736054 am 2 at 68.687203736054 pe 189
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 67.687203736054 am 2 at 68.687203736054 pe 189
+
+E # 190 t 67.787203736054 m 3 ce 189 msg 139
+DM id 139 tid 139 eid 139 etid 139 c omnetpp::cMessage n DATA m 3 pe 190
+
+E # 191 t 68.687203736054 m 2 ce 189 msg 0
+BS id 140 tid 140 eid 140 etid 140 c omnetpp::cMessage n DATA m 2 pe 189
+SH sm 2 sg 3 pd 0.1
+ES id 140 tid 140 eid 140 etid 140 c omnetpp::cMessage n DATA sm 2 sg 3 st 68.687203736054 am 3 ag 0 at 68.787203736054 pe 191
+CM id 141 tid 141 eid 141 etid 141 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 68.687203736054 am 2 at 69.687203736054 pe 191
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 68.687203736054 am 2 at 69.687203736054 pe 191
+
+E # 192 t 68.787203736054 m 3 ce 191 msg 140
+DM id 140 tid 140 eid 140 etid 140 c omnetpp::cMessage n DATA m 3 pe 192
+CM id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 68.787203736054 am 3 at 69.162106882012 pe 192
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 68.787203736054 am 3 at 69.162106882012 pe 192
+
+E # 193 t 69.162106882012 m 3 ce 192 msg 2
+BS id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n ACK m 3 pe 192
+SH sm 3 sg 3 pd 0.1
+ES id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n ACK sm 3 sg 3 st 69.162106882012 am 2 ag 0 at 69.262106882012 pe 193
+
+E # 194 t 69.262106882012 m 2 ce 193 msg 142
+DM id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n ACK m 2 pe 194
+DM id 141 tid 141 eid 141 etid 141 c omnetpp::cMessage n DATA m 2 pe 191
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 191
+CM id 143 tid 143 eid 143 etid 143 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 69.262106882012 am 2 at 71.367428182804 pe 194
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 69.262106882012 am 2 at 71.367428182804 pe 194
+
+E # 195 t 71.367428182804 m 2 ce 194 msg 0
+BS id 143 tid 143 eid 143 etid 143 c omnetpp::cMessage n DATA m 2 pe 194
+SH sm 2 sg 3 pd 0.1
+ES id 143 tid 143 eid 143 etid 143 c omnetpp::cMessage n DATA sm 2 sg 3 st 71.367428182804 am 3 ag 0 at 71.467428182804 pe 195
+CM id 144 tid 144 eid 144 etid 144 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.367428182804 am 2 at 72.367428182804 pe 195
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.367428182804 am 2 at 72.367428182804 pe 195
+
+E # 196 t 71.467428182804 m 3 ce 195 msg 143
+DM id 143 tid 143 eid 143 etid 143 c omnetpp::cMessage n DATA m 3 pe 196
+CM id 145 tid 145 eid 145 etid 145 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 71.467428182804 am 3 at 71.538686542137 pe 196
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 71.467428182804 am 3 at 71.538686542137 pe 196
+
+E # 197 t 71.538686542137 m 3 ce 196 msg 2
+BS id 145 tid 145 eid 145 etid 145 c omnetpp::cMessage n ACK m 3 pe 196
+SH sm 3 sg 3 pd 0.1
+ES id 145 tid 145 eid 145 etid 145 c omnetpp::cMessage n ACK sm 3 sg 3 st 71.538686542137 am 2 ag 0 at 71.638686542137 pe 197
+
+E # 198 t 71.638686542137 m 2 ce 197 msg 145
+DM id 145 tid 145 eid 145 etid 145 c omnetpp::cMessage n ACK m 2 pe 198
+DM id 144 tid 144 eid 144 etid 144 c omnetpp::cMessage n DATA m 2 pe 195
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 195
+CM id 146 tid 146 eid 146 etid 146 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.638686542137 am 2 at 75.400613826641 pe 198
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 71.638686542137 am 2 at 75.400613826641 pe 198
+
+E # 199 t 75.400613826641 m 2 ce 198 msg 0
+BS id 146 tid 146 eid 146 etid 146 c omnetpp::cMessage n DATA m 2 pe 198
+SH sm 2 sg 3 pd 0.1
+ES id 146 tid 146 eid 146 etid 146 c omnetpp::cMessage n DATA sm 2 sg 3 st 75.400613826641 am 3 ag 0 at 75.500613826641 pe 199
+CM id 147 tid 147 eid 147 etid 147 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 75.400613826641 am 2 at 76.400613826641 pe 199
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 75.400613826641 am 2 at 76.400613826641 pe 199
+
+E # 200 t 75.500613826641 m 3 ce 199 msg 146
+DM id 146 tid 146 eid 146 etid 146 c omnetpp::cMessage n DATA m 3 pe 200
+
+E # 201 t 76.400613826641 m 2 ce 199 msg 0
+BS id 147 tid 147 eid 147 etid 147 c omnetpp::cMessage n DATA m 2 pe 199
+SH sm 2 sg 3 pd 0.1
+ES id 147 tid 147 eid 147 etid 147 c omnetpp::cMessage n DATA sm 2 sg 3 st 76.400613826641 am 3 ag 0 at 76.500613826641 pe 201
+CM id 148 tid 148 eid 148 etid 148 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.400613826641 am 2 at 77.400613826641 pe 201
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.400613826641 am 2 at 77.400613826641 pe 201
+
+E # 202 t 76.500613826641 m 3 ce 201 msg 147
+DM id 147 tid 147 eid 147 etid 147 c omnetpp::cMessage n DATA m 3 pe 202
+CM id 149 tid 149 eid 149 etid 149 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 76.500613826641 am 3 at 76.560608515305 pe 202
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 76.500613826641 am 3 at 76.560608515305 pe 202
+
+E # 203 t 76.560608515305 m 3 ce 202 msg 2
+BS id 149 tid 149 eid 149 etid 149 c omnetpp::cMessage n ACK m 3 pe 202
+SH sm 3 sg 3 pd 0.1
+ES id 149 tid 149 eid 149 etid 149 c omnetpp::cMessage n ACK sm 3 sg 3 st 76.560608515305 am 2 ag 0 at 76.660608515305 pe 203
+
+E # 204 t 76.660608515305 m 2 ce 203 msg 149
+DM id 149 tid 149 eid 149 etid 149 c omnetpp::cMessage n ACK m 2 pe 204
+DM id 148 tid 148 eid 148 etid 148 c omnetpp::cMessage n DATA m 2 pe 201
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 201
+CM id 150 tid 150 eid 150 etid 150 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.660608515305 am 2 at 78.004853787457 pe 204
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 76.660608515305 am 2 at 78.004853787457 pe 204
+
+E # 205 t 78.004853787457 m 2 ce 204 msg 0
+BS id 150 tid 150 eid 150 etid 150 c omnetpp::cMessage n DATA m 2 pe 204
+SH sm 2 sg 3 pd 0.1
+ES id 150 tid 150 eid 150 etid 150 c omnetpp::cMessage n DATA sm 2 sg 3 st 78.004853787457 am 3 ag 0 at 78.104853787457 pe 205
+CM id 151 tid 151 eid 151 etid 151 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.004853787457 am 2 at 79.004853787457 pe 205
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 78.004853787457 am 2 at 79.004853787457 pe 205
+
+E # 206 t 78.104853787457 m 3 ce 205 msg 150
+DM id 150 tid 150 eid 150 etid 150 c omnetpp::cMessage n DATA m 3 pe 206
+
+E # 207 t 79.004853787457 m 2 ce 205 msg 0
+BS id 151 tid 151 eid 151 etid 151 c omnetpp::cMessage n DATA m 2 pe 205
+SH sm 2 sg 3 pd 0.1
+ES id 151 tid 151 eid 151 etid 151 c omnetpp::cMessage n DATA sm 2 sg 3 st 79.004853787457 am 3 ag 0 at 79.104853787457 pe 207
+CM id 152 tid 152 eid 152 etid 152 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 79.004853787457 am 2 at 80.004853787457 pe 207
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 79.004853787457 am 2 at 80.004853787457 pe 207
+
+E # 208 t 79.104853787457 m 3 ce 207 msg 151
+DM id 151 tid 151 eid 151 etid 151 c omnetpp::cMessage n DATA m 3 pe 208
+
+E # 209 t 80.004853787457 m 2 ce 207 msg 0
+BS id 152 tid 152 eid 152 etid 152 c omnetpp::cMessage n DATA m 2 pe 207
+SH sm 2 sg 3 pd 0.1
+ES id 152 tid 152 eid 152 etid 152 c omnetpp::cMessage n DATA sm 2 sg 3 st 80.004853787457 am 3 ag 0 at 80.104853787457 pe 209
+CM id 153 tid 153 eid 153 etid 153 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.004853787457 am 2 at 81.004853787457 pe 209
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.004853787457 am 2 at 81.004853787457 pe 209
+
+E # 210 t 80.104853787457 m 3 ce 209 msg 152
+DM id 152 tid 152 eid 152 etid 152 c omnetpp::cMessage n DATA m 3 pe 210
+CM id 154 tid 154 eid 154 etid 154 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 80.104853787457 am 3 at 80.138094811553 pe 210
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 80.104853787457 am 3 at 80.138094811553 pe 210
+
+E # 211 t 80.138094811553 m 3 ce 210 msg 2
+BS id 154 tid 154 eid 154 etid 154 c omnetpp::cMessage n ACK m 3 pe 210
+SH sm 3 sg 3 pd 0.1
+ES id 154 tid 154 eid 154 etid 154 c omnetpp::cMessage n ACK sm 3 sg 3 st 80.138094811553 am 2 ag 0 at 80.238094811553 pe 211
+
+E # 212 t 80.238094811553 m 2 ce 211 msg 154
+DM id 154 tid 154 eid 154 etid 154 c omnetpp::cMessage n ACK m 2 pe 212
+DM id 153 tid 153 eid 153 etid 153 c omnetpp::cMessage n DATA m 2 pe 209
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 209
+CM id 155 tid 155 eid 155 etid 155 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.238094811553 am 2 at 84.129664934398 pe 212
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 80.238094811553 am 2 at 84.129664934398 pe 212
+
+E # 213 t 84.129664934398 m 2 ce 212 msg 0
+BS id 155 tid 155 eid 155 etid 155 c omnetpp::cMessage n DATA m 2 pe 212
+SH sm 2 sg 3 pd 0.1
+ES id 155 tid 155 eid 155 etid 155 c omnetpp::cMessage n DATA sm 2 sg 3 st 84.129664934398 am 3 ag 0 at 84.229664934398 pe 213
+CM id 156 tid 156 eid 156 etid 156 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 84.129664934398 am 2 at 85.129664934398 pe 213
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 84.129664934398 am 2 at 85.129664934398 pe 213
+
+E # 214 t 84.229664934398 m 3 ce 213 msg 155
+DM id 155 tid 155 eid 155 etid 155 c omnetpp::cMessage n DATA m 3 pe 214
+
+E # 215 t 85.129664934398 m 2 ce 213 msg 0
+BS id 156 tid 156 eid 156 etid 156 c omnetpp::cMessage n DATA m 2 pe 213
+SH sm 2 sg 3 pd 0.1
+ES id 156 tid 156 eid 156 etid 156 c omnetpp::cMessage n DATA sm 2 sg 3 st 85.129664934398 am 3 ag 0 at 85.229664934398 pe 215
+CM id 157 tid 157 eid 157 etid 157 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.129664934398 am 2 at 86.129664934398 pe 215
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.129664934398 am 2 at 86.129664934398 pe 215
+
+E # 216 t 85.229664934398 m 3 ce 215 msg 156
+DM id 156 tid 156 eid 156 etid 156 c omnetpp::cMessage n DATA m 3 pe 216
+CM id 158 tid 158 eid 158 etid 158 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 85.229664934398 am 3 at 85.264782543336 pe 216
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 85.229664934398 am 3 at 85.264782543336 pe 216
+
+E # 217 t 85.264782543336 m 3 ce 216 msg 2
+BS id 158 tid 158 eid 158 etid 158 c omnetpp::cMessage n ACK m 3 pe 216
+SH sm 3 sg 3 pd 0.1
+ES id 158 tid 158 eid 158 etid 158 c omnetpp::cMessage n ACK sm 3 sg 3 st 85.264782543336 am 2 ag 0 at 85.364782543336 pe 217
+
+E # 218 t 85.364782543336 m 2 ce 217 msg 158
+DM id 158 tid 158 eid 158 etid 158 c omnetpp::cMessage n ACK m 2 pe 218
+DM id 157 tid 157 eid 157 etid 157 c omnetpp::cMessage n DATA m 2 pe 215
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 215
+CM id 159 tid 159 eid 159 etid 159 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.364782543336 am 2 at 86.0204288277 pe 218
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 85.364782543336 am 2 at 86.0204288277 pe 218
+
+E # 219 t 86.0204288277 m 2 ce 218 msg 0
+BS id 159 tid 159 eid 159 etid 159 c omnetpp::cMessage n DATA m 2 pe 218
+SH sm 2 sg 3 pd 0.1
+ES id 159 tid 159 eid 159 etid 159 c omnetpp::cMessage n DATA sm 2 sg 3 st 86.0204288277 am 3 ag 0 at 86.1204288277 pe 219
+CM id 160 tid 160 eid 160 etid 160 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 86.0204288277 am 2 at 87.0204288277 pe 219
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 86.0204288277 am 2 at 87.0204288277 pe 219
+
+E # 220 t 86.1204288277 m 3 ce 219 msg 159
+DM id 159 tid 159 eid 159 etid 159 c omnetpp::cMessage n DATA m 3 pe 220
+
+E # 221 t 87.0204288277 m 2 ce 219 msg 0
+BS id 160 tid 160 eid 160 etid 160 c omnetpp::cMessage n DATA m 2 pe 219
+SH sm 2 sg 3 pd 0.1
+ES id 160 tid 160 eid 160 etid 160 c omnetpp::cMessage n DATA sm 2 sg 3 st 87.0204288277 am 3 ag 0 at 87.1204288277 pe 221
+CM id 161 tid 161 eid 161 etid 161 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.0204288277 am 2 at 88.0204288277 pe 221
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.0204288277 am 2 at 88.0204288277 pe 221
+
+E # 222 t 87.1204288277 m 3 ce 221 msg 160
+DM id 160 tid 160 eid 160 etid 160 c omnetpp::cMessage n DATA m 3 pe 222
+CM id 162 tid 162 eid 162 etid 162 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 87.1204288277 am 3 at 87.158698922586 pe 222
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 87.1204288277 am 3 at 87.158698922586 pe 222
+
+E # 223 t 87.158698922586 m 3 ce 222 msg 2
+BS id 162 tid 162 eid 162 etid 162 c omnetpp::cMessage n ACK m 3 pe 222
+SH sm 3 sg 3 pd 0.1
+ES id 162 tid 162 eid 162 etid 162 c omnetpp::cMessage n ACK sm 3 sg 3 st 87.158698922586 am 2 ag 0 at 87.258698922586 pe 223
+
+E # 224 t 87.258698922586 m 2 ce 223 msg 162
+DM id 162 tid 162 eid 162 etid 162 c omnetpp::cMessage n ACK m 2 pe 224
+DM id 161 tid 161 eid 161 etid 161 c omnetpp::cMessage n DATA m 2 pe 221
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 221
+CM id 163 tid 163 eid 163 etid 163 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.258698922586 am 2 at 89.382936119588 pe 224
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 87.258698922586 am 2 at 89.382936119588 pe 224
+
+E # 225 t 89.382936119588 m 2 ce 224 msg 0
+BS id 163 tid 163 eid 163 etid 163 c omnetpp::cMessage n DATA m 2 pe 224
+SH sm 2 sg 3 pd 0.1
+ES id 163 tid 163 eid 163 etid 163 c omnetpp::cMessage n DATA sm 2 sg 3 st 89.382936119588 am 3 ag 0 at 89.482936119588 pe 225
+CM id 164 tid 164 eid 164 etid 164 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.382936119588 am 2 at 90.382936119588 pe 225
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.382936119588 am 2 at 90.382936119588 pe 225
+
+E # 226 t 89.482936119588 m 3 ce 225 msg 163
+DM id 163 tid 163 eid 163 etid 163 c omnetpp::cMessage n DATA m 3 pe 226
+CM id 165 tid 165 eid 165 etid 165 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 89.482936119588 am 3 at 89.733327297897 pe 226
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 89.482936119588 am 3 at 89.733327297897 pe 226
+
+E # 227 t 89.733327297897 m 3 ce 226 msg 2
+BS id 165 tid 165 eid 165 etid 165 c omnetpp::cMessage n ACK m 3 pe 226
+SH sm 3 sg 3 pd 0.1
+ES id 165 tid 165 eid 165 etid 165 c omnetpp::cMessage n ACK sm 3 sg 3 st 89.733327297897 am 2 ag 0 at 89.833327297897 pe 227
+
+E # 228 t 89.833327297897 m 2 ce 227 msg 165
+DM id 165 tid 165 eid 165 etid 165 c omnetpp::cMessage n ACK m 2 pe 228
+DM id 164 tid 164 eid 164 etid 164 c omnetpp::cMessage n DATA m 2 pe 225
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 225
+CM id 166 tid 166 eid 166 etid 166 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.833327297897 am 2 at 89.899624699379 pe 228
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.833327297897 am 2 at 89.899624699379 pe 228
+
+E # 229 t 89.899624699379 m 2 ce 228 msg 0
+BS id 166 tid 166 eid 166 etid 166 c omnetpp::cMessage n DATA m 2 pe 228
+SH sm 2 sg 3 pd 0.1
+ES id 166 tid 166 eid 166 etid 166 c omnetpp::cMessage n DATA sm 2 sg 3 st 89.899624699379 am 3 ag 0 at 89.999624699379 pe 229
+CM id 167 tid 167 eid 167 etid 167 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.899624699379 am 2 at 90.899624699379 pe 229
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 89.899624699379 am 2 at 90.899624699379 pe 229
+
+E # 230 t 89.999624699379 m 3 ce 229 msg 166
+DM id 166 tid 166 eid 166 etid 166 c omnetpp::cMessage n DATA m 3 pe 230
+CM id 168 tid 168 eid 168 etid 168 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 89.999624699379 am 3 at 90.117543652086 pe 230
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 89.999624699379 am 3 at 90.117543652086 pe 230
+
+E # 231 t 90.117543652086 m 3 ce 230 msg 2
+BS id 168 tid 168 eid 168 etid 168 c omnetpp::cMessage n ACK m 3 pe 230
+SH sm 3 sg 3 pd 0.1
+ES id 168 tid 168 eid 168 etid 168 c omnetpp::cMessage n ACK sm 3 sg 3 st 90.117543652086 am 2 ag 0 at 90.217543652086 pe 231
+
+E # 232 t 90.217543652086 m 2 ce 231 msg 168
+DM id 168 tid 168 eid 168 etid 168 c omnetpp::cMessage n ACK m 2 pe 232
+DM id 167 tid 167 eid 167 etid 167 c omnetpp::cMessage n DATA m 2 pe 229
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 229
+CM id 169 tid 169 eid 169 etid 169 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 90.217543652086 am 2 at 91.050387168152 pe 232
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 90.217543652086 am 2 at 91.050387168152 pe 232
+
+E # 233 t 91.050387168152 m 2 ce 232 msg 0
+BS id 169 tid 169 eid 169 etid 169 c omnetpp::cMessage n DATA m 2 pe 232
+SH sm 2 sg 3 pd 0.1
+ES id 169 tid 169 eid 169 etid 169 c omnetpp::cMessage n DATA sm 2 sg 3 st 91.050387168152 am 3 ag 0 at 91.150387168152 pe 233
+CM id 170 tid 170 eid 170 etid 170 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.050387168152 am 2 at 92.050387168152 pe 233
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.050387168152 am 2 at 92.050387168152 pe 233
+
+E # 234 t 91.150387168152 m 3 ce 233 msg 169
+DM id 169 tid 169 eid 169 etid 169 c omnetpp::cMessage n DATA m 3 pe 234
+CM id 171 tid 171 eid 171 etid 171 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 91.150387168152 am 3 at 91.350711220403 pe 234
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 91.150387168152 am 3 at 91.350711220403 pe 234
+
+E # 235 t 91.350711220403 m 3 ce 234 msg 2
+BS id 171 tid 171 eid 171 etid 171 c omnetpp::cMessage n ACK m 3 pe 234
+SH sm 3 sg 3 pd 0.1
+ES id 171 tid 171 eid 171 etid 171 c omnetpp::cMessage n ACK sm 3 sg 3 st 91.350711220403 am 2 ag 0 at 91.450711220403 pe 235
+
+E # 236 t 91.450711220403 m 2 ce 235 msg 171
+DM id 171 tid 171 eid 171 etid 171 c omnetpp::cMessage n ACK m 2 pe 236
+DM id 170 tid 170 eid 170 etid 170 c omnetpp::cMessage n DATA m 2 pe 233
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 233
+CM id 172 tid 172 eid 172 etid 172 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.450711220403 am 2 at 91.759126060501 pe 236
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.450711220403 am 2 at 91.759126060501 pe 236
+
+E # 237 t 91.759126060501 m 2 ce 236 msg 0
+BS id 172 tid 172 eid 172 etid 172 c omnetpp::cMessage n DATA m 2 pe 236
+SH sm 2 sg 3 pd 0.1
+ES id 172 tid 172 eid 172 etid 172 c omnetpp::cMessage n DATA sm 2 sg 3 st 91.759126060501 am 3 ag 0 at 91.859126060501 pe 237
+CM id 173 tid 173 eid 173 etid 173 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.759126060501 am 2 at 92.759126060501 pe 237
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 91.759126060501 am 2 at 92.759126060501 pe 237
+
+E # 238 t 91.859126060501 m 3 ce 237 msg 172
+DM id 172 tid 172 eid 172 etid 172 c omnetpp::cMessage n DATA m 3 pe 238
+CM id 174 tid 174 eid 174 etid 174 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 91.859126060501 am 3 at 91.933201955546 pe 238
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 91.859126060501 am 3 at 91.933201955546 pe 238
+
+E # 239 t 91.933201955546 m 3 ce 238 msg 2
+BS id 174 tid 174 eid 174 etid 174 c omnetpp::cMessage n ACK m 3 pe 238
+SH sm 3 sg 3 pd 0.1
+ES id 174 tid 174 eid 174 etid 174 c omnetpp::cMessage n ACK sm 3 sg 3 st 91.933201955546 am 2 ag 0 at 92.033201955546 pe 239
+
+E # 240 t 92.033201955546 m 2 ce 239 msg 174
+DM id 174 tid 174 eid 174 etid 174 c omnetpp::cMessage n ACK m 2 pe 240
+DM id 173 tid 173 eid 173 etid 173 c omnetpp::cMessage n DATA m 2 pe 237
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 237
+CM id 175 tid 175 eid 175 etid 175 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 92.033201955546 am 2 at 94.518784312523 pe 240
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 92.033201955546 am 2 at 94.518784312523 pe 240
+
+E # 241 t 94.518784312523 m 2 ce 240 msg 0
+BS id 175 tid 175 eid 175 etid 175 c omnetpp::cMessage n DATA m 2 pe 240
+SH sm 2 sg 3 pd 0.1
+ES id 175 tid 175 eid 175 etid 175 c omnetpp::cMessage n DATA sm 2 sg 3 st 94.518784312523 am 3 ag 0 at 94.618784312523 pe 241
+CM id 176 tid 176 eid 176 etid 176 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 94.518784312523 am 2 at 95.518784312523 pe 241
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 94.518784312523 am 2 at 95.518784312523 pe 241
+
+E # 242 t 94.618784312523 m 3 ce 241 msg 175
+DM id 175 tid 175 eid 175 etid 175 c omnetpp::cMessage n DATA m 3 pe 242
+
+E # 243 t 95.518784312523 m 2 ce 241 msg 0
+BS id 176 tid 176 eid 176 etid 176 c omnetpp::cMessage n DATA m 2 pe 241
+SH sm 2 sg 3 pd 0.1
+ES id 176 tid 176 eid 176 etid 176 c omnetpp::cMessage n DATA sm 2 sg 3 st 95.518784312523 am 3 ag 0 at 95.618784312523 pe 243
+CM id 177 tid 177 eid 177 etid 177 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.518784312523 am 2 at 96.518784312523 pe 243
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.518784312523 am 2 at 96.518784312523 pe 243
+
+E # 244 t 95.618784312523 m 3 ce 243 msg 176
+DM id 176 tid 176 eid 176 etid 176 c omnetpp::cMessage n DATA m 3 pe 244
+CM id 178 tid 178 eid 178 etid 178 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 95.618784312523 am 3 at 95.70457387663 pe 244
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 95.618784312523 am 3 at 95.70457387663 pe 244
+
+E # 245 t 95.70457387663 m 3 ce 244 msg 2
+BS id 178 tid 178 eid 178 etid 178 c omnetpp::cMessage n ACK m 3 pe 244
+SH sm 3 sg 3 pd 0.1
+ES id 178 tid 178 eid 178 etid 178 c omnetpp::cMessage n ACK sm 3 sg 3 st 95.70457387663 am 2 ag 0 at 95.80457387663 pe 245
+
+E # 246 t 95.80457387663 m 2 ce 245 msg 178
+DM id 178 tid 178 eid 178 etid 178 c omnetpp::cMessage n ACK m 2 pe 246
+DM id 177 tid 177 eid 177 etid 177 c omnetpp::cMessage n DATA m 2 pe 243
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 243
+CM id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.80457387663 am 2 at 95.89134435897 pe 246
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.80457387663 am 2 at 95.89134435897 pe 246
+
+E # 247 t 95.89134435897 m 2 ce 246 msg 0
+BS id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n DATA m 2 pe 246
+SH sm 2 sg 3 pd 0.1
+ES id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n DATA sm 2 sg 3 st 95.89134435897 am 3 ag 0 at 95.99134435897 pe 247
+CM id 180 tid 180 eid 180 etid 180 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.89134435897 am 2 at 96.89134435897 pe 247
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 95.89134435897 am 2 at 96.89134435897 pe 247
+
+E # 248 t 95.99134435897 m 3 ce 247 msg 179
+DM id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n DATA m 3 pe 248
+CM id 181 tid 181 eid 181 etid 181 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 95.99134435897 am 3 at 96.023878400523 pe 248
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 95.99134435897 am 3 at 96.023878400523 pe 248
+
+E # 249 t 96.023878400523 m 3 ce 248 msg 2
+BS id 181 tid 181 eid 181 etid 181 c omnetpp::cMessage n ACK m 3 pe 248
+SH sm 3 sg 3 pd 0.1
+ES id 181 tid 181 eid 181 etid 181 c omnetpp::cMessage n ACK sm 3 sg 3 st 96.023878400523 am 2 ag 0 at 96.123878400523 pe 249
+
+E # 250 t 96.123878400523 m 2 ce 249 msg 181
+DM id 181 tid 181 eid 181 etid 181 c omnetpp::cMessage n ACK m 2 pe 250
+DM id 180 tid 180 eid 180 etid 180 c omnetpp::cMessage n DATA m 2 pe 247
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 247
+CM id 182 tid 182 eid 182 etid 182 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.123878400523 am 2 at 96.507438614622 pe 250
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.123878400523 am 2 at 96.507438614622 pe 250
+
+E # 251 t 96.507438614622 m 2 ce 250 msg 0
+BS id 182 tid 182 eid 182 etid 182 c omnetpp::cMessage n DATA m 2 pe 250
+SH sm 2 sg 3 pd 0.1
+ES id 182 tid 182 eid 182 etid 182 c omnetpp::cMessage n DATA sm 2 sg 3 st 96.507438614622 am 3 ag 0 at 96.607438614622 pe 251
+CM id 183 tid 183 eid 183 etid 183 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.507438614622 am 2 at 97.507438614622 pe 251
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 96.507438614622 am 2 at 97.507438614622 pe 251
+
+E # 252 t 96.607438614622 m 3 ce 251 msg 182
+DM id 182 tid 182 eid 182 etid 182 c omnetpp::cMessage n DATA m 3 pe 252
+
+E # 253 t 97.507438614622 m 2 ce 251 msg 0
+BS id 183 tid 183 eid 183 etid 183 c omnetpp::cMessage n DATA m 2 pe 251
+SH sm 2 sg 3 pd 0.1
+ES id 183 tid 183 eid 183 etid 183 c omnetpp::cMessage n DATA sm 2 sg 3 st 97.507438614622 am 3 ag 0 at 97.607438614622 pe 253
+CM id 184 tid 184 eid 184 etid 184 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.507438614622 am 2 at 98.507438614622 pe 253
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.507438614622 am 2 at 98.507438614622 pe 253
+
+E # 254 t 97.607438614622 m 3 ce 253 msg 183
+DM id 183 tid 183 eid 183 etid 183 c omnetpp::cMessage n DATA m 3 pe 254
+CM id 185 tid 185 eid 185 etid 185 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 97.607438614622 am 3 at 97.792171379722 pe 254
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 97.607438614622 am 3 at 97.792171379722 pe 254
+
+E # 255 t 97.792171379722 m 3 ce 254 msg 2
+BS id 185 tid 185 eid 185 etid 185 c omnetpp::cMessage n ACK m 3 pe 254
+SH sm 3 sg 3 pd 0.1
+ES id 185 tid 185 eid 185 etid 185 c omnetpp::cMessage n ACK sm 3 sg 3 st 97.792171379722 am 2 ag 0 at 97.892171379722 pe 255
+
+E # 256 t 97.892171379722 m 2 ce 255 msg 185
+DM id 185 tid 185 eid 185 etid 185 c omnetpp::cMessage n ACK m 2 pe 256
+DM id 184 tid 184 eid 184 etid 184 c omnetpp::cMessage n DATA m 2 pe 253
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 253
+CM id 186 tid 186 eid 186 etid 186 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.892171379722 am 2 at 98.033502093283 pe 256
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 97.892171379722 am 2 at 98.033502093283 pe 256
+
+E # 257 t 98.033502093283 m 2 ce 256 msg 0
+BS id 186 tid 186 eid 186 etid 186 c omnetpp::cMessage n DATA m 2 pe 256
+SH sm 2 sg 3 pd 0.1
+ES id 186 tid 186 eid 186 etid 186 c omnetpp::cMessage n DATA sm 2 sg 3 st 98.033502093283 am 3 ag 0 at 98.133502093283 pe 257
+CM id 187 tid 187 eid 187 etid 187 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.033502093283 am 2 at 99.033502093283 pe 257
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.033502093283 am 2 at 99.033502093283 pe 257
+
+E # 258 t 98.133502093283 m 3 ce 257 msg 186
+DM id 186 tid 186 eid 186 etid 186 c omnetpp::cMessage n DATA m 3 pe 258
+CM id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n ACK pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 98.133502093283 am 3 at 98.259495474294 pe 258
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event sm 3 st 98.133502093283 am 3 at 98.259495474294 pe 258
+
+E # 259 t 98.259495474294 m 3 ce 258 msg 2
+BS id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n ACK m 3 pe 258
+SH sm 3 sg 3 pd 0.1
+ES id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n ACK sm 3 sg 3 st 98.259495474294 am 2 ag 0 at 98.359495474294 pe 259
+
+E # 260 t 98.359495474294 m 2 ce 259 msg 188
+DM id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n ACK m 2 pe 260
+DM id 187 tid 187 eid 187 etid 187 c omnetpp::cMessage n DATA m 2 pe 257
+CE id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event m 2 pe 257
+CM id 189 tid 189 eid 189 etid 189 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.359495474294 am 2 at 100.200777945781 pe 260
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 98.359495474294 am 2 at 100.200777945781 pe 260
 
 
-SE e 0 c 38 m "Simulation time limit reached -- at t=100s, event #213"
+SE e 0 c 38 m "Simulation time limit reached -- at t=100s, event #261"
