@@ -1,6 +1,10 @@
 simple Txc1{
-    paramaters:
+    parameters:
         volatile double delayTime @unit(s);
+        @signal[transmissionSignal](type="long");
+		@statistic[transmissionSignal](title="tx_t";source="transmissionSignal";record=vector);
+		@signal[receptionSignal](type="long");
+		@statistic[receptionSignal](title="rx_t";source="receptionSignal";record=vector);
     gates:
         inout gate[];
 }
