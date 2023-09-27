@@ -1,4 +1,4 @@
-SB ov 1536 ev 2 rid General-0-20230927-16:19:09-20633
+SB ov 1536 ev 2 rid General-0-20230927-17:03:53-4063
 
 E # 0 t 0 m 1 ce -1 msg -1
 MC id 1 c omnetpp::cModule t Multihop n Multihop cm 1
@@ -56,6 +56,7 @@ CDC sm 6 sg 1572865 d ""
 CC sm 7 sg 1572864 dm 6 dg 1048577
 CDC sm 7 sg 1572864 d ""
 CMB sm 1 tm 2 m initialize(0)
+- INFO: Scheduling first send to a random time
 CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 pe -1
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 2 st 0 am 2 at 0.079587450457 pe 0
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 2 st 0 am 2 at 0.079587450457 pe 0
@@ -72,31 +73,42 @@ CMB sm 1 tm 7 m initialize(0)
 CME
 
 E # 1 t 0.079587450457 m 2 ce 0 msg 0
+- INFO: Forwarding message (omnetpp::cMessage)DATA-0  on gate[0]
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 m 2 pe 1
 SH sm 2 sg 1572864 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 2 sg 1572864 st 0.079587450457 am 3 ag 1048576 at 0.179587450457 pe 1
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n DATA-0 m 2 pe -1 cid 0
 
 E # 2 t 0.179587450457 m 3 ce 1 msg 0
+- INFO: Forwarding message (omnetpp::cMessage)DATA-0  on gate[1]
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 m 3 pe 2
 SH sm 3 sg 1572865 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 3 sg 1572865 st 0.179587450457 am 4 ag 1048576 at 0.279587450457 pe 2
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n DATA-0 m 3 pe -1 cid 0
 
 E # 3 t 0.279587450457 m 4 ce 2 msg 0
+- INFO: Forwarding message (omnetpp::cMessage)DATA-0  on gate[1]
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 m 4 pe 3
 SH sm 4 sg 1572865 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 4 sg 1572865 st 0.279587450457 am 5 ag 1048576 at 0.379587450457 pe 3
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n DATA-0 m 4 pe -1 cid 0
 
 E # 4 t 0.379587450457 m 5 ce 3 msg 0
+- INFO: Forwarding message (omnetpp::cMessage)DATA-0  on gate[1]
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 m 5 pe 4
 SH sm 5 sg 1572865 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 5 sg 1572865 st 0.379587450457 am 6 ag 1048576 at 0.479587450457 pe 4
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n DATA-0 m 5 pe -1 cid 0
 
 E # 5 t 0.479587450457 m 6 ce 4 msg 0
+- INFO: Forwarding message (omnetpp::cMessage)DATA-0  on gate[1]
 BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 m 6 pe 5
 SH sm 6 sg 1572865 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n DATA-0 sm 6 sg 1572865 st 0.479587450457 am 7 ag 1048576 at 0.579587450457 pe 5
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n DATA-0 m 6 pe -1 cid 0
 
 E # 6 t 0.579587450457 m 7 ce 5 msg 0
+- INFO: Message (omnetpp::cMessage)DATA-0  arrived.
 
 
 SE e 0 c 38 m "Simulation time limit reached -- at t=200s, event #7"
