@@ -1,8 +1,8 @@
 version 3
-run General-0-20230927-17:03:53-4063
+run General-0-20230928-16:42:35-28284
 attr configname General
-attr datetime 20230927-17:03:53
-attr datetimef 20230927-170353
+attr datetime 20230928-16:42:35
+attr datetimef 20230928-164235
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,14 +10,14 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 4063
+attr processid 28284
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 config network Multihop
-config Multihop.node[*].delayTime exponential(0.1s)
+config Multihop.node[*].delayTime exponential(1s)
 config record-eventlog true
 config sim-time-limit 200s
 
@@ -82,22 +82,22 @@ par Multihop.node[5].gate$o[0].channel delay 0.1s
 attr mutable ""
 attr unit s
 par Multihop.node[0] typename "\"Txc1\""
-par Multihop.node[0] delayTime exponential(0.1s)
+par Multihop.node[0] delayTime exponential(1s)
 attr unit s
 par Multihop.node[1] typename "\"Txc1\""
-par Multihop.node[1] delayTime exponential(0.1s)
+par Multihop.node[1] delayTime exponential(1s)
 attr unit s
 par Multihop.node[2] typename "\"Txc1\""
-par Multihop.node[2] delayTime exponential(0.1s)
+par Multihop.node[2] delayTime exponential(1s)
 attr unit s
 par Multihop.node[3] typename "\"Txc1\""
-par Multihop.node[3] delayTime exponential(0.1s)
+par Multihop.node[3] delayTime exponential(1s)
 attr unit s
 par Multihop.node[4] typename "\"Txc1\""
-par Multihop.node[4] delayTime exponential(0.1s)
+par Multihop.node[4] delayTime exponential(1s)
 attr unit s
 par Multihop.node[5] typename "\"Txc1\""
-par Multihop.node[5] delayTime exponential(0.1s)
+par Multihop.node[5] delayTime exponential(1s)
 attr unit s
 par Multihop typename "\"Multihop\""
 
