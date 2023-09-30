@@ -5,7 +5,7 @@ using namespace omnetpp;
 
 class Txc1 : public cSimpleModule{
     private:
-        char firstMessageFlag;
+        // char firstMessageFlag;
         // long msgCounter;
         long numSent;
         long numReceived;
@@ -27,7 +27,7 @@ Txc1::~Txc1(){
 
 void Txc1::initialize(){
     // msgCounter = 0;
-    firstMessageFlag = 0;
+    //firstMessageFlag = 0;
     numSent = 0;
     numReceived = 0;
     // WATCH(msgCounter);
@@ -39,6 +39,7 @@ void Txc1::initialize(){
     // Start messaging if I an the first node
     if(getIndex() == 0){
         numSent++;
+        // msgCounter++;
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
@@ -52,13 +53,13 @@ void Txc1::handleMessage(cMessage *msg){
 
     //Planning new Message
     if(getIndex() == 0){
-        //Excluding first to not get double messages
         // numSent++;
         EV << "Scheduling 1 second after last event\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
         scheduleAt(simTime() + 1, newMsg);
+        
     }
 
     // Forwarding Message
@@ -72,15 +73,15 @@ void Txc1::handleMessage(cMessage *msg){
         delete msg; 
     }
     else{
-        // Message has to be forwarded
-        forwardMessage(msg);
+        // Message has to be forwarded   
         if(getIndex() != 0){
             numReceived++;
             emit(receptionSignal, numReceived);
         }
-
         numSent++;
         emit(transmissionSignal, numSent);
+
+        forwardMessage(msg);
     }
 }
 
