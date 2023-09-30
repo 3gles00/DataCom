@@ -1,51 +1,55 @@
 #include<cstring>
 #include<omnetpp.h>
+// #include<coutvector.h>
 
 using namespace omnetpp;
 
 class Txc1 : public cSimpleModule{
     private:
-        // char firstMessageFlag;
-        // long msgCounter;
+        cMessage *event = nullptr;
+        cMessage *multihopMsg = nullptr;
+        long msgCounter;
         long numSent;
         long numReceived;
-        simsignal_t transmissionSignal;
-        simsignal_t receptionSignal;
+        cOutVector txVector;
+        cOutVector rxVector;
+        // simsignal_t transmissionSignal;
+        // simsignal_t receptionSignal;
     public:
         virtual ~Txc1();
     protected:
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
         virtual void forwardMessage(cMessage *msg);
+        virtual void finish();
 };
 
 Define_Module(Txc1);
 
 Txc1::~Txc1(){
-
+    cancelAndDelete(event);
+    delete multihopMsg;
 }
 
 void Txc1::initialize(){
-    // msgCounter = 0;
-    //firstMessageFlag = 0;
-    numSent = 0;
+    
+    msgCounter = 0;
     numReceived = 0;
-    // WATCH(msgCounter);
-    WATCH(numSent);
-    WATCH(numReceived);
-    transmissionSignal = registerSignal("transmissionSignal");
-    receptionSignal = registerSignal("receptionSignal");
-
+    numSent = 0;
+    event = new cMessage("event");
+    txVector.setName("txVector");
+    rxVector.setName("rxVector");
+    
     // Start messaging if I an the first node
     if(getIndex() == 0){
         numSent++;
-        // msgCounter++;
+        msgCounter++;
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
-        sprintf(msgname, "DATA-%ld", numSent);
-        cMessage *msg = new cMessage(msgname);
-        scheduleAt(par("delayTime"), msg);
-        emit(transmissionSignal, numSent);
+        sprintf(msgname, "DATA-%ld", msgCounter);
+        multihopMsg = new cMessage(msgname);
+        scheduleAt(par("delayTime"), event);
+        txVector.record(numSent);
     }
 }
 
@@ -53,12 +57,14 @@ void Txc1::handleMessage(cMessage *msg){
 
     //Planning new Message
     if(getIndex() == 0){
-        // numSent++;
-        EV << "Scheduling 1 second after last event\n";
+        msgCounter++;
+        numSent++;
+        EV << "Scheduling next event\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + 1, newMsg);
+        scheduleAt(simTime() + par("delayTime"), newMsg);
+        txVector.record(numSent);
         
     }
 
@@ -67,20 +73,15 @@ void Txc1::handleMessage(cMessage *msg){
         // Message arrived
         EV << "Message " << msg << " arrived\n";
         numReceived++;
-        // msgCounter++;
-        emit(receptionSignal, numReceived);
-        cancelEvent(msg);
+        rxVector.record(numReceived);
         delete msg; 
     }
     else{
         // Message has to be forwarded   
-        if(getIndex() != 0){
-            numReceived++;
-            emit(receptionSignal, numReceived);
-        }
-        numSent++;
-        emit(transmissionSignal, numSent);
-
+        // if(getIndex() != 0){
+        //     numReceived++;
+        // }
+        // numSent++;
         forwardMessage(msg);
     }
 }
@@ -92,5 +93,15 @@ void Txc1::forwardMessage(cMessage *msg){
     int n = gateSize("gate");
     int k = n - 1;
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
-    send(msg, "gate$o", k);
+    sendDelayed(msg, exponential(0.01), "gate$o", k);
+}
+
+void Txc1::finish(){
+	EV << "Sent: " << numSent << endl;
+	EV << "Received: " << numReceived << endl;
+	EV << "msgCounter: " << msgCounter << endl;
+
+	recordScalar("#sent", numSent);
+	recordScalar("#received", numReceived);
+	recordScalar("#counter", msgCounter);
 }
