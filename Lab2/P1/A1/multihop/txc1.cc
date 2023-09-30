@@ -5,6 +5,7 @@ using namespace omnetpp;
 
 class Txc1 : public cSimpleModule{
     private:
+        char firstMessageFlag;
         // long msgCounter;
         long numSent;
         long numReceived;
@@ -26,6 +27,7 @@ Txc1::~Txc1(){
 
 void Txc1::initialize(){
     // msgCounter = 0;
+    firstMessageFlag = 0;
     numSent = 0;
     numReceived = 0;
     // WATCH(msgCounter);
@@ -50,13 +52,13 @@ void Txc1::handleMessage(cMessage *msg){
 
     //Planning new Message
     if(getIndex() == 0){
-        numSent++;
+        //Excluding first to not get double messages
+        // numSent++;
         EV << "Scheduling 1 second after last event\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
         scheduleAt(simTime() + 1, newMsg);
-        emit(transmissionSignal, numSent);
     }
 
     // Forwarding Message
@@ -64,6 +66,7 @@ void Txc1::handleMessage(cMessage *msg){
         // Message arrived
         EV << "Message " << msg << " arrived\n";
         numReceived++;
+        // msgCounter++;
         emit(receptionSignal, numReceived);
         cancelEvent(msg);
         delete msg; 
@@ -75,6 +78,7 @@ void Txc1::handleMessage(cMessage *msg){
             numReceived++;
             emit(receptionSignal, numReceived);
         }
+
         numSent++;
         emit(transmissionSignal, numSent);
     }
