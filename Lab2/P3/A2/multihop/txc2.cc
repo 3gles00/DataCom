@@ -2,7 +2,10 @@
 #include<omnetpp.h>
 #include<vector>
 #include<algorithm>
+<<<<<<< HEAD
 // #include<coutvector.h>
+=======
+>>>>>>> c34946e1114d0bda17a98c85b58f6251ddb88943
 
 using namespace omnetpp;
 
@@ -13,12 +16,16 @@ class Txc2 : public cSimpleModule{
         long msgCounter;
         long numSent;
         long numReceived;
+        std::vector<long> duplicatePackageList;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
+<<<<<<< HEAD
         std:vector<long> duplicatePacketList;
         // simsignal_t transmissionSignal;
         // simsignal_t receptionSignal;
+=======
+>>>>>>> c34946e1114d0bda17a98c85b58f6251ddb88943
     public:
         virtual ~Txc2();
     protected:
@@ -87,14 +94,20 @@ void Txc2::handleMessage(cMessage *msg){
     }
     else{
         if(lossProbability < uniform(0, 1)){
-            if(getIndex() != 0){
-                numReceived++;
-                numSent++;
-                msgCounter++;
-                rxVector.record(numReceived);
-                txVector.record(numSent);
+            if(std::find(duplicatePackageList.begin(), duplicatePackageList.end(),
+                msg->getTreeId()) != duplicatePackageList.end()){
+                EV << "This is a duplicate package. Deleting.\n";
+                delete msg;
             }
-            forwardMessage(msg);
+            else{
+                EV << "This is the first time we receive this message.\n";
+                duplicatePackageList.push_back(msg->getTreeId());
+                numReceived++;
+                msgCounter++;
+                forwardMessage(msg);
+            }
+            rxVector.record(numReceived);
+            txVector.record(numSent);
         }
         else{
             EV << "Lost Transmission\n";
@@ -108,16 +121,19 @@ void Txc2::forwardMessage(cMessage *msg){
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    int k =  n - 1;
-    if(getIndex() == 1){
-        k = intuniform(1, n - 1);
+    for(int i = 0; i < n; i++){
+        send(msg -> dup(), "gate$o", i);
+        numSent++;
     }
+<<<<<<< HEAD
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
 
     for(int i = 0; i<n; i++){
         sendDelayed(msg->dup(), exponential(0.01), "gate$o", i);
         numSent++;
     }
+=======
+>>>>>>> c34946e1114d0bda17a98c85b58f6251ddb88943
 }
 
 void Txc2::finish(){
