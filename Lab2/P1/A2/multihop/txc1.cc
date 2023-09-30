@@ -5,58 +5,82 @@ using namespace omnetpp;
 
 class Txc1 : public cSimpleModule{
     private:
-        long msgCounter;
-        // cMessage *event = nullptr;
+        // char firstMessageFlag;
+        // long msgCounter;
+        long numSent;
+        long numReceived;
+        simsignal_t transmissionSignal;
+        simsignal_t receptionSignal;
     public:
         virtual ~Txc1();
     protected:
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
         virtual void forwardMessage(cMessage *msg);
-        // virtual void scheduleMessage(cMessage *msg);
 };
 
 Define_Module(Txc1);
 
 Txc1::~Txc1(){
-    // cancelAndDelete(event);
-    // delete msg;
+
 }
 
 void Txc1::initialize(){
-    msgCounter = 0;
-    // event = new cMessage("event");
+    // msgCounter = 0;
+    //firstMessageFlag = 0;
+    numSent = 0;
+    numReceived = 0;
+    // WATCH(msgCounter);
+    WATCH(numSent);
+    WATCH(numReceived);
+    transmissionSignal = registerSignal("transmissionSignal");
+    receptionSignal = registerSignal("receptionSignal");
+
     // Start messaging if I an the first node
     if(getIndex() == 0){
-        msgCounter++;
+        numSent++;
+        // msgCounter++;
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
-        sprintf(msgname, "DATA-%ld", msgCounter);
+        sprintf(msgname, "DATA-%ld", numSent);
         cMessage *msg = new cMessage(msgname);
         scheduleAt(par("delayTime"), msg);
+        emit(transmissionSignal, numSent);
     }
 }
 
 void Txc1::handleMessage(cMessage *msg){
+
     //Planning new Message
     if(getIndex() == 0){
-        // Creating new Message
-        msgCounter++;
-        EV << "Scheduling first sent to a random time\n";
+        // numSent++;
+        EV << "Scheduling 1 second after last event\n";
         char msgname[20];
-        sprintf(msgname, "DATA-%ld", msgCounter);
+        sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + 1.0, newMsg);
+        scheduleAt(simTime() + 1, newMsg);
+        
     }
 
+    // Forwarding Message
     if(getIndex() == 5){
         // Message arrived
         EV << "Message " << msg << " arrived\n";
+        numReceived++;
+        // msgCounter++;
+        emit(receptionSignal, numReceived);
         cancelEvent(msg);
         delete msg; 
     }
     else{
-        // Message has to be forwarded
+        // Message has to be forwarded   
+        if(getIndex() != 0){
+            numReceived++;
+            emit(receptionSignal, numReceived);
+        }
+        numSent++;
+        emit(transmissionSignal, numSent);
+
         forwardMessage(msg);
     }
 }
