@@ -1,0 +1,129 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20230930-22:59:47-10933 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t Multihop n Multihop cm 1
+MS id 1 d ""
+MC id 2 c Txc1 t Txc1 pid 1 n node[0]
+MS id 2 d ""
+MC id 3 c Txc1 t Txc1 pid 1 n node[1]
+MS id 3 d ""
+MC id 4 c Txc1 t Txc1 pid 1 n node[2]
+MS id 4 d ""
+MC id 5 c Txc1 t Txc1 pid 1 n node[3]
+MS id 5 d ""
+MC id 6 c Txc1 t Txc1 pid 1 n node[4]
+MS id 6 d ""
+MC id 7 c Txc1 t Txc1 pid 1 n node[5]
+MS id 7 d ""
+MC id 8 c Txc1 t Txc1 pid 1 n node[6]
+MS id 8 d ""
+MC id 9 c Txc1 t Txc1 pid 1 n node[7]
+MS id 9 d ""
+GC m 2 g 1048576 n gate$i i 0 o 0
+GC m 2 g 1572864 n gate$o i 0 o 1
+GC m 3 g 1048576 n gate$i i 0 o 0
+GC m 3 g 1572864 n gate$o i 0 o 1
+CC sm 2 sg 1572864 dm 3 dg 1048576
+CS sm 2 sg 1572864 d ""
+CC sm 3 sg 1572864 dm 2 dg 1048576
+CS sm 3 sg 1572864 d ""
+GC m 2 g 1048577 n gate$i i 1 o 0
+GC m 2 g 1572865 n gate$o i 1 o 1
+GC m 4 g 1048576 n gate$i i 0 o 0
+GC m 4 g 1572864 n gate$o i 0 o 1
+CC sm 2 sg 1572865 dm 4 dg 1048576
+CS sm 2 sg 1572865 d ""
+CC sm 4 sg 1572864 dm 2 dg 1048577
+CS sm 4 sg 1572864 d ""
+GC m 3 g 1048577 n gate$i i 1 o 0
+GC m 3 g 1572865 n gate$o i 1 o 1
+GC m 5 g 1048576 n gate$i i 0 o 0
+GC m 5 g 1572864 n gate$o i 0 o 1
+CC sm 3 sg 1572865 dm 5 dg 1048576
+CS sm 3 sg 1572865 d ""
+CC sm 5 sg 1572864 dm 3 dg 1048577
+CS sm 5 sg 1572864 d ""
+GC m 3 g 1048578 n gate$i i 2 o 0
+GC m 3 g 1572866 n gate$o i 2 o 1
+GC m 6 g 1048576 n gate$i i 0 o 0
+GC m 6 g 1572864 n gate$o i 0 o 1
+CC sm 3 sg 1572866 dm 6 dg 1048576
+CS sm 3 sg 1572866 d ""
+CC sm 6 sg 1572864 dm 3 dg 1048578
+CS sm 6 sg 1572864 d ""
+GC m 4 g 1048577 n gate$i i 1 o 0
+GC m 4 g 1572865 n gate$o i 1 o 1
+GC m 6 g 1048577 n gate$i i 1 o 0
+GC m 6 g 1572865 n gate$o i 1 o 1
+CC sm 4 sg 1572865 dm 6 dg 1048577
+CS sm 4 sg 1572865 d ""
+CC sm 6 sg 1572865 dm 4 dg 1048577
+CS sm 6 sg 1572865 d ""
+GC m 5 g 1048577 n gate$i i 1 o 0
+GC m 5 g 1572865 n gate$o i 1 o 1
+GC m 7 g 1048576 n gate$i i 0 o 0
+GC m 7 g 1572864 n gate$o i 0 o 1
+CC sm 5 sg 1572865 dm 7 dg 1048576
+CS sm 5 sg 1572865 d ""
+CC sm 7 sg 1572864 dm 5 dg 1048577
+CS sm 7 sg 1572864 d ""
+GC m 5 g 1048578 n gate$i i 2 o 0
+GC m 5 g 1572866 n gate$o i 2 o 1
+GC m 8 g 1048576 n gate$i i 0 o 0
+GC m 8 g 1572864 n gate$o i 0 o 1
+CC sm 5 sg 1572866 dm 8 dg 1048576
+CS sm 5 sg 1572866 d ""
+CC sm 8 sg 1572864 dm 5 dg 1048578
+CS sm 8 sg 1572864 d ""
+GC m 6 g 1048578 n gate$i i 2 o 0
+GC m 6 g 1572866 n gate$o i 2 o 1
+GC m 8 g 1048577 n gate$i i 1 o 0
+GC m 8 g 1572865 n gate$o i 1 o 1
+CC sm 6 sg 1572866 dm 8 dg 1048577
+CS sm 6 sg 1572866 d ""
+CC sm 8 sg 1572865 dm 6 dg 1048578
+CS sm 8 sg 1572865 d ""
+GC m 7 g 1048577 n gate$i i 1 o 0
+GC m 7 g 1572865 n gate$o i 1 o 1
+GC m 9 g 1048576 n gate$i i 0 o 0
+GC m 9 g 1572864 n gate$o i 0 o 1
+CC sm 7 sg 1572865 dm 9 dg 1048576
+CS sm 7 sg 1572865 d ""
+CC sm 9 sg 1572864 dm 7 dg 1048577
+CS sm 9 sg 1572864 d ""
+GC m 8 g 1048578 n gate$i i 2 o 0
+GC m 8 g 1572866 n gate$o i 2 o 1
+GC m 9 g 1048577 n gate$i i 1 o 0
+GC m 9 g 1572865 n gate$o i 1 o 1
+CC sm 8 sg 1572866 dm 9 dg 1048577
+CS sm 8 sg 1572866 d ""
+CC sm 9 sg 1572865 dm 8 dg 1048578
+CS sm 9 sg 1572865 d ""
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe -1
+- INFO (Txc1)Multihop.node[0]:Scheduling first sent to a random time
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA-1 pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 0
+ES t 0.114274565438
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 7 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 8 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n event pe -1
+ME
+MB sm 1 tm 9 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n event pe -1
+ME

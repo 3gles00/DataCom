@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for model1
+# OMNeT++/OMNEST Makefile for model3
 #
 # This file was generated with the command:
 #  opp_makemake -f
 #
 
 # Name of target to be created (-o option)
-TARGET = model1$(D)$(EXE_SUFFIX)
+TARGET = model3$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
