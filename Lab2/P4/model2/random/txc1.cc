@@ -71,7 +71,7 @@ void Txc1::handleMessage(cMessage *msg){
     }
 
     // Forwarding Message
-    if(getIndex() == 5){
+    if(getIndex() == 6){
         // Message arrived
         EV << "Message " << msg << " arrived\n";
         numReceived++;

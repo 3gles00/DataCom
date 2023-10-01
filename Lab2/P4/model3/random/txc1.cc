@@ -71,7 +71,7 @@ void Txc1::handleMessage(cMessage *msg){
     }
 
     // Forwarding Message
-    if(getIndex() == 5){
+    if(getIndex() == 7){
         // Message arrived
         EV << "Message " << msg << " arrived\n";
         numReceived++;
@@ -101,10 +101,16 @@ void Txc1::forwardMessage(cMessage *msg){
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    int k = n - 1;
-    if(getIndex() == 1 || getIndex() == 2 || getIndex() == 3 || getIndex() == 4){
+    int k = intuniform(1, n - 1);
+    /*if(getIndex() == 0 || getIndex() == 1 || getIndex() == 2 || getIndex() == 3 || getIndex() == 4){
         k = intuniform(1, n - 1);
-    }
+    }*/
+    // the 0 gate gets funky becauuse we dont have a -> b that increase the gate count
+    // there fore wee need a if statement for this node
+
+    if(getIndex() == 0){
+        k = intuniform(0, n - 1);
+    } 
 
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
     sendDelayed(msg, exponential(0.01), "gate$o", k);

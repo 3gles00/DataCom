@@ -102,7 +102,7 @@ void Txc1::forwardMessage(cMessage *msg){
     // using our higher-numbered gate
     int n = gateSize("gate");
     int k = n - 1;
-    if(getIndex() == 1 || getIndex() == 2 || getIndex() == 3 || getIndex() == 4){
+    if(getIndex() == 1 || getIndex() == 2 || getIndex() == 3){
         k = intuniform(1, n - 1);
     }
 

@@ -1,0 +1,51 @@
+file 5362 1696118503                                            
+version 2
+run General-0-20231001-00:00:36-11919
+attr configname General
+attr datetime 20231001-00:00:36
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 11919
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+param Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+param Multihop.node[0].lossProbability 0.2
+param Multihop.node[1].lossProbability 0.2
+param Multihop.node[2].lossProbability 0.2
+param Multihop.node[3].lossProbability 0.2
+param Multihop.node[4].lossProbability 0.2
+param Multihop.node[5].lossProbability 0.2
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[3] rxVector ETV
+vector 4 Multihop.node[3] txVector ETV
+vector 5 Multihop.node[4] rxVector ETV
+vector 6 Multihop.node[4] txVector ETV
+vector 7 Multihop.node[2] rxVector ETV
+vector 8 Multihop.node[2] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+vector 10 Multihop.node[5] txVector ETV
+vector 11 Multihop.node[6] rxVector ETV
+0	1197 802 0 127 0 3.853111107691 36 1 36 666 16206
+1	1999 473 2 126 0.232870607559 3.77161086541 21 1 21 231 3311
+2	2472 473 2 126 0.232870607559 3.77161086541 21 1 21 231 3311
+3	2945 267 4 113 0.342640671823 3.163500870074 12 1 12 78 650
+4	3212 267 4 113 0.342640671823 3.163500870074 12 1 12 78 650
+5	3479 314 7 116 0.443224518514 3.286187210001 14 1 14 105 1015
+6	3793 314 7 116 0.443224518514 3.286187210001 14 1 14 105 1015
+7	4107 173 8 104 0.44750625557 2.949875739515 8 1 8 36 204
+8	4280 173 8 104 0.44750625557 2.949875739515 8 1 8 36 204
+9	4453 294 12 119 0.551618847043 3.389202869133 13 1 13 91 819
+10	4747 307 12 119 0.551618847043 3.389202869133 13 1 13 91 819
+11	5054 307 17 122 0.672027769202 3.490258995569 13 1 13 91 819
+

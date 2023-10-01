@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for model3
+# OMNeT++/OMNEST Makefile for random
 #
 # This file was generated with the command:
-#  opp_makemake -f
+#  opp_makemake
 #
 
 # Name of target to be created (-o option)
-TARGET = model3$(D)$(EXE_SUFFIX)
+TARGET = random$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
