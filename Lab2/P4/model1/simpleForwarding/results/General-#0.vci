@@ -1,0 +1,50 @@
+file 764116 1697032445                                          
+version 3
+run General-0-20231011-15:53:16-10640
+attr configname General
+attr datetime 20231011-15:53:16
+attr datetimef 20231011-155316
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 10640
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[0] rxVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[1] txVector ETV
+vector 4 Reliability.node[2] rxVector ETV
+vector 5 Reliability.node[2] txVector ETV
+vector 6 Reliability.node[3] rxVector ETV
+vector 7 Reliability.node[3] txVector ETV
+vector 8 Reliability.node[4] rxVector ETV
+vector 9 Reliability.node[4] txVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+0	1142 481206 0 10774 0 239.988030837792 16539 1 16401 135456879 1480614580071
+1	482348 211097 1 10774 0.114274565438 239.988030837792 7377 1 7239 26625294 128401522648
+2	693445 23435 2 10772 0.384435110221 239.981688269737 853 1 804 340720 182447674
+3	716880 24010 2 10772 0.384435110221 239.981688269737 853 3 2412 1022160 1642029066
+4	740890 4856 3 10714 0.892398024145 239.613446068858 181 1 146 13299 1293991
+5	745746 4945 3 10714 0.892398024145 239.613446068858 181 3 438 39897 11645919
+6	750691 5100 4 10736 0.949848050521 239.713250007398 190 1 154 14638 1512952
+7	755791 5186 4 10736 0.949848050521 239.713250007398 190 3 462 43914 13616568
+8	760977 1415 6 10494 1.877828572852 237.894837101658 54 1 37 1061 26765
+9	762392 1428 6 10494 1.877828572852 237.894837101658 54 3 111 3183 240885
+10	763820 295 18 8211 3.929969203732 219.149381714549 11 1 11 66 506
+
