@@ -1,14 +1,14 @@
 version 2
-run General-0-20231001-03:29:59-13187
+run General-0-20231001-03:32:59-13234
 attr configname General
-attr datetime 20231001-03:29:59
+attr datetime 20231001-03:32:59
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 13187
+attr processid 13234
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -23,18 +23,16 @@ param Multihop.node[3].lossProbability 0.2
 param Multihop.node[4].lossProbability 0.2
 param Multihop.node[5].lossProbability 0.2
 
-scalar Multihop.node[0] #sent 2277
+scalar Multihop.node[0] #sent 2301
 scalar Multihop.node[0] #received 0
-scalar Multihop.node[1] #sent 1502
-scalar Multihop.node[1] #received 1502
-scalar Multihop.node[2] #sent 714
-scalar Multihop.node[2] #received 714
-scalar Multihop.node[3] #sent 760
-scalar Multihop.node[3] #received 760
-scalar Multihop.node[4] #sent 1279
-scalar Multihop.node[4] #received 1279
-scalar Multihop.node[5] #sent 644
-scalar Multihop.node[5] #received 644
-scalar Multihop.node[6] #sent 0
-scalar Multihop.node[6] #received 644
+scalar Multihop.node[1] #sent 1514
+scalar Multihop.node[1] #received 1514
+scalar Multihop.node[2] #sent 997
+scalar Multihop.node[2] #received 997
+scalar Multihop.node[3] #sent 972
+scalar Multihop.node[3] #received 972
+scalar Multihop.node[4] #sent 824
+scalar Multihop.node[4] #received 824
+scalar Multihop.node[5] #sent 0
+scalar Multihop.node[5] #received 824
 
