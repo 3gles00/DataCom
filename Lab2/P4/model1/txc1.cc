@@ -1,34 +1,23 @@
 #include<cstring>
 #include<omnetpp.h>
-#include<vector>
-#include<algorithm>
+// #include<coutvector.h>
 
 using namespace omnetpp;
 
-class Txc2 : public cSimpleModule{
+class Txc1 : public cSimpleModule{
     private:
         cMessage *event = nullptr;
         cMessage *multihopMsg = nullptr;
         long msgCounter;
         long numSent;
         long numReceived;
-        std::vector<long> duplicatePacketList;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
-<<<<<<< HEAD
         // simsignal_t transmissionSignal;
         // simsignal_t receptionSignal;
-=======
-<<<<<<< HEAD
-        std:vector<long> duplicatePacketList;
-        // simsignal_t transmissionSignal;
-        // simsignal_t receptionSignal;
-=======
->>>>>>> c34946e1114d0bda17a98c85b58f6251ddb88943
->>>>>>> 47d73d74ba4c974c194d0d1f30812d73f81a40b9
     public:
-        virtual ~Txc2();
+        virtual ~Txc1();
     protected:
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
@@ -36,18 +25,14 @@ class Txc2 : public cSimpleModule{
         virtual void finish();
 };
 
-Define_Module(Txc2);
+Define_Module(Txc1);
 
-Txc2::~Txc2(){
+Txc1::~Txc1(){
     cancelAndDelete(event);
     delete multihopMsg;
 }
 
-void Txc2::broadcast(cMessage *msg){
-
-}
-
-void Txc2::initialize(){
+void Txc1::initialize(){
     
     msgCounter = 0;
     numReceived = 0;
@@ -70,21 +55,20 @@ void Txc2::initialize(){
     }
 }
 
-void Txc2::handleMessage(cMessage *msg){
+void Txc1::handleMessage(cMessage *msg){
 
-         //Planning new Message
-        if(getIndex() == 0){
-            msgCounter++;
-            numSent++;
-            EV << "Scheduling next event\n";
-            char msgname[20];
-            sprintf(msgname, "DATA-%ld", numSent);
-            cMessage *newMsg = new cMessage(msgname);
-            duplicatePacketList.push_back(newMsg->getTreeId());
-            scheduleAt(simTime() + par("delayTime"), newMsg);
-            txVector.record(numSent);
+    //Planning new Message
+    if(getIndex() == 0){
+        msgCounter++;
+        numSent++;
+        EV << "Scheduling next event\n";
+        char msgname[20];
+        sprintf(msgname, "DATA-%ld", numSent);
+        cMessage *newMsg = new cMessage(msgname);
+        scheduleAt(simTime() + par("delayTime"), newMsg);
+        txVector.record(numSent);
         
-        }
+    }
 
     // Forwarding Message
     if(getIndex() == 5){
@@ -96,21 +80,14 @@ void Txc2::handleMessage(cMessage *msg){
     }
     else{
         if(lossProbability < uniform(0, 1)){
-            if(getIndex)
-            if(std::find(duplicatePacketList.begin(), duplicatePacketList.end(), msg->getTreeId())
-                != duplicatePacketList.end()){
-                EV << "This is a duplicate packet. Deleting.\n";
-                delete msg;
-            }
-            else{
-                EV << "This is the first time we reeceive this message.\n";
-                duplicatePacketList.push_back(msg->getTreeId());
+            if(getIndex() != 0){
                 numReceived++;
+                numSent++;
                 msgCounter++;
-                forwardMessage(msg);
-                // rxVector.record(numReceived);
-                // txVector.record(numSent);
-            }    
+                rxVector.record(numReceived);
+                txVector.record(numSent);
+            }
+            forwardMessage(msg);
         }
         else{
             EV << "Lost Transmission\n";
@@ -119,27 +96,17 @@ void Txc2::handleMessage(cMessage *msg){
     }
 }
 
-void Txc2::forwardMessage(cMessage *msg){
+void Txc1::forwardMessage(cMessage *msg){
     // For this example, we always reveive in the gate with
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    for(int i = 0; i < n; i++){
-        send(msg -> dup(), "gate$o", i);
-        numSent++;
-    }
-<<<<<<< HEAD
+    int k = n - 1;
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
-
-    for(int i = 0; i<n; i++){
-        sendDelayed(msg->dup(), exponential(0.01), "gate$o", i);
-        numSent++;
-    }
-=======
->>>>>>> c34946e1114d0bda17a98c85b58f6251ddb88943
+    sendDelayed(msg, exponential(0.01), "gate$o", k);
 }
 
-void Txc2::finish(){
+void Txc1::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
 	EV << "msgCounter: " << msgCounter << endl;
