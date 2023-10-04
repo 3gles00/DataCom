@@ -1,6 +1,7 @@
 #include<cstring>
 #include<omnetpp.h>
-// #include<coutvector.h>
+#include<vector>
+#include<algorithm>
 
 using namespace omnetpp;
 
@@ -11,11 +12,10 @@ class Txc2 : public cSimpleModule{
         long msgCounter;
         long numSent;
         long numReceived;
+        std::vector<long> duplicatePackageList;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
-        // simsignal_t transmissionSignal;
-        // simsignal_t receptionSignal;
     public:
         virtual ~Txc2();
     protected:
@@ -80,14 +80,20 @@ void Txc2::handleMessage(cMessage *msg){
     }
     else{
         if(lossProbability < uniform(0, 1)){
-            if(getIndex() != 0){
-                numReceived++;
-                numSent++;
-                msgCounter++;
-                rxVector.record(numReceived);
-                txVector.record(numSent);
+            if(std::find(duplicatePackageList.begin(), duplicatePackageList.end(),
+                msg->getTreeId()) != duplicatePackageList.end()){
+                EV << "This is a duplicate package. Deleting.\n";
+                delete msg;
             }
-            forwardMessage(msg);
+            else{
+                EV << "This is the first time we receive this message.\n";
+                duplicatePackageList.push_back(msg->getTreeId());
+                numReceived++;
+                msgCounter++;
+                forwardMessage(msg);
+            }
+            rxVector.record(numReceived);
+            txVector.record(numSent);
         }
         else{
             EV << "Lost Transmission\n";
@@ -101,12 +107,10 @@ void Txc2::forwardMessage(cMessage *msg){
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    int k =  n - 1;
-    if(getIndex() == 1){
-        k = intuniform(1, n - 1);
+    for(int i = 0; i < n; i++){
+        send(msg -> dup(), "gate$o", i);
+        numSent++;
     }
-    EV << "Forwarding message " << msg << " on gate " << k << "\n";
-    sendDelayed(msg, exponential(0.01), "gate$o", k);
 }
 
 void Txc2::finish(){
