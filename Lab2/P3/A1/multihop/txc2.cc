@@ -4,7 +4,7 @@
 
 using namespace omnetpp;
 
-class Txc1 : public cSimpleModule{
+class Txc2 : public cSimpleModule{
     private:
         cMessage *event = nullptr;
         cMessage *multihopMsg = nullptr;
@@ -17,7 +17,7 @@ class Txc1 : public cSimpleModule{
         // simsignal_t transmissionSignal;
         // simsignal_t receptionSignal;
     public:
-        virtual ~Txc1();
+        virtual ~Txc2();
     protected:
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
@@ -25,14 +25,14 @@ class Txc1 : public cSimpleModule{
         virtual void finish();
 };
 
-Define_Module(Txc1);
+Define_Module(Txc2);
 
-Txc1::~Txc1(){
+Txc2::~Txc2(){
     cancelAndDelete(event);
     delete multihopMsg;
 }
 
-void Txc1::initialize(){
+void Txc2::initialize(){
     
     msgCounter = 0;
     numReceived = 0;
@@ -55,7 +55,7 @@ void Txc1::initialize(){
     }
 }
 
-void Txc1::handleMessage(cMessage *msg){
+void Txc2::handleMessage(cMessage *msg){
 
     //Planning new Message
     if(getIndex() == 0){
@@ -96,17 +96,20 @@ void Txc1::handleMessage(cMessage *msg){
     }
 }
 
-void Txc1::forwardMessage(cMessage *msg){
+void Txc2::forwardMessage(cMessage *msg){
     // For this example, we always reveive in the gate with
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    int k = n - 1;
+    int k =  n - 1;
+    if(getIndex() == 1){
+        k = intuniform(1, n - 1);
+    }
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
     sendDelayed(msg, exponential(0.01), "gate$o", k);
 }
 
-void Txc1::finish(){
+void Txc2::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
 	EV << "msgCounter: " << msgCounter << endl;
