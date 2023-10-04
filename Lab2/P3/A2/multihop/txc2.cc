@@ -12,10 +12,12 @@ class Txc2 : public cSimpleModule{
         long msgCounter;
         long numSent;
         long numReceived;
-        std::vector<long> duplicatePackageList;
+        std::vector<long> duplicatePacketList;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
+        // simsignal_t transmissionSignal;
+        // simsignal_t receptionSignal;
     public:
         virtual ~Txc2();
     protected:
@@ -57,18 +59,19 @@ void Txc2::initialize(){
 
 void Txc2::handleMessage(cMessage *msg){
 
-    //Planning new Message
-    if(getIndex() == 0){
-        msgCounter++;
-        numSent++;
-        EV << "Scheduling next event\n";
-        char msgname[20];
-        sprintf(msgname, "DATA-%ld", numSent);
-        cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + par("delayTime"), newMsg);
-        txVector.record(numSent);
+         //Planning new Message
+        if(getIndex() == 0){
+            msgCounter++;
+            numSent++;
+            EV << "Scheduling next event\n";
+            char msgname[20];
+            sprintf(msgname, "DATA-%ld", numSent);
+            cMessage *newMsg = new cMessage(msgname);
+            duplicatePacketList.push_back(newMsg->getTreeId());
+            scheduleAt(simTime() + par("delayTime"), newMsg);
+            txVector.record(numSent);
         
-    }
+        }
 
     // Forwarding Message
     if(getIndex() == 5){
@@ -80,20 +83,21 @@ void Txc2::handleMessage(cMessage *msg){
     }
     else{
         if(lossProbability < uniform(0, 1)){
-            if(std::find(duplicatePackageList.begin(), duplicatePackageList.end(),
-                msg->getTreeId()) != duplicatePackageList.end()){
-                EV << "This is a duplicate package. Deleting.\n";
+            if(getIndex)
+            if(std::find(duplicatePacketList.begin(), duplicatePacketList.end(), msg->getTreeId())
+                != duplicatePacketList.end()){
+                EV << "This is a duplicate packet. Deleting.\n";
                 delete msg;
             }
             else{
-                EV << "This is the first time we receive this message.\n";
-                duplicatePackageList.push_back(msg->getTreeId());
+                EV << "This is the first time we reeceive this message.\n";
+                duplicatePacketList.push_back(msg->getTreeId());
                 numReceived++;
                 msgCounter++;
                 forwardMessage(msg);
-            }
-            rxVector.record(numReceived);
-            txVector.record(numSent);
+                // rxVector.record(numReceived);
+                // txVector.record(numSent);
+            }    
         }
         else{
             EV << "Lost Transmission\n";
