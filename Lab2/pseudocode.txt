@@ -1,0 +1,54 @@
+//Pseudocode for Forwarding Mechanisms for K nodes
+
+initialize()
+    initialize counters
+    initialize statistics
+    read parameter processingDelay
+    read parameter transmissionDelay
+    read parameter lossProbability
+    read parameter forwardingAlgorithm
+    
+    if node[0]
+        create newMessage
+        multihopMsg <- newMessage
+        store multihopMsg in duplicatePacketList //Source remembers its messages
+        schedule event in t_now + processingDelay
+        
+handle_message(msg)
+    if msg == event
+        if node[0]
+            send multihopMsg on gate(n-1)
+            clear multihopMsg
+            update statistics
+            create newMessage
+            multihopMsg <- newMessage
+            schedule event in t_now + transmissionDelay
+        else if node[1]..node[k-1]
+            if forwardingAlgorithm == randomNextHop
+                outgate <- random(1..n-1)
+                send multihopMsg on outgate
+                clear multihopMsg
+            else // this means forwardingAlgorithm == simpleForwarding
+                for (i=0 ; i<n ; i++)
+                    copyMessage <- multihopMsg
+                    send copyMessage on gate(i)
+                clear multihopMsg
+    else //this means msg is an external message
+        if (uniform(0,1)>lossProbability) //I shall receive
+            if msg is in duplicatePacketList
+                delete msg //I had seen this message before
+            else // This is a new message
+                if node[k] //I am the last node
+                    update statistics
+                    store msg in duplicatePacketList
+                    delete msg
+                else //I am an intermediate node
+                    update statistics
+                    store msg in duplicatePacketList
+                    forward(msg)
+        else //I shall not receive
+            delete msg
+            
+forward(msg)
+    multihopMsg <- msg
+    schedule event in t_now + processingDelay
