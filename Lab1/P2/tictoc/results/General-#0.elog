@@ -1,4 +1,4 @@
-SB ov 1536 ev 2 rid General-0-20230919-15:46:14-1756
+SB ov 1536 ev 2 rid General-0-20230928-15:22:12-17498
 
 E # 0 t 0 m 1 ce -1 msg -1
 MC id 1 c omnetpp::cModule t Tictoc1 n Tictoc1 cm 1
@@ -25,5 +25,43 @@ CME
 CMB sm 1 tm 3 m initialize(0)
 CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe -1
 CME
+
+E # 1 t 1.591749009132 m 2 ce 0 msg 0
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA m 2 pe 0
+SH sm 2 sg 3 pd 0.1
+ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA sm 2 sg 3 st 1.591749009132 am 3 ag 0 at 1.691749009132 pe 1
+CL id 3 tid 1 eid 3 etid 1 c omnetpp::cMessage n DATA m 2 pe -1 cid 1
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 1.591749009132 am 2 at 3.3888697861 pe 1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 1.591749009132 am 2 at 3.3888697861 pe 1
+- INFO: Timeout is over, sending message
+
+E # 2 t 1.691749009132 m 3 ce 1 msg 1
+DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA m 3 pe 2
+- INFO: Message is lost
+
+E # 3 t 3.3888697861 m 2 ce 1 msg 0
+BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA m 2 pe 1
+SH sm 2 sg 3 pd 0.1
+ES id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA sm 2 sg 3 st 3.3888697861 am 3 ag 0 at 3.4888697861 pe 3
+CL id 4 tid 3 eid 4 etid 3 c omnetpp::cMessage n DATA m 2 pe -1 cid 3
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.3888697861 am 2 at 7.108078210249 pe 3
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 3.3888697861 am 2 at 7.108078210249 pe 3
+- INFO: Timeout is over, sending message
+
+E # 4 t 3.4888697861 m 3 ce 3 msg 3
+DM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n DATA m 3 pe 4
+- INFO: Message is lost
+
+E # 5 t 7.108078210249 m 2 ce 3 msg 0
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA m 2 pe 3
+SH sm 2 sg 3 pd 0.1
+ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n DATA sm 2 sg 3 st 7.108078210249 am 3 ag 0 at 7.208078210249 pe 5
+CL id 5 tid 4 eid 5 etid 4 c omnetpp::cMessage n DATA m 2 pe -1 cid 4
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n DATA pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.108078210249 am 2 at 11.011168882018 pe 5
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event sm 2 st 7.108078210249 am 2 at 11.011168882018 pe 5
+- INFO: Timeout is over, sending message
 
 SE e 0 c -1 m ""

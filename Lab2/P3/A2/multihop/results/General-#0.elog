@@ -1,0 +1,661 @@
+SB ov 1536 ev 2 rid General-0-20231005-15:01:37-12533
+
+E # 0 t 0 m 1 ce -1 msg -1
+MC id 1 c omnetpp::cModule t Reliability n Reliability cm 1
+MDC id 1 d ""
+MC id 2 c Txc2 t Txc2 pid 1 n node[0]
+MDC id 2 d ""
+MC id 3 c Txc2 t Txc2 pid 1 n node[1]
+MDC id 3 d ""
+MC id 4 c Txc2 t Txc2 pid 1 n node[2]
+MDC id 4 d ""
+MC id 5 c Txc2 t Txc2 pid 1 n node[3]
+MDC id 5 d ""
+MC id 6 c Txc2 t Txc2 pid 1 n node[4]
+MDC id 6 d ""
+MC id 7 c Txc2 t Txc2 pid 1 n node[5]
+MDC id 7 d ""
+GC m 2 g 1048576 n gate$i i 0 o 0
+GC m 2 g 1572864 n gate$o i 0 o 1
+GC m 3 g 1048576 n gate$i i 0 o 0
+GC m 3 g 1572864 n gate$o i 0 o 1
+CC sm 2 sg 1572864 dm 3 dg 1048576
+CDC sm 2 sg 1572864 d ""
+CC sm 3 sg 1572864 dm 2 dg 1048576
+CDC sm 3 sg 1572864 d ""
+GC m 3 g 1048577 n gate$i i 1 o 0
+GC m 3 g 1572865 n gate$o i 1 o 1
+GC m 4 g 1048576 n gate$i i 0 o 0
+GC m 4 g 1572864 n gate$o i 0 o 1
+CC sm 3 sg 1572865 dm 4 dg 1048576
+CDC sm 3 sg 1572865 d ""
+CC sm 4 sg 1572864 dm 3 dg 1048577
+CDC sm 4 sg 1572864 d ""
+GC m 3 g 1048578 n gate$i i 2 o 0
+GC m 3 g 1572866 n gate$o i 2 o 1
+GC m 5 g 1048576 n gate$i i 0 o 0
+GC m 5 g 1572864 n gate$o i 0 o 1
+CC sm 3 sg 1572866 dm 5 dg 1048576
+CDC sm 3 sg 1572866 d ""
+CC sm 5 sg 1572864 dm 3 dg 1048578
+CDC sm 5 sg 1572864 d ""
+GC m 4 g 1048577 n gate$i i 1 o 0
+GC m 4 g 1572865 n gate$o i 1 o 1
+GC m 6 g 1048576 n gate$i i 0 o 0
+GC m 6 g 1572864 n gate$o i 0 o 1
+CC sm 4 sg 1572865 dm 6 dg 1048576
+CDC sm 4 sg 1572865 d ""
+CC sm 6 sg 1572864 dm 4 dg 1048577
+CDC sm 6 sg 1572864 d ""
+GC m 5 g 1048577 n gate$i i 1 o 0
+GC m 5 g 1572865 n gate$o i 1 o 1
+GC m 6 g 1048577 n gate$i i 1 o 0
+GC m 6 g 1572865 n gate$o i 1 o 1
+CC sm 5 sg 1572865 dm 6 dg 1048577
+CDC sm 5 sg 1572865 d ""
+CC sm 6 sg 1572865 dm 5 dg 1048577
+CDC sm 6 sg 1572865 d ""
+GC m 6 g 1048578 n gate$i i 2 o 0
+GC m 6 g 1572866 n gate$o i 2 o 1
+GC m 7 g 1048576 n gate$i i 0 o 0
+GC m 7 g 1572864 n gate$o i 0 o 1
+CC sm 6 sg 1572866 dm 7 dg 1048576
+CDC sm 6 sg 1572866 d ""
+CC sm 7 sg 1572864 dm 6 dg 1048578
+CDC sm 7 sg 1572864 d ""
+CMB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe -1
+- INFO: Scheduling first sent to a random time
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA-1 pe -1
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA-1 sm 2 st 0 am 2 at 0.114274565438 pe 0
+ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n DATA-1 sm 2 st 0 am 2 at 0.114274565438 pe 0
+CME
+CMB sm 1 tm 3 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe -1
+CME
+CMB sm 1 tm 4 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n event pe -1
+CME
+CMB sm 1 tm 5 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n event pe -1
+CME
+CMB sm 1 tm 6 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n event pe -1
+CME
+CMB sm 1 tm 7 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n event pe -1
+CME
+
+E # 1 t 0.114274565438 m 2 ce 0 msg 1
+- INFO: Scheduling next event
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA-2 pe -1
+BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA-2 sm 2 st 0.114274565438 am 2 at 0.236915042552 pe 1
+ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n DATA-2 sm 2 st 0.114274565438 am 2 at 0.236915042552 pe 1
+- INFO: This is the first time we receive this message.
+CL id 8 tid 1 eid 8 etid 1 c omnetpp::cMessage n DATA-1 m 2 pe -1 cid 1
+BS id 8 tid 1 eid 8 etid 1 c omnetpp::cMessage n DATA-1 m 2 pe 1
+SH sm 2 sg 1572864 pd 0.01
+ES id 8 tid 1 eid 8 etid 1 c omnetpp::cMessage n DATA-1 sm 2 sg 1572864 st 0.114274565438 am 3 ag 1048576 at 0.124274565438 pe 1
+CL id 9 tid 1 eid 9 etid 1 c omnetpp::cMessage n DATA-1 m 2 pe -1 cid 8
+
+E # 2 t 0.124274565438 m 3 ce 1 msg 8
+- INFO: This is the first time we receive this message.
+CL id 9 tid 1 eid 9 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 8
+BS id 9 tid 1 eid 9 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe 2
+SH sm 3 sg 1572864 pd 0.01
+ES id 9 tid 1 eid 9 etid 1 c omnetpp::cMessage n DATA-1 sm 3 sg 1572864 st 0.124274565438 am 2 ag 1048576 at 0.134274565438 pe 2
+CL id 10 tid 1 eid 10 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 9
+CL id 10 tid 1 eid 10 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 8
+BS id 10 tid 1 eid 10 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe 2
+SH sm 3 sg 1572865 pd 0.01
+ES id 10 tid 1 eid 10 etid 1 c omnetpp::cMessage n DATA-1 sm 3 sg 1572865 st 0.124274565438 am 4 ag 1048576 at 0.134274565438 pe 2
+CL id 11 tid 1 eid 11 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 10
+CL id 11 tid 1 eid 11 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 8
+BS id 11 tid 1 eid 11 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe 2
+SH sm 3 sg 1572866 pd 0.01
+ES id 11 tid 1 eid 11 etid 1 c omnetpp::cMessage n DATA-1 sm 3 sg 1572866 st 0.124274565438 am 5 ag 1048576 at 0.134274565438 pe 2
+CL id 12 tid 1 eid 12 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe -1 cid 11
+
+E # 3 t 0.134274565438 m 2 ce 2 msg 9
+- INFO: Scheduling next event
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA-4 pe -1
+BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA-4 sm 2 st 0.134274565438 am 2 at 0.25879960581 pe 3
+ES id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n DATA-4 sm 2 st 0.134274565438 am 2 at 0.25879960581 pe 3
+- INFO: This is a duplicate package. Deleting.
+DM id 9 tid 1 eid 9 etid 1 c omnetpp::cMessage n DATA-1 m 2 pe 3
+
+E # 4 t 0.134274565438 m 4 ce 2 msg 10
+- INFO: This is the first time we receive this message.
+CL id 13 tid 1 eid 13 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe -1 cid 10
+BS id 13 tid 1 eid 13 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe 4
+SH sm 4 sg 1572864 pd 0.01
+ES id 13 tid 1 eid 13 etid 1 c omnetpp::cMessage n DATA-1 sm 4 sg 1572864 st 0.134274565438 am 3 ag 1048577 at 0.144274565438 pe 4
+CL id 14 tid 1 eid 14 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe -1 cid 13
+CL id 14 tid 1 eid 14 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe -1 cid 10
+BS id 14 tid 1 eid 14 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe 4
+SH sm 4 sg 1572865 pd 0.01
+ES id 14 tid 1 eid 14 etid 1 c omnetpp::cMessage n DATA-1 sm 4 sg 1572865 st 0.134274565438 am 6 ag 1048576 at 0.144274565438 pe 4
+CL id 15 tid 1 eid 15 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe -1 cid 14
+
+E # 5 t 0.134274565438 m 5 ce 2 msg 11
+- INFO: This is the first time we receive this message.
+CL id 15 tid 1 eid 15 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe -1 cid 11
+BS id 15 tid 1 eid 15 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe 5
+SH sm 5 sg 1572864 pd 0.01
+ES id 15 tid 1 eid 15 etid 1 c omnetpp::cMessage n DATA-1 sm 5 sg 1572864 st 0.134274565438 am 3 ag 1048578 at 0.144274565438 pe 5
+CL id 16 tid 1 eid 16 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe -1 cid 15
+CL id 16 tid 1 eid 16 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe -1 cid 11
+BS id 16 tid 1 eid 16 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe 5
+SH sm 5 sg 1572865 pd 0.01
+ES id 16 tid 1 eid 16 etid 1 c omnetpp::cMessage n DATA-1 sm 5 sg 1572865 st 0.134274565438 am 6 ag 1048577 at 0.144274565438 pe 5
+CL id 17 tid 1 eid 17 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe -1 cid 16
+
+E # 6 t 0.144274565438 m 3 ce 4 msg 13
+- INFO: This is a duplicate package. Deleting.
+DM id 13 tid 1 eid 13 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe 6
+
+E # 7 t 0.144274565438 m 6 ce 4 msg 14
+- INFO: This is the first time we receive this message.
+CL id 17 tid 1 eid 17 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 14
+BS id 17 tid 1 eid 17 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe 7
+SH sm 6 sg 1572864 pd 0.01
+ES id 17 tid 1 eid 17 etid 1 c omnetpp::cMessage n DATA-1 sm 6 sg 1572864 st 0.144274565438 am 4 ag 1048577 at 0.154274565438 pe 7
+CL id 18 tid 1 eid 18 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 17
+CL id 18 tid 1 eid 18 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 14
+BS id 18 tid 1 eid 18 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe 7
+SH sm 6 sg 1572865 pd 0.01
+ES id 18 tid 1 eid 18 etid 1 c omnetpp::cMessage n DATA-1 sm 6 sg 1572865 st 0.144274565438 am 5 ag 1048577 at 0.154274565438 pe 7
+CL id 19 tid 1 eid 19 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 18
+CL id 19 tid 1 eid 19 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 14
+BS id 19 tid 1 eid 19 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe 7
+SH sm 6 sg 1572866 pd 0.01
+ES id 19 tid 1 eid 19 etid 1 c omnetpp::cMessage n DATA-1 sm 6 sg 1572866 st 0.144274565438 am 7 ag 1048576 at 0.154274565438 pe 7
+CL id 20 tid 1 eid 20 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe -1 cid 19
+
+E # 8 t 0.144274565438 m 3 ce 5 msg 15
+- INFO: This is a duplicate package. Deleting.
+DM id 15 tid 1 eid 15 etid 1 c omnetpp::cMessage n DATA-1 m 3 pe 8
+
+E # 9 t 0.144274565438 m 6 ce 5 msg 16
+- INFO: This is a duplicate package. Deleting.
+DM id 16 tid 1 eid 16 etid 1 c omnetpp::cMessage n DATA-1 m 6 pe 9
+
+E # 10 t 0.154274565438 m 4 ce 7 msg 17
+- INFO: This is a duplicate package. Deleting.
+DM id 17 tid 1 eid 17 etid 1 c omnetpp::cMessage n DATA-1 m 4 pe 10
+
+E # 11 t 0.154274565438 m 5 ce 7 msg 18
+- INFO: This is a duplicate package. Deleting.
+DM id 18 tid 1 eid 18 etid 1 c omnetpp::cMessage n DATA-1 m 5 pe 11
+
+E # 12 t 0.154274565438 m 7 ce 7 msg 19
+- INFO: Message (omnetpp::cMessage)DATA-1  arrived
+DM id 19 tid 1 eid 19 etid 1 c omnetpp::cMessage n DATA-1 m 7 pe 12
+
+E # 13 t 0.236915042552 m 2 ce 1 msg 7
+- INFO: Scheduling next event
+CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA-5 pe -1
+BS id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA-5 sm 2 st 0.236915042552 am 2 at 0.416351912886 pe 13
+ES id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n DATA-5 sm 2 st 0.236915042552 am 2 at 0.416351912886 pe 13
+- INFO: This is the first time we receive this message.
+CL id 21 tid 7 eid 21 etid 7 c omnetpp::cMessage n DATA-2 m 2 pe -1 cid 7
+BS id 21 tid 7 eid 21 etid 7 c omnetpp::cMessage n DATA-2 m 2 pe 13
+SH sm 2 sg 1572864 pd 0.01
+ES id 21 tid 7 eid 21 etid 7 c omnetpp::cMessage n DATA-2 sm 2 sg 1572864 st 0.236915042552 am 3 ag 1048576 at 0.246915042552 pe 13
+CL id 22 tid 7 eid 22 etid 7 c omnetpp::cMessage n DATA-2 m 2 pe -1 cid 21
+
+E # 14 t 0.246915042552 m 3 ce 13 msg 21
+- INFO: This is the first time we receive this message.
+CL id 22 tid 7 eid 22 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 21
+BS id 22 tid 7 eid 22 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe 14
+SH sm 3 sg 1572864 pd 0.01
+ES id 22 tid 7 eid 22 etid 7 c omnetpp::cMessage n DATA-2 sm 3 sg 1572864 st 0.246915042552 am 2 ag 1048576 at 0.256915042552 pe 14
+CL id 23 tid 7 eid 23 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 22
+CL id 23 tid 7 eid 23 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 21
+BS id 23 tid 7 eid 23 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe 14
+SH sm 3 sg 1572865 pd 0.01
+ES id 23 tid 7 eid 23 etid 7 c omnetpp::cMessage n DATA-2 sm 3 sg 1572865 st 0.246915042552 am 4 ag 1048576 at 0.256915042552 pe 14
+CL id 24 tid 7 eid 24 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 23
+CL id 24 tid 7 eid 24 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 21
+BS id 24 tid 7 eid 24 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe 14
+SH sm 3 sg 1572866 pd 0.01
+ES id 24 tid 7 eid 24 etid 7 c omnetpp::cMessage n DATA-2 sm 3 sg 1572866 st 0.246915042552 am 5 ag 1048576 at 0.256915042552 pe 14
+CL id 25 tid 7 eid 25 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe -1 cid 24
+
+E # 15 t 0.256915042552 m 2 ce 14 msg 22
+- INFO: Scheduling next event
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA-7 pe -1
+BS id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA-7 sm 2 st 0.256915042552 am 2 at 0.31871973851 pe 15
+ES id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n DATA-7 sm 2 st 0.256915042552 am 2 at 0.31871973851 pe 15
+- INFO: This is a duplicate package. Deleting.
+DM id 22 tid 7 eid 22 etid 7 c omnetpp::cMessage n DATA-2 m 2 pe 15
+
+E # 16 t 0.256915042552 m 4 ce 14 msg 23
+- INFO: This is the first time we receive this message.
+CL id 26 tid 7 eid 26 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe -1 cid 23
+BS id 26 tid 7 eid 26 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe 16
+SH sm 4 sg 1572864 pd 0.01
+ES id 26 tid 7 eid 26 etid 7 c omnetpp::cMessage n DATA-2 sm 4 sg 1572864 st 0.256915042552 am 3 ag 1048577 at 0.266915042552 pe 16
+CL id 27 tid 7 eid 27 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe -1 cid 26
+CL id 27 tid 7 eid 27 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe -1 cid 23
+BS id 27 tid 7 eid 27 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe 16
+SH sm 4 sg 1572865 pd 0.01
+ES id 27 tid 7 eid 27 etid 7 c omnetpp::cMessage n DATA-2 sm 4 sg 1572865 st 0.256915042552 am 6 ag 1048576 at 0.266915042552 pe 16
+CL id 28 tid 7 eid 28 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe -1 cid 27
+
+E # 17 t 0.256915042552 m 5 ce 14 msg 24
+- INFO: This is the first time we receive this message.
+CL id 28 tid 7 eid 28 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe -1 cid 24
+BS id 28 tid 7 eid 28 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe 17
+SH sm 5 sg 1572864 pd 0.01
+ES id 28 tid 7 eid 28 etid 7 c omnetpp::cMessage n DATA-2 sm 5 sg 1572864 st 0.256915042552 am 3 ag 1048578 at 0.266915042552 pe 17
+CL id 29 tid 7 eid 29 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe -1 cid 28
+CL id 29 tid 7 eid 29 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe -1 cid 24
+BS id 29 tid 7 eid 29 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe 17
+SH sm 5 sg 1572865 pd 0.01
+ES id 29 tid 7 eid 29 etid 7 c omnetpp::cMessage n DATA-2 sm 5 sg 1572865 st 0.256915042552 am 6 ag 1048577 at 0.266915042552 pe 17
+CL id 30 tid 7 eid 30 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe -1 cid 29
+
+E # 18 t 0.25879960581 m 2 ce 3 msg 12
+- INFO: Scheduling next event
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA-8 pe -1
+BS id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA-8 sm 2 st 0.25879960581 am 2 at 0.423111663838 pe 18
+ES id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n DATA-8 sm 2 st 0.25879960581 am 2 at 0.423111663838 pe 18
+- INFO: This is the first time we receive this message.
+CL id 31 tid 12 eid 31 etid 12 c omnetpp::cMessage n DATA-4 m 2 pe -1 cid 12
+BS id 31 tid 12 eid 31 etid 12 c omnetpp::cMessage n DATA-4 m 2 pe 18
+SH sm 2 sg 1572864 pd 0.01
+ES id 31 tid 12 eid 31 etid 12 c omnetpp::cMessage n DATA-4 sm 2 sg 1572864 st 0.25879960581 am 3 ag 1048576 at 0.26879960581 pe 18
+CL id 32 tid 12 eid 32 etid 12 c omnetpp::cMessage n DATA-4 m 2 pe -1 cid 31
+
+E # 19 t 0.266915042552 m 3 ce 16 msg 26
+- INFO: This is a duplicate package. Deleting.
+DM id 26 tid 7 eid 26 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe 19
+
+E # 20 t 0.266915042552 m 6 ce 16 msg 27
+- INFO: This is the first time we receive this message.
+CL id 32 tid 7 eid 32 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 27
+BS id 32 tid 7 eid 32 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe 20
+SH sm 6 sg 1572864 pd 0.01
+ES id 32 tid 7 eid 32 etid 7 c omnetpp::cMessage n DATA-2 sm 6 sg 1572864 st 0.266915042552 am 4 ag 1048577 at 0.276915042552 pe 20
+CL id 33 tid 7 eid 33 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 32
+CL id 33 tid 7 eid 33 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 27
+BS id 33 tid 7 eid 33 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe 20
+SH sm 6 sg 1572865 pd 0.01
+ES id 33 tid 7 eid 33 etid 7 c omnetpp::cMessage n DATA-2 sm 6 sg 1572865 st 0.266915042552 am 5 ag 1048577 at 0.276915042552 pe 20
+CL id 34 tid 7 eid 34 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 33
+CL id 34 tid 7 eid 34 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 27
+BS id 34 tid 7 eid 34 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe 20
+SH sm 6 sg 1572866 pd 0.01
+ES id 34 tid 7 eid 34 etid 7 c omnetpp::cMessage n DATA-2 sm 6 sg 1572866 st 0.266915042552 am 7 ag 1048576 at 0.276915042552 pe 20
+CL id 35 tid 7 eid 35 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe -1 cid 34
+
+E # 21 t 0.266915042552 m 3 ce 17 msg 28
+- INFO: This is a duplicate package. Deleting.
+DM id 28 tid 7 eid 28 etid 7 c omnetpp::cMessage n DATA-2 m 3 pe 21
+
+E # 22 t 0.266915042552 m 6 ce 17 msg 29
+- INFO: This is a duplicate package. Deleting.
+DM id 29 tid 7 eid 29 etid 7 c omnetpp::cMessage n DATA-2 m 6 pe 22
+
+E # 23 t 0.26879960581 m 3 ce 18 msg 31
+- INFO: This is the first time we receive this message.
+CL id 35 tid 12 eid 35 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 31
+BS id 35 tid 12 eid 35 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe 23
+SH sm 3 sg 1572864 pd 0.01
+ES id 35 tid 12 eid 35 etid 12 c omnetpp::cMessage n DATA-4 sm 3 sg 1572864 st 0.26879960581 am 2 ag 1048576 at 0.27879960581 pe 23
+CL id 36 tid 12 eid 36 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 35
+CL id 36 tid 12 eid 36 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 31
+BS id 36 tid 12 eid 36 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe 23
+SH sm 3 sg 1572865 pd 0.01
+ES id 36 tid 12 eid 36 etid 12 c omnetpp::cMessage n DATA-4 sm 3 sg 1572865 st 0.26879960581 am 4 ag 1048576 at 0.27879960581 pe 23
+CL id 37 tid 12 eid 37 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 36
+CL id 37 tid 12 eid 37 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 31
+BS id 37 tid 12 eid 37 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe 23
+SH sm 3 sg 1572866 pd 0.01
+ES id 37 tid 12 eid 37 etid 12 c omnetpp::cMessage n DATA-4 sm 3 sg 1572866 st 0.26879960581 am 5 ag 1048576 at 0.27879960581 pe 23
+CL id 38 tid 12 eid 38 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe -1 cid 37
+
+E # 24 t 0.276915042552 m 4 ce 20 msg 32
+- INFO: This is a duplicate package. Deleting.
+DM id 32 tid 7 eid 32 etid 7 c omnetpp::cMessage n DATA-2 m 4 pe 24
+
+E # 25 t 0.276915042552 m 5 ce 20 msg 33
+- INFO: This is a duplicate package. Deleting.
+DM id 33 tid 7 eid 33 etid 7 c omnetpp::cMessage n DATA-2 m 5 pe 25
+
+E # 26 t 0.276915042552 m 7 ce 20 msg 34
+- INFO: Message (omnetpp::cMessage)DATA-2  arrived
+DM id 34 tid 7 eid 34 etid 7 c omnetpp::cMessage n DATA-2 m 7 pe 26
+
+E # 27 t 0.27879960581 m 2 ce 23 msg 35
+- INFO: Scheduling next event
+CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA-10 pe -1
+BS id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA-10 sm 2 st 0.27879960581 am 2 at 0.305354172234 pe 27
+ES id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n DATA-10 sm 2 st 0.27879960581 am 2 at 0.305354172234 pe 27
+- INFO: This is a duplicate package. Deleting.
+DM id 35 tid 12 eid 35 etid 12 c omnetpp::cMessage n DATA-4 m 2 pe 27
+
+E # 28 t 0.27879960581 m 4 ce 23 msg 36
+- INFO: This is the first time we receive this message.
+CL id 39 tid 12 eid 39 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe -1 cid 36
+BS id 39 tid 12 eid 39 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe 28
+SH sm 4 sg 1572864 pd 0.01
+ES id 39 tid 12 eid 39 etid 12 c omnetpp::cMessage n DATA-4 sm 4 sg 1572864 st 0.27879960581 am 3 ag 1048577 at 0.28879960581 pe 28
+CL id 40 tid 12 eid 40 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe -1 cid 39
+CL id 40 tid 12 eid 40 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe -1 cid 36
+BS id 40 tid 12 eid 40 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe 28
+SH sm 4 sg 1572865 pd 0.01
+ES id 40 tid 12 eid 40 etid 12 c omnetpp::cMessage n DATA-4 sm 4 sg 1572865 st 0.27879960581 am 6 ag 1048576 at 0.28879960581 pe 28
+CL id 41 tid 12 eid 41 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe -1 cid 40
+
+E # 29 t 0.27879960581 m 5 ce 23 msg 37
+- INFO: This is the first time we receive this message.
+CL id 41 tid 12 eid 41 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe -1 cid 37
+BS id 41 tid 12 eid 41 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe 29
+SH sm 5 sg 1572864 pd 0.01
+ES id 41 tid 12 eid 41 etid 12 c omnetpp::cMessage n DATA-4 sm 5 sg 1572864 st 0.27879960581 am 3 ag 1048578 at 0.28879960581 pe 29
+CL id 42 tid 12 eid 42 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe -1 cid 41
+CL id 42 tid 12 eid 42 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe -1 cid 37
+BS id 42 tid 12 eid 42 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe 29
+SH sm 5 sg 1572865 pd 0.01
+ES id 42 tid 12 eid 42 etid 12 c omnetpp::cMessage n DATA-4 sm 5 sg 1572865 st 0.27879960581 am 6 ag 1048577 at 0.28879960581 pe 29
+CL id 43 tid 12 eid 43 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe -1 cid 42
+
+E # 30 t 0.28879960581 m 3 ce 28 msg 39
+- INFO: This is a duplicate package. Deleting.
+DM id 39 tid 12 eid 39 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe 30
+
+E # 31 t 0.28879960581 m 6 ce 28 msg 40
+- INFO: This is the first time we receive this message.
+CL id 43 tid 12 eid 43 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 40
+BS id 43 tid 12 eid 43 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe 31
+SH sm 6 sg 1572864 pd 0.01
+ES id 43 tid 12 eid 43 etid 12 c omnetpp::cMessage n DATA-4 sm 6 sg 1572864 st 0.28879960581 am 4 ag 1048577 at 0.29879960581 pe 31
+CL id 44 tid 12 eid 44 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 43
+CL id 44 tid 12 eid 44 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 40
+BS id 44 tid 12 eid 44 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe 31
+SH sm 6 sg 1572865 pd 0.01
+ES id 44 tid 12 eid 44 etid 12 c omnetpp::cMessage n DATA-4 sm 6 sg 1572865 st 0.28879960581 am 5 ag 1048577 at 0.29879960581 pe 31
+CL id 45 tid 12 eid 45 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 44
+CL id 45 tid 12 eid 45 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 40
+BS id 45 tid 12 eid 45 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe 31
+SH sm 6 sg 1572866 pd 0.01
+ES id 45 tid 12 eid 45 etid 12 c omnetpp::cMessage n DATA-4 sm 6 sg 1572866 st 0.28879960581 am 7 ag 1048576 at 0.29879960581 pe 31
+CL id 46 tid 12 eid 46 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe -1 cid 45
+
+E # 32 t 0.28879960581 m 3 ce 29 msg 41
+- INFO: This is a duplicate package. Deleting.
+DM id 41 tid 12 eid 41 etid 12 c omnetpp::cMessage n DATA-4 m 3 pe 32
+
+E # 33 t 0.28879960581 m 6 ce 29 msg 42
+- INFO: This is a duplicate package. Deleting.
+DM id 42 tid 12 eid 42 etid 12 c omnetpp::cMessage n DATA-4 m 6 pe 33
+
+E # 34 t 0.29879960581 m 4 ce 31 msg 43
+- INFO: This is a duplicate package. Deleting.
+DM id 43 tid 12 eid 43 etid 12 c omnetpp::cMessage n DATA-4 m 4 pe 34
+
+E # 35 t 0.29879960581 m 5 ce 31 msg 44
+- INFO: This is a duplicate package. Deleting.
+DM id 44 tid 12 eid 44 etid 12 c omnetpp::cMessage n DATA-4 m 5 pe 35
+
+E # 36 t 0.29879960581 m 7 ce 31 msg 45
+- INFO: Message (omnetpp::cMessage)DATA-4  arrived
+DM id 45 tid 12 eid 45 etid 12 c omnetpp::cMessage n DATA-4 m 7 pe 36
+
+E # 37 t 0.305354172234 m 2 ce 27 msg 38
+- INFO: Scheduling next event
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA-11 pe -1
+BS id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA-11 sm 2 st 0.305354172234 am 2 at 0.501291657384 pe 37
+ES id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n DATA-11 sm 2 st 0.305354172234 am 2 at 0.501291657384 pe 37
+- INFO: This is the first time we receive this message.
+CL id 47 tid 38 eid 47 etid 38 c omnetpp::cMessage n DATA-10 m 2 pe -1 cid 38
+BS id 47 tid 38 eid 47 etid 38 c omnetpp::cMessage n DATA-10 m 2 pe 37
+SH sm 2 sg 1572864 pd 0.01
+ES id 47 tid 38 eid 47 etid 38 c omnetpp::cMessage n DATA-10 sm 2 sg 1572864 st 0.305354172234 am 3 ag 1048576 at 0.315354172234 pe 37
+CL id 48 tid 38 eid 48 etid 38 c omnetpp::cMessage n DATA-10 m 2 pe -1 cid 47
+
+E # 38 t 0.315354172234 m 3 ce 37 msg 47
+- INFO: This is the first time we receive this message.
+CL id 48 tid 38 eid 48 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 47
+BS id 48 tid 38 eid 48 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe 38
+SH sm 3 sg 1572864 pd 0.01
+ES id 48 tid 38 eid 48 etid 38 c omnetpp::cMessage n DATA-10 sm 3 sg 1572864 st 0.315354172234 am 2 ag 1048576 at 0.325354172234 pe 38
+CL id 49 tid 38 eid 49 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 48
+CL id 49 tid 38 eid 49 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 47
+BS id 49 tid 38 eid 49 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe 38
+SH sm 3 sg 1572865 pd 0.01
+ES id 49 tid 38 eid 49 etid 38 c omnetpp::cMessage n DATA-10 sm 3 sg 1572865 st 0.315354172234 am 4 ag 1048576 at 0.325354172234 pe 38
+CL id 50 tid 38 eid 50 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 49
+CL id 50 tid 38 eid 50 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 47
+BS id 50 tid 38 eid 50 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe 38
+SH sm 3 sg 1572866 pd 0.01
+ES id 50 tid 38 eid 50 etid 38 c omnetpp::cMessage n DATA-10 sm 3 sg 1572866 st 0.315354172234 am 5 ag 1048576 at 0.325354172234 pe 38
+CL id 51 tid 38 eid 51 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe -1 cid 50
+
+E # 39 t 0.31871973851 m 2 ce 15 msg 25
+- INFO: Scheduling next event
+CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA-13 pe -1
+BS id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA-13 sm 2 st 0.31871973851 am 2 at 0.480892781485 pe 39
+ES id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n DATA-13 sm 2 st 0.31871973851 am 2 at 0.480892781485 pe 39
+- INFO: This is the first time we receive this message.
+CL id 52 tid 25 eid 52 etid 25 c omnetpp::cMessage n DATA-7 m 2 pe -1 cid 25
+BS id 52 tid 25 eid 52 etid 25 c omnetpp::cMessage n DATA-7 m 2 pe 39
+SH sm 2 sg 1572864 pd 0.01
+ES id 52 tid 25 eid 52 etid 25 c omnetpp::cMessage n DATA-7 sm 2 sg 1572864 st 0.31871973851 am 3 ag 1048576 at 0.32871973851 pe 39
+CL id 53 tid 25 eid 53 etid 25 c omnetpp::cMessage n DATA-7 m 2 pe -1 cid 52
+
+E # 40 t 0.325354172234 m 2 ce 38 msg 48
+- INFO: Scheduling next event
+CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA-15 pe -1
+BS id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA-15 sm 2 st 0.325354172234 am 2 at 0.434244893527 pe 40
+ES id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n DATA-15 sm 2 st 0.325354172234 am 2 at 0.434244893527 pe 40
+- INFO: This is a duplicate package. Deleting.
+DM id 48 tid 38 eid 48 etid 38 c omnetpp::cMessage n DATA-10 m 2 pe 40
+
+E # 41 t 0.325354172234 m 4 ce 38 msg 49
+- INFO: This is the first time we receive this message.
+CL id 54 tid 38 eid 54 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe -1 cid 49
+BS id 54 tid 38 eid 54 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe 41
+SH sm 4 sg 1572864 pd 0.01
+ES id 54 tid 38 eid 54 etid 38 c omnetpp::cMessage n DATA-10 sm 4 sg 1572864 st 0.325354172234 am 3 ag 1048577 at 0.335354172234 pe 41
+CL id 55 tid 38 eid 55 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe -1 cid 54
+CL id 55 tid 38 eid 55 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe -1 cid 49
+BS id 55 tid 38 eid 55 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe 41
+SH sm 4 sg 1572865 pd 0.01
+ES id 55 tid 38 eid 55 etid 38 c omnetpp::cMessage n DATA-10 sm 4 sg 1572865 st 0.325354172234 am 6 ag 1048576 at 0.335354172234 pe 41
+CL id 56 tid 38 eid 56 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe -1 cid 55
+
+E # 42 t 0.325354172234 m 5 ce 38 msg 50
+- INFO: This is the first time we receive this message.
+CL id 56 tid 38 eid 56 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe -1 cid 50
+BS id 56 tid 38 eid 56 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe 42
+SH sm 5 sg 1572864 pd 0.01
+ES id 56 tid 38 eid 56 etid 38 c omnetpp::cMessage n DATA-10 sm 5 sg 1572864 st 0.325354172234 am 3 ag 1048578 at 0.335354172234 pe 42
+CL id 57 tid 38 eid 57 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe -1 cid 56
+CL id 57 tid 38 eid 57 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe -1 cid 50
+BS id 57 tid 38 eid 57 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe 42
+SH sm 5 sg 1572865 pd 0.01
+ES id 57 tid 38 eid 57 etid 38 c omnetpp::cMessage n DATA-10 sm 5 sg 1572865 st 0.325354172234 am 6 ag 1048577 at 0.335354172234 pe 42
+CL id 58 tid 38 eid 58 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe -1 cid 57
+
+E # 43 t 0.32871973851 m 3 ce 39 msg 52
+- INFO: This is the first time we receive this message.
+CL id 58 tid 25 eid 58 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 52
+BS id 58 tid 25 eid 58 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe 43
+SH sm 3 sg 1572864 pd 0.01
+ES id 58 tid 25 eid 58 etid 25 c omnetpp::cMessage n DATA-7 sm 3 sg 1572864 st 0.32871973851 am 2 ag 1048576 at 0.33871973851 pe 43
+CL id 59 tid 25 eid 59 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 58
+CL id 59 tid 25 eid 59 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 52
+BS id 59 tid 25 eid 59 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe 43
+SH sm 3 sg 1572865 pd 0.01
+ES id 59 tid 25 eid 59 etid 25 c omnetpp::cMessage n DATA-7 sm 3 sg 1572865 st 0.32871973851 am 4 ag 1048576 at 0.33871973851 pe 43
+CL id 60 tid 25 eid 60 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 59
+CL id 60 tid 25 eid 60 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 52
+BS id 60 tid 25 eid 60 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe 43
+SH sm 3 sg 1572866 pd 0.01
+ES id 60 tid 25 eid 60 etid 25 c omnetpp::cMessage n DATA-7 sm 3 sg 1572866 st 0.32871973851 am 5 ag 1048576 at 0.33871973851 pe 43
+CL id 61 tid 25 eid 61 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe -1 cid 60
+
+E # 44 t 0.335354172234 m 3 ce 41 msg 54
+- INFO: This is a duplicate package. Deleting.
+DM id 54 tid 38 eid 54 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe 44
+
+E # 45 t 0.335354172234 m 6 ce 41 msg 55
+- INFO: This is the first time we receive this message.
+CL id 61 tid 38 eid 61 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 55
+BS id 61 tid 38 eid 61 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe 45
+SH sm 6 sg 1572864 pd 0.01
+ES id 61 tid 38 eid 61 etid 38 c omnetpp::cMessage n DATA-10 sm 6 sg 1572864 st 0.335354172234 am 4 ag 1048577 at 0.345354172234 pe 45
+CL id 62 tid 38 eid 62 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 61
+CL id 62 tid 38 eid 62 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 55
+BS id 62 tid 38 eid 62 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe 45
+SH sm 6 sg 1572865 pd 0.01
+ES id 62 tid 38 eid 62 etid 38 c omnetpp::cMessage n DATA-10 sm 6 sg 1572865 st 0.335354172234 am 5 ag 1048577 at 0.345354172234 pe 45
+CL id 63 tid 38 eid 63 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 62
+CL id 63 tid 38 eid 63 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 55
+BS id 63 tid 38 eid 63 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe 45
+SH sm 6 sg 1572866 pd 0.01
+ES id 63 tid 38 eid 63 etid 38 c omnetpp::cMessage n DATA-10 sm 6 sg 1572866 st 0.335354172234 am 7 ag 1048576 at 0.345354172234 pe 45
+CL id 64 tid 38 eid 64 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe -1 cid 63
+
+E # 46 t 0.335354172234 m 3 ce 42 msg 56
+- INFO: This is a duplicate package. Deleting.
+DM id 56 tid 38 eid 56 etid 38 c omnetpp::cMessage n DATA-10 m 3 pe 46
+
+E # 47 t 0.335354172234 m 6 ce 42 msg 57
+- INFO: This is a duplicate package. Deleting.
+DM id 57 tid 38 eid 57 etid 38 c omnetpp::cMessage n DATA-10 m 6 pe 47
+
+E # 48 t 0.33871973851 m 2 ce 43 msg 58
+- INFO: Scheduling next event
+CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA-16 pe -1
+BS id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA-16 sm 2 st 0.33871973851 am 2 at 0.528206833047 pe 48
+ES id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n DATA-16 sm 2 st 0.33871973851 am 2 at 0.528206833047 pe 48
+- INFO: This is a duplicate package. Deleting.
+DM id 58 tid 25 eid 58 etid 25 c omnetpp::cMessage n DATA-7 m 2 pe 48
+
+E # 49 t 0.33871973851 m 4 ce 43 msg 59
+- INFO: This is the first time we receive this message.
+CL id 65 tid 25 eid 65 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe -1 cid 59
+BS id 65 tid 25 eid 65 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe 49
+SH sm 4 sg 1572864 pd 0.01
+ES id 65 tid 25 eid 65 etid 25 c omnetpp::cMessage n DATA-7 sm 4 sg 1572864 st 0.33871973851 am 3 ag 1048577 at 0.34871973851 pe 49
+CL id 66 tid 25 eid 66 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe -1 cid 65
+CL id 66 tid 25 eid 66 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe -1 cid 59
+BS id 66 tid 25 eid 66 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe 49
+SH sm 4 sg 1572865 pd 0.01
+ES id 66 tid 25 eid 66 etid 25 c omnetpp::cMessage n DATA-7 sm 4 sg 1572865 st 0.33871973851 am 6 ag 1048576 at 0.34871973851 pe 49
+CL id 67 tid 25 eid 67 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe -1 cid 66
+
+E # 50 t 0.33871973851 m 5 ce 43 msg 60
+- INFO: This is the first time we receive this message.
+CL id 67 tid 25 eid 67 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe -1 cid 60
+BS id 67 tid 25 eid 67 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe 50
+SH sm 5 sg 1572864 pd 0.01
+ES id 67 tid 25 eid 67 etid 25 c omnetpp::cMessage n DATA-7 sm 5 sg 1572864 st 0.33871973851 am 3 ag 1048578 at 0.34871973851 pe 50
+CL id 68 tid 25 eid 68 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe -1 cid 67
+CL id 68 tid 25 eid 68 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe -1 cid 60
+BS id 68 tid 25 eid 68 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe 50
+SH sm 5 sg 1572865 pd 0.01
+ES id 68 tid 25 eid 68 etid 25 c omnetpp::cMessage n DATA-7 sm 5 sg 1572865 st 0.33871973851 am 6 ag 1048577 at 0.34871973851 pe 50
+CL id 69 tid 25 eid 69 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe -1 cid 68
+
+E # 51 t 0.345354172234 m 4 ce 45 msg 61
+- INFO: This is a duplicate package. Deleting.
+DM id 61 tid 38 eid 61 etid 38 c omnetpp::cMessage n DATA-10 m 4 pe 51
+
+E # 52 t 0.345354172234 m 5 ce 45 msg 62
+- INFO: This is a duplicate package. Deleting.
+DM id 62 tid 38 eid 62 etid 38 c omnetpp::cMessage n DATA-10 m 5 pe 52
+
+E # 53 t 0.345354172234 m 7 ce 45 msg 63
+- INFO: Message (omnetpp::cMessage)DATA-10  arrived
+DM id 63 tid 38 eid 63 etid 38 c omnetpp::cMessage n DATA-10 m 7 pe 53
+
+E # 54 t 0.34871973851 m 3 ce 49 msg 65
+- INFO: This is a duplicate package. Deleting.
+DM id 65 tid 25 eid 65 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe 54
+
+E # 55 t 0.34871973851 m 6 ce 49 msg 66
+- INFO: This is the first time we receive this message.
+CL id 69 tid 25 eid 69 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 66
+BS id 69 tid 25 eid 69 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe 55
+SH sm 6 sg 1572864 pd 0.01
+ES id 69 tid 25 eid 69 etid 25 c omnetpp::cMessage n DATA-7 sm 6 sg 1572864 st 0.34871973851 am 4 ag 1048577 at 0.35871973851 pe 55
+CL id 70 tid 25 eid 70 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 69
+CL id 70 tid 25 eid 70 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 66
+BS id 70 tid 25 eid 70 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe 55
+SH sm 6 sg 1572865 pd 0.01
+ES id 70 tid 25 eid 70 etid 25 c omnetpp::cMessage n DATA-7 sm 6 sg 1572865 st 0.34871973851 am 5 ag 1048577 at 0.35871973851 pe 55
+CL id 71 tid 25 eid 71 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 70
+CL id 71 tid 25 eid 71 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 66
+BS id 71 tid 25 eid 71 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe 55
+SH sm 6 sg 1572866 pd 0.01
+ES id 71 tid 25 eid 71 etid 25 c omnetpp::cMessage n DATA-7 sm 6 sg 1572866 st 0.34871973851 am 7 ag 1048576 at 0.35871973851 pe 55
+CL id 72 tid 25 eid 72 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe -1 cid 71
+
+E # 56 t 0.34871973851 m 3 ce 50 msg 67
+- INFO: This is a duplicate package. Deleting.
+DM id 67 tid 25 eid 67 etid 25 c omnetpp::cMessage n DATA-7 m 3 pe 56
+
+E # 57 t 0.34871973851 m 6 ce 50 msg 68
+- INFO: This is a duplicate package. Deleting.
+DM id 68 tid 25 eid 68 etid 25 c omnetpp::cMessage n DATA-7 m 6 pe 57
+
+E # 58 t 0.35871973851 m 4 ce 55 msg 69
+- INFO: This is a duplicate package. Deleting.
+DM id 69 tid 25 eid 69 etid 25 c omnetpp::cMessage n DATA-7 m 4 pe 58
+
+E # 59 t 0.35871973851 m 5 ce 55 msg 70
+- INFO: This is a duplicate package. Deleting.
+DM id 70 tid 25 eid 70 etid 25 c omnetpp::cMessage n DATA-7 m 5 pe 59
+
+E # 60 t 0.35871973851 m 7 ce 55 msg 71
+- INFO: Message (omnetpp::cMessage)DATA-7  arrived
+DM id 71 tid 25 eid 71 etid 25 c omnetpp::cMessage n DATA-7 m 7 pe 60
+
+E # 61 t 0.416351912886 m 2 ce 13 msg 20
+- INFO: Scheduling next event
+CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA-17 pe -1
+BS id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA-17 sm 2 st 0.416351912886 am 2 at 0.534354363068 pe 61
+ES id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n DATA-17 sm 2 st 0.416351912886 am 2 at 0.534354363068 pe 61
+- INFO: This is the first time we receive this message.
+CL id 73 tid 20 eid 73 etid 20 c omnetpp::cMessage n DATA-5 m 2 pe -1 cid 20
+BS id 73 tid 20 eid 73 etid 20 c omnetpp::cMessage n DATA-5 m 2 pe 61
+SH sm 2 sg 1572864 pd 0.01
+ES id 73 tid 20 eid 73 etid 20 c omnetpp::cMessage n DATA-5 sm 2 sg 1572864 st 0.416351912886 am 3 ag 1048576 at 0.426351912886 pe 61
+CL id 74 tid 20 eid 74 etid 20 c omnetpp::cMessage n DATA-5 m 2 pe -1 cid 73
+
+E # 62 t 0.423111663838 m 2 ce 18 msg 30
+- INFO: Scheduling next event
+CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA-19 pe -1
+BS id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA-19 sm 2 st 0.423111663838 am 2 at 0.436681725462 pe 62
+ES id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n DATA-19 sm 2 st 0.423111663838 am 2 at 0.436681725462 pe 62
+- INFO: This is the first time we receive this message.
+CL id 75 tid 30 eid 75 etid 30 c omnetpp::cMessage n DATA-8 m 2 pe -1 cid 30
+BS id 75 tid 30 eid 75 etid 30 c omnetpp::cMessage n DATA-8 m 2 pe 62
+SH sm 2 sg 1572864 pd 0.01
+ES id 75 tid 30 eid 75 etid 30 c omnetpp::cMessage n DATA-8 sm 2 sg 1572864 st 0.423111663838 am 3 ag 1048576 at 0.433111663838 pe 62
+CL id 76 tid 30 eid 76 etid 30 c omnetpp::cMessage n DATA-8 m 2 pe -1 cid 75
+
+E # 63 t 0.426351912886 m 3 ce 61 msg 73
+- INFO: This is the first time we receive this message.
+CL id 76 tid 20 eid 76 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 73
+BS id 76 tid 20 eid 76 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe 63
+SH sm 3 sg 1572864 pd 0.01
+ES id 76 tid 20 eid 76 etid 20 c omnetpp::cMessage n DATA-5 sm 3 sg 1572864 st 0.426351912886 am 2 ag 1048576 at 0.436351912886 pe 63
+CL id 77 tid 20 eid 77 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 76
+CL id 77 tid 20 eid 77 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 73
+BS id 77 tid 20 eid 77 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe 63
+SH sm 3 sg 1572865 pd 0.01
+ES id 77 tid 20 eid 77 etid 20 c omnetpp::cMessage n DATA-5 sm 3 sg 1572865 st 0.426351912886 am 4 ag 1048576 at 0.436351912886 pe 63
+CL id 78 tid 20 eid 78 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 77
+CL id 78 tid 20 eid 78 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 73
+BS id 78 tid 20 eid 78 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe 63
+SH sm 3 sg 1572866 pd 0.01
+ES id 78 tid 20 eid 78 etid 20 c omnetpp::cMessage n DATA-5 sm 3 sg 1572866 st 0.426351912886 am 5 ag 1048576 at 0.436351912886 pe 63
+CL id 79 tid 20 eid 79 etid 20 c omnetpp::cMessage n DATA-5 m 3 pe -1 cid 78
+
+SE e 0 c 10 m "The user has finished the simulation -- at t=0.427326876556s, event #63"

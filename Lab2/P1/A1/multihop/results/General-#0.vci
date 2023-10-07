@@ -1,0 +1,60 @@
+file 3036 1696069316                                            
+version 2
+run General-0-20230930-10:21:08-5568
+attr configname General
+attr datetime 20230930-10:21:08
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 5568
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Multihop.node[*].delayTime exponential(1s)
+
+vector 0 Multihop.node[0] transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 1 Multihop.node[1] receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+vector 2 Multihop.node[1] transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 3 Multihop.node[2] receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+vector 4 Multihop.node[2] transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 5 Multihop.node[3] receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+vector 6 Multihop.node[3] transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 7 Multihop.node[4] receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+vector 8 Multihop.node[4] transmissionSignal:vector ETV
+attr source transmissionSignal
+attr title "tx_t, vector"
+vector 9 Multihop.node[5] receptionSignal:vector ETV
+attr source receptionSignal
+attr title "rx_t, vector"
+0	1502 160 0 37 0 6.795874504566 8 1 8 36 204
+1	1662 152 2 38 0.895874504566 6.895874504566 7 1 7 28 140
+2	1814 152 2 38 0.895874504566 6.895874504566 7 1 7 28 140
+3	1966 152 3 39 0.995874504566 6.995874504566 7 1 7 28 140
+4	2118 152 3 39 0.995874504566 6.995874504566 7 1 7 28 140
+5	2270 153 4 40 1.095874504566 7.095874504566 7 1 7 28 140
+6	2423 153 4 40 1.095874504566 7.095874504566 7 1 7 28 140
+7	2576 153 5 41 1.195874504566 7.195874504566 7 1 7 28 140
+8	2729 153 5 41 1.195874504566 7.195874504566 7 1 7 28 140
+9	2882 153 6 42 1.295874504566 7.295874504566 7 1 7 28 140
+
