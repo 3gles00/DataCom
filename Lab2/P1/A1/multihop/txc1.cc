@@ -17,6 +17,7 @@ class Txc1 : public cSimpleModule{
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
         virtual void forwardMessage(cMessage *msg);
+        virtual void finish();
 };
 
 Define_Module(Txc1);
@@ -58,8 +59,7 @@ void Txc1::handleMessage(cMessage *msg){
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + 1, newMsg);
-        
+        scheduleAt(simTime() + 1, newMsg);      
     }
 
     // Forwarding Message
@@ -93,4 +93,14 @@ void Txc1::forwardMessage(cMessage *msg){
     int k = n - 1;
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
     send(msg, "gate$o", k);
+}
+
+void Txc1::finish(){
+    EV << "Sent: " << numSent << endl;
+    EV << "Received: " << numReceived << endl;
+    //EV << "msgCounter: " << msgCounter << endl;
+
+    recordScalar("#sent", numSent);
+    recordScalar("#received", numReceived);
+    // recordScalar("#counter", msgCounter);
 }

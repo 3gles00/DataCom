@@ -1,0 +1,47 @@
+file 322770 1696131240                                          
+version 2
+run General-0-20231001-03:32:59-13234
+attr configname General
+attr datetime 20231001-03:32:59
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 13234
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+param Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+param Multihop.node[0].lossProbability 0.2
+param Multihop.node[1].lossProbability 0.2
+param Multihop.node[2].lossProbability 0.2
+param Multihop.node[3].lossProbability 0.2
+param Multihop.node[4].lossProbability 0.2
+param Multihop.node[5].lossProbability 0.2
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[3] rxVector ETV
+vector 4 Multihop.node[3] txVector ETV
+vector 5 Multihop.node[4] rxVector ETV
+vector 6 Multihop.node[4] txVector ETV
+vector 7 Multihop.node[5] rxVector ETV
+vector 8 Multihop.node[2] rxVector ETV
+vector 9 Multihop.node[2] txVector ETV
+0	1117 63984 0 8461 0 239.942201445781 2301 1 2301 2648451 4063606651
+1	65101 41704 2 8458 0.142870607559 239.874423140164 1514 1 1514 1146855 1157941265
+2	106805 41704 2 8458 0.142870607559 239.874423140164 1514 1 1514 1146855 1157941265
+3	148509 26452 3 8459 0.160742618959 239.897936544304 972 1 972 472878 306582570
+4	174961 26452 3 8459 0.160742618959 239.897936544304 972 1 972 472878 306582570
+5	201413 22385 4 8453 0.180512683223 239.675055774112 824 1 824 339900 186831700
+6	223798 22385 4 8453 0.180512683223 239.675055774112 824 1 824 339900 186831700
+7	246183 22370 5 8455 0.19536396486 239.692621560843 824 1 824 339900 186831700
+8	268553 27108 10 8451 0.3716147455 239.592182998563 997 1 997 497503 330839495
+9	295661 27108 10 8451 0.3716147455 239.592182998563 997 1 997 497503 330839495
+
