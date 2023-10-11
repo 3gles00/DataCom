@@ -71,7 +71,6 @@ void Txc2::handleMessage(cMessage *msg){
             if(std::find(duplicatePackageList.begin(), duplicatePackageList.end(),
                 msg->getTreeId()) != duplicatePackageList.end()){
                 EV << "This is a duplicate package. Deleting.\n";
-                cancelAndDelete(msg);
             }
             else{
                 EV << "This is the first time we receive this message.\n";
@@ -80,6 +79,7 @@ void Txc2::handleMessage(cMessage *msg){
                 msgCounter++;
                 forwardMessage(msg);
             }
+            delete msg;
             rxVector.record(numReceived);
             txVector.record(numSent);
         }
@@ -111,7 +111,6 @@ void Txc2::forwardMessage(cMessage *msg){
         sendDelayed(msg -> dup(), simTime() + par("delayTime"), "gate$o", i);
         numSent++;
     }
-    delete msg;
 }
 
 void Txc2::finish(){
