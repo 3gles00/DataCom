@@ -1,0 +1,51 @@
+file 2426731 1697025452                                         
+version 3
+run General-1-20231011-13:57:29-6857
+attr configname General
+attr datetime 20231011-13:57:29
+attr datetimef 20231011-135729
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 6857
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[0] rxVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[1] txVector ETV
+vector 4 Reliability.node[2] rxVector ETV
+vector 5 Reliability.node[2] txVector ETV
+vector 6 Reliability.node[3] rxVector ETV
+vector 7 Reliability.node[3] txVector ETV
+vector 8 Reliability.node[4] rxVector ETV
+vector 9 Reliability.node[4] txVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+0	1138 979007 0 19625 0 212.367876073188 32768 1 32416 530240614 11454314203984
+0	980145 471661 19625 28474 212.367876073188 239.992272640483 15271 32417 47570 610711074 24715502832116
+1	1451806 719562 1 28474 0.089234179703 239.992272640483 24019 1 23550 281995644 4423991512274
+2	2171368 93255 2 28475 0.335330012371 239.996838354026 3221 1 3007 4787411 9564015243
+3	2264623 94057 2 28475 0.335330012371 239.996838354026 3221 3 9021 14362233 86076137187
+4	2358680 13871 4 28469 0.748103212614 239.968343805053 497 1 470 115735 36160261
+5	2372551 13929 4 28469 0.748103212614 239.968343805053 497 2 940 231470 144641044
+6	2386480 13867 5 28473 0.880477722667 239.988691308868 497 1 470 115742 36163852
+7	2400347 13925 5 28473 0.880477722667 239.988691308868 497 2 940 231484 144655408
+8	2414272 5787 6 28085 1.551595865371 238.892855080933 214 1 107 11561 828565
+9	2420059 5931 6 28085 1.551595865371 238.892855080933 214 3 321 34683 7457085
+10	2425990 740 14 26268 3.283990805204 233.708271661838 27 1 27 378 6930
+

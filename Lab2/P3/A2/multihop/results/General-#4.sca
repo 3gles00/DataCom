@@ -1,0 +1,154 @@
+version 3
+run General-4-20231011-13:57:39-6857
+attr configname General
+attr datetime 20231011-13:57:39
+attr datetimef 20231011-135739
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 6857
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+par Reliability.node[0].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[0].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[1].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[1].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[1].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Reliability.node[1].gate$o[1].channel disabled false
+attr mutable ""
+par Reliability.node[1].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[2].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[2].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[1].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Reliability.node[1].gate$o[2].channel disabled false
+attr mutable ""
+par Reliability.node[1].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[3].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[3].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[3].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[2].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Reliability.node[2].gate$o[1].channel disabled false
+attr mutable ""
+par Reliability.node[2].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[4].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[4].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[4].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[3].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Reliability.node[3].gate$o[1].channel disabled false
+attr mutable ""
+par Reliability.node[3].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[4].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Reliability.node[4].gate$o[1].channel disabled false
+attr mutable ""
+par Reliability.node[4].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[4].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Reliability.node[4].gate$o[2].channel disabled false
+attr mutable ""
+par Reliability.node[4].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[5].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Reliability.node[5].gate$o[0].channel disabled false
+attr mutable ""
+par Reliability.node[5].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Reliability.node[0] typename "\"Txc2\""
+par Reliability.node[0] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[0] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[0] lossProbability 0
+scalar Reliability.node[0] #sent 44842
+scalar Reliability.node[0] #received 22198
+scalar Reliability.node[0] #counter 44842
+par Reliability.node[1] typename "\"Txc2\""
+par Reliability.node[1] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[1] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[1] lossProbability 0
+scalar Reliability.node[1] #sent 8337
+scalar Reliability.node[1] #received 2779
+scalar Reliability.node[1] #counter 2779
+par Reliability.node[2] typename "\"Txc2\""
+par Reliability.node[2] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[2] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[2] lossProbability 0
+scalar Reliability.node[2] #sent 890
+scalar Reliability.node[2] #received 445
+scalar Reliability.node[2] #counter 445
+par Reliability.node[3] typename "\"Txc2\""
+par Reliability.node[3] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[3] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[3] lossProbability 0
+scalar Reliability.node[3] #sent 890
+scalar Reliability.node[3] #received 445
+scalar Reliability.node[3] #counter 445
+par Reliability.node[4] typename "\"Txc2\""
+par Reliability.node[4] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[4] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[4] lossProbability 0
+scalar Reliability.node[4] #sent 288
+scalar Reliability.node[4] #received 96
+scalar Reliability.node[4] #counter 96
+par Reliability.node[5] typename "\"Txc2\""
+par Reliability.node[5] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Reliability.node[5] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Reliability.node[5] lossProbability 0
+scalar Reliability.node[5] #sent 0
+scalar Reliability.node[5] #received 28
+scalar Reliability.node[5] #counter 0
+par Reliability typename "\"Reliability\""
+
