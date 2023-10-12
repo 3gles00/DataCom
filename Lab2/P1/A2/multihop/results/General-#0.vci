@@ -1,15 +1,15 @@
-file 2447 1696140145                                            
+file 2630 1696148857                                            
 version 2
-run General-0-20231001-06:02:08-14773
+run General-0-20231001-08:27:34-15886
 attr configname General
-attr datetime 20231001-06:02:08
+attr datetime 20231001-08:27:34
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 14773
+attr processid 15886
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -19,6 +19,6 @@ param Multihop.node[*].delayTime exponential(5s)
 
 vector 0 Multihop.node[0] txVector ETV
 vector 1 Multihop.node[5] rxVector ETV
-0	482 983 0 235 0 198.71614128947 41 1 41 861 23821
-1	1465 981 6 240 4.547147568604 199.304724834629 40 1 40 820 22140
+0	482 1092 0 259 0 199.440971559947 45 1 45 1035 31395
+1	1574 1055 6 258 4.818247751702 196.934310746246 43 1 43 946 27434
 
