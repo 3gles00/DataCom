@@ -1,0 +1,53 @@
+file 10985 1697109356                                           
+version 3
+run General-2-20231012-13:15:56-33747
+attr configname General
+attr datetime 20231012-13:15:56
+attr datetimef 20231012-131556
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 33747
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[0].lossProbability 0.5
+config Multihop.node[1].lossProbability 0.4
+config Multihop.node[2].lossProbability 0.35
+config Multihop.node[3].lossProbability 0.25
+config Multihop.node[4].lossProbability 0.2
+config Multihop.node[5].lossProbability 0.1
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[3] rxVector ETV
+vector 6 Multihop.node[3] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+0	1276 4007 0 337 0 239.501352909504 158 1 158 12561 1327279
+1	5283 997 3 330 1.333201129842 232.168811192428 40 1 40 820 22140
+2	6280 997 3 330 1.333201129842 232.168811192428 40 1 40 820 22140
+3	7277 636 4 291 1.535303458122 194.592673368285 26 1 26 351 6201
+4	7913 636 4 291 1.535303458122 194.592673368285 26 1 26 351 6201
+5	8549 533 5 284 1.706205381015 191.378204880592 22 1 22 253 3795
+6	9082 533 5 284 1.706205381015 191.378204880592 22 1 22 253 3795
+7	9615 457 6 285 1.845546449364 191.557645774141 19 1 19 190 2470
+8	10072 457 6 285 1.845546449364 191.557645774141 19 1 19 190 2470
+9	10529 455 7 286 2.088330360334 191.779574225014 19 1 19 190 2470
+

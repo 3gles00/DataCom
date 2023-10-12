@@ -1,21 +1,16 @@
 #include<cstring>
 #include<omnetpp.h>
-// #include<coutvector.h>
 
 using namespace omnetpp;
 
 class Txc1 : public cSimpleModule{
     private:
-        cMessage *event = nullptr;
-        cMessage *multihopMsg = nullptr;
         long msgCounter;
         long numSent;
         long numReceived;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
-        // simsignal_t transmissionSignal;
-        // simsignal_t receptionSignal;
     public:
         virtual ~Txc1();
     protected:
@@ -27,10 +22,7 @@ class Txc1 : public cSimpleModule{
 
 Define_Module(Txc1);
 
-Txc1::~Txc1(){
-    cancelAndDelete(event);
-    delete multihopMsg;
-}
+Txc1::~Txc1(){}
 
 void Txc1::initialize(){
     
@@ -38,7 +30,6 @@ void Txc1::initialize(){
     numReceived = 0;
     numSent = 0;
     lossProbability = par("lossProbability");
-    event = new cMessage("event");
     txVector.setName("txVector");
     rxVector.setName("rxVector");
     
@@ -49,26 +40,13 @@ void Txc1::initialize(){
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", msgCounter);
-        multihopMsg = new cMessage(msgname);
-        scheduleAt(par("delayTime"), event);
+        cMessage *newMsg = new cMessage(msgname);
+        scheduleAt(par("delayTime"), newMsg);
         txVector.record(numSent);
     }
 }
 
 void Txc1::handleMessage(cMessage *msg){
-
-    //Planning new Message
-    if(getIndex() == 0){
-        msgCounter++;
-        numSent++;
-        EV << "Scheduling next event\n";
-        char msgname[20];
-        sprintf(msgname, "DATA-%ld", numSent);
-        cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + par("delayTime"), newMsg);
-        txVector.record(numSent);
-        
-    }
 
     // Forwarding Message
     if(getIndex() == 5){
@@ -79,7 +57,7 @@ void Txc1::handleMessage(cMessage *msg){
         delete msg; 
     }
     else{
-        if(lossProbability < uniform(0, 1)){
+        if(lossProbability <= uniform(0, 1)){
             if(getIndex() != 0){
                 numReceived++;
                 numSent++;
@@ -94,6 +72,18 @@ void Txc1::handleMessage(cMessage *msg){
             delete msg;
         }
     }
+
+    //Planning new Message
+    if(getIndex() == 0){
+        msgCounter++;
+        numSent++;
+        EV << "Scheduling next event\n";
+        char msgname[20];
+        sprintf(msgname, "DATA-%ld", numSent);
+        cMessage *newMsg = new cMessage(msgname);
+        scheduleAt(simTime() + par("transmissionTime"), newMsg);
+        txVector.record(numSent);
+    }
 }
 
 void Txc1::forwardMessage(cMessage *msg){
@@ -103,13 +93,13 @@ void Txc1::forwardMessage(cMessage *msg){
     int n = gateSize("gate");
     int k = n - 1;
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
-    sendDelayed(msg, exponential(0.01), "gate$o", k);
+    sendDelayed(msg, par("delayTime"), "gate$o", k);
 }
 
 void Txc1::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
-	EV << "msgCounter: " << msgCounter << endl;
+	// EV << "msgCounter: " << msgCounter << endl;
 
 	recordScalar("#sent", numSent);
 	recordScalar("#received", numReceived);

@@ -1,0 +1,48 @@
+file 11607 1697057303                                           
+version 3
+run General-4-20231011-22:48:23-22434
+attr configname General
+attr datetime 20231011-22:48:23
+attr datetimef 20231011-224823
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 22434
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.4
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[3] rxVector ETV
+vector 6 Multihop.node[3] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+0	1054 4079 0 372 0 238.863668004198 161 1 161 13041 1404081
+1	5133 1571 2 370 0.407709797404 237.544698879848 63 1 63 2016 85344
+2	6704 1571 2 370 0.407709797404 237.544698879848 63 1 63 2016 85344
+3	8275 771 3 365 0.68027777693 236.087986441791 31 1 31 496 10416
+4	9046 771 3 365 0.68027777693 236.087986441791 31 1 31 496 10416
+5	9817 492 4 366 0.905994540572 236.358082056489 20 1 20 210 2870
+6	10309 492 4 366 0.905994540572 236.358082056489 20 1 20 210 2870
+7	10801 269 23 367 12.680117677064 236.616961094857 11 1 11 66 506
+8	11070 269 23 367 12.680117677064 236.616961094857 11 1 11 66 506
+9	11339 267 24 368 12.87492402517 236.827724519159 11 1 11 66 506
+

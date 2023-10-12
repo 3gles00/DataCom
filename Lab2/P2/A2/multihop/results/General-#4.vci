@@ -1,0 +1,53 @@
+file 12742 1697109356                                           
+version 3
+run General-4-20231012-13:15:56-33747
+attr configname General
+attr datetime 20231012-13:15:56
+attr datetimef 20231012-131556
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 33747
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[0].lossProbability 0.5
+config Multihop.node[1].lossProbability 0.4
+config Multihop.node[2].lossProbability 0.35
+config Multihop.node[3].lossProbability 0.25
+config Multihop.node[4].lossProbability 0.2
+config Multihop.node[5].lossProbability 0.1
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[3] rxVector ETV
+vector 6 Multihop.node[3] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+0	1276 4168 0 374 0 238.894384010384 164 1 164 13530 1483790
+1	5444 1398 2 375 0.407709797404 239.077969406067 56 1 56 1596 60116
+2	6842 1398 2 375 0.407709797404 239.077969406067 56 1 56 1596 60116
+3	8240 814 3 370 0.68027777693 237.62125696801 33 1 33 561 12529
+4	9054 814 3 370 0.68027777693 237.62125696801 33 1 33 561 12529
+5	9868 664 4 371 0.905994540572 237.891352582708 27 1 27 378 6930
+6	10532 664 4 371 0.905994540572 237.891352582708 27 1 27 378 6930
+7	11196 515 5 372 1.129530219655 238.150231621076 21 1 21 231 3311
+8	11711 515 5 372 1.129530219655 238.150231621076 21 1 21 231 3311
+9	12226 515 6 373 1.266408412499 238.360995045378 21 1 21 231 3311
+
