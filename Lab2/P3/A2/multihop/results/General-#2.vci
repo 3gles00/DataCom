@@ -1,9 +1,9 @@
-file 107073 1697563175                                          
+file 21446 1697576541                                           
 version 3
-run General-2-20231017-19:19:35-8222
+run General-2-20231017-23:02:20-11995
 attr configname General
-attr datetime 20231017-19:19:35
-attr datetimef 20231017-191935
+attr datetime 20231017-23:02:20
+attr datetimef 20231017-230220
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Reliability
-attr processid 8222
+attr processid 11995
 attr repetition 2
 attr replication #2
 attr resultdir results
@@ -20,7 +20,7 @@ attr seedset 2
 config network Reliability
 config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
 config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
-config Reliability.node[*].lossProbability 0.0
+config Reliability.node[*].lossProbability 0.7
 config record-eventlog true
 config sim-time-limit 240s
 config repeat 5
@@ -28,23 +28,23 @@ config repeat 5
 vector 0 Reliability.node[0] txVector ETV
 vector 1 Reliability.node[1] txVector ETV
 vector 2 Reliability.node[1] rxVector ETV
-vector 3 Reliability.node[3] txVector ETV
-vector 4 Reliability.node[3] rxVector ETV
-vector 5 Reliability.node[0] rxVector ETV
-vector 6 Reliability.node[2] txVector ETV
-vector 7 Reliability.node[2] rxVector ETV
-vector 8 Reliability.node[4] txVector ETV
-vector 9 Reliability.node[4] rxVector ETV
-vector 10 Reliability.node[5] rxVector ETV
-0	1140 13140 1 1993 0.092839031499 239.819043263579 501 1 167 42084 4699380
-1	14280 13341 2 1994 0.238004626979 239.937696494337 501 1 501 125751 42042751
-2	27621 13296 2 1994 0.238004626979 239.937696494337 499 1 499 124750 41541750
-3	40917 8804 3 1984 0.430715881687 238.695387891329 332 1 332 55278 12253290
-4	49721 8804 3 1991 0.430715881687 239.0975745907 332 1 332 55278 12253290
-5	58525 4347 4 1985 0.452440497408 238.725619339327 166 1 166 13861 1538571
-6	62872 8808 5 1983 0.52807344304 238.689942610095 332 1 332 55278 12253290
-7	71680 8807 5 1992 0.52807344304 239.139984174747 332 1 332 55278 12253290
-8	80487 13257 6 1987 0.60161780458 238.904531365907 498 1 498 124251 41292749
-9	93744 8806 6 1988 0.60161780458 238.970841770403 332 1 332 55278 12253290
-10	102550 4522 12 1990 0.803801228398 239.087540104279 166 1 166 13861 1538571
+vector 3 Reliability.node[2] txVector ETV
+vector 4 Reliability.node[2] rxVector ETV
+vector 5 Reliability.node[4] txVector ETV
+vector 6 Reliability.node[4] rxVector ETV
+vector 7 Reliability.node[5] rxVector ETV
+vector 8 Reliability.node[0] rxVector ETV
+vector 9 Reliability.node[3] txVector ETV
+vector 10 Reliability.node[3] rxVector ETV
+0	1142 12360 1 531 0.092839031499 239.990056370875 483 1 161 39123 4212243
+1	13502 3582 2 517 0.238004626979 231.031494968115 141 1 141 10011 944371
+2	17084 1276 2 517 0.238004626979 231.031494968115 51 1 51 1326 45526
+3	18360 499 21 506 7.416071532516 227.296202834738 20 1 20 210 2870
+4	18859 245 21 506 7.416071532516 227.296202834738 10 1 10 55 385
+5	19104 513 22 441 7.541204171996 196.62649245175 21 1 21 231 3311
+6	19617 167 22 441 7.541204171996 196.62649245175 7 1 7 28 140
+7	19784 168 24 447 7.663608607687 196.858391296888 7 1 7 28 140
+8	19952 416 47 497 19.949981526418 223.863953251873 17 1 17 153 1785
+9	20368 695 61 513 27.45534144622 229.283291618331 28 1 28 406 7714
+10	21063 382 61 513 27.45534144622 229.283291618331 15 1 15 120 1240
 

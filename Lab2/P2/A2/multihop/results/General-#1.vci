@@ -1,9 +1,9 @@
-file 12116 1697109356                                           
+file 7012 1697190389                                            
 version 3
-run General-1-20231012-13:15:56-33747
+run General-1-20231013-11:46:29-28182
 attr configname General
-attr datetime 20231012-13:15:56
-attr datetimef 20231012-131556
+attr datetime 20231013-11:46:29
+attr datetimef 20231013-114629
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 33747
+attr processid 28182
 attr repetition 1
 attr replication #1
 attr resultdir results
@@ -21,9 +21,9 @@ config network Multihop
 config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
 config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
 config Multihop.node[0].lossProbability 0.5
-config Multihop.node[1].lossProbability 0.4
-config Multihop.node[2].lossProbability 0.35
-config Multihop.node[3].lossProbability 0.25
+config Multihop.node[1].lossProbability 0.6
+config Multihop.node[2].lossProbability 0.7
+config Multihop.node[3].lossProbability 0.1
 config Multihop.node[4].lossProbability 0.2
 config Multihop.node[5].lossProbability 0.1
 config record-eventlog true
@@ -40,14 +40,14 @@ vector 6 Multihop.node[3] txVector ETV
 vector 7 Multihop.node[4] rxVector ETV
 vector 8 Multihop.node[4] txVector ETV
 vector 9 Multihop.node[5] rxVector ETV
-0	1276 4238 0 372 0 238.866237286594 167 1 167 14028 1566460
-1	5514 1195 9 366 7.277419840323 235.294908908984 48 1 48 1176 38024
-2	6709 1195 9 366 7.277419840323 235.294908908984 48 1 48 1176 38024
-3	7904 714 10 367 7.548218914785 235.502314632452 29 1 29 435 8555
-4	8618 714 10 367 7.548218914785 235.502314632452 29 1 29 435 8555
-5	9332 616 11 368 7.717740882253 235.729214969739 25 1 25 325 5525
-6	9948 616 11 368 7.717740882253 235.729214969739 25 1 25 325 5525
-7	10564 517 12 369 7.927405033167 235.847890591471 21 1 21 231 3311
-8	11081 517 12 369 7.927405033167 235.847890591471 21 1 21 231 3311
-9	11598 517 13 370 8.121661082981 236.042649497521 21 1 21 231 3311
+0	1274 4094 0 279 0 238.815638466393 162 1 162 13203 1430325
+1	5368 646 11 276 9.21722005251 236.317842054364 26 1 26 351 6201
+2	6014 646 11 276 9.21722005251 236.317842054364 26 1 26 351 6201
+3	6660 71 21 165 18.253064105429 142.004164087703 3 1 3 6 14
+4	6731 71 21 165 18.253064105429 142.004164087703 3 1 3 6 14
+5	6802 70 22 166 18.515588031043 142.117693565416 3 1 3 6 14
+6	6872 70 22 166 18.515588031043 142.117693565416 3 1 3 6 14
+7	6942 23 23 23 18.643220184988 18.643220184988 1 1 1 1 1
+8	6965 23 23 23 18.643220184988 18.643220184988 1 1 1 1 1
+9	6988 23 24 24 18.851669169152 18.851669169152 1 1 1 1 1
 

@@ -6,16 +6,11 @@ using namespace omnetpp;
 
 class Txc2 : public cSimpleModule{
     private:
-        cMessage *event = nullptr;
-        cMessage *multihopMsg = nullptr;
-        long msgCounter;
         long numSent;
         long numReceived;
         double lossProbability;
         cOutVector txVector;
         cOutVector rxVector;
-        // simsignal_t transmissionSignal;
-        // simsignal_t receptionSignal;
     public:
         virtual ~Txc2();
     protected:
@@ -27,30 +22,24 @@ class Txc2 : public cSimpleModule{
 
 Define_Module(Txc2);
 
-Txc2::~Txc2(){
-    cancelAndDelete(event);
-    delete multihopMsg;
-}
+Txc2::~Txc2(){}
 
 void Txc2::initialize(){
     
-    msgCounter = 0;
     numReceived = 0;
     numSent = 0;
     lossProbability = par("lossProbability");
-    event = new cMessage("event");
     txVector.setName("txVector");
     rxVector.setName("rxVector");
     
     // Start messaging if I an the first node
     if(getIndex() == 0){
         numSent++;
-        msgCounter++;
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
-        sprintf(msgname, "DATA-%ld", msgCounter);
-        multihopMsg = new cMessage(msgname);
-        scheduleAt(par("delayTime"), event);
+        sprintf(msgname, "DATA-%ld", numSent);
+        cMessage *newMsg = new cMessage(msgname);
+        scheduleAt(par("delayTime"), newMsg);
         txVector.record(numSent);
     }
 }
@@ -59,15 +48,13 @@ void Txc2::handleMessage(cMessage *msg){
 
     //Planning new Message
     if(getIndex() == 0){
-        msgCounter++;
         numSent++;
         EV << "Scheduling next event\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", numSent);
         cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + par("delayTime"), newMsg);
-        txVector.record(numSent);
-        
+        scheduleAt(simTime() + par("transmissionTime"), newMsg);
+        txVector.record(numSent);   
     }
 
     // Forwarding Message
@@ -83,7 +70,6 @@ void Txc2::handleMessage(cMessage *msg){
             if(getIndex() != 0){
                 numReceived++;
                 numSent++;
-                msgCounter++;
                 rxVector.record(numReceived);
                 txVector.record(numSent);
             }
@@ -106,15 +92,13 @@ void Txc2::forwardMessage(cMessage *msg){
         k = intuniform(1, n - 1);
     }
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
-    sendDelayed(msg, exponential(0.01), "gate$o", k);
+    sendDelayed(msg, par("delayTime"), "gate$o", k);
 }
 
 void Txc2::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
-	EV << "msgCounter: " << msgCounter << endl;
 
 	recordScalar("#sent", numSent);
 	recordScalar("#received", numReceived);
-	// recordScalar("#counter", msgCounter);
 }

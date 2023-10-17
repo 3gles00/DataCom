@@ -1,8 +1,8 @@
 version 3
-run General-0-20231011-16:30:32-11605
+run General-0-20231014-01:53:47-39191
 attr configname General
-attr datetime 20231011-16:30:32
-attr datetimef 20231011-163032
+attr datetime 20231014-01:53:47
+attr datetimef 20231014-015347
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Reliability
-attr processid 11605
+attr processid 39191
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -150,45 +150,45 @@ attr unit s
 par Reliability.node[0] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[0] lossProbability 0.2
-scalar Reliability.node[0] #sent 138328
-scalar Reliability.node[0] #received 42144
-scalar Reliability.node[0] #counter 96184
+scalar Reliability.node[0] #sent 106
+scalar Reliability.node[0] #received 30
+scalar Reliability.node[0] #counter 76
 par Reliability.node[1] typename "\"Txc2\""
 par Reliability.node[1] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[1] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[1] lossProbability 0.2
-scalar Reliability.node[1] #sent 12642
-scalar Reliability.node[1] #received 4214
-scalar Reliability.node[1] #counter 4214
+scalar Reliability.node[1] #sent 18
+scalar Reliability.node[1] #received 6
+scalar Reliability.node[1] #counter 6
 par Reliability.node[2] typename "\"Txc2\""
 par Reliability.node[2] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[2] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[2] lossProbability 0.2
-scalar Reliability.node[2] #sent 8526
-scalar Reliability.node[2] #received 4263
-scalar Reliability.node[2] #counter 4263
+scalar Reliability.node[2] #sent 16
+scalar Reliability.node[2] #received 8
+scalar Reliability.node[2] #counter 8
 par Reliability.node[3] typename "\"Txc2\""
 par Reliability.node[3] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[3] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[3] lossProbability 0.2
-scalar Reliability.node[3] #sent 1299
-scalar Reliability.node[3] #received 433
-scalar Reliability.node[3] #counter 433
+scalar Reliability.node[3] #sent 12
+scalar Reliability.node[3] #received 4
+scalar Reliability.node[3] #counter 4
 par Reliability.node[4] typename "\"Txc2\""
 par Reliability.node[4] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[4] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[4] lossProbability 0.2
-scalar Reliability.node[4] #sent 1848
-scalar Reliability.node[4] #received 616
-scalar Reliability.node[4] #counter 616
+scalar Reliability.node[4] #sent 12
+scalar Reliability.node[4] #received 4
+scalar Reliability.node[4] #counter 4
 par Reliability.node[5] typename "\"Txc2\""
 par Reliability.node[5] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
@@ -196,7 +196,7 @@ par Reliability.node[5] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[5] lossProbability 0.2
 scalar Reliability.node[5] #sent 0
-scalar Reliability.node[5] #received 97
+scalar Reliability.node[5] #received 2
 scalar Reliability.node[5] #counter 0
 par Reliability.node[6] typename "\"Txc2\""
 par Reliability.node[6] delayTime "uniform(0.01s, 0.2s)"
@@ -204,17 +204,17 @@ attr unit s
 par Reliability.node[6] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[6] lossProbability 0.2
-scalar Reliability.node[6] #sent 333
-scalar Reliability.node[6] #received 111
-scalar Reliability.node[6] #counter 111
+scalar Reliability.node[6] #sent 3
+scalar Reliability.node[6] #received 1
+scalar Reliability.node[6] #counter 1
 par Reliability.node[7] typename "\"Txc2\""
 par Reliability.node[7] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[7] transmissionTime "uniform(1s, 2s)"
 attr unit s
 par Reliability.node[7] lossProbability 0.2
-scalar Reliability.node[7] #sent 52
-scalar Reliability.node[7] #received 26
-scalar Reliability.node[7] #counter 26
+scalar Reliability.node[7] #sent 2
+scalar Reliability.node[7] #received 1
+scalar Reliability.node[7] #counter 1
 par Reliability typename "\"Reliability\""
 

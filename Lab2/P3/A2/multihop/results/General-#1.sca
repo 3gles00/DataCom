@@ -1,8 +1,8 @@
 version 3
-run General-1-20231017-19:19:35-8222
+run General-1-20231017-23:02:20-11995
 attr configname General
-attr datetime 20231017-19:19:35
-attr datetimef 20231017-191935
+attr datetime 20231017-23:02:20
+attr datetimef 20231017-230220
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Reliability
-attr processid 8222
+attr processid 11995
 attr repetition 1
 attr replication #1
 attr resultdir results
@@ -19,7 +19,7 @@ attr seedset 1
 config network Reliability
 config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
 config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
-config Reliability.node[*].lossProbability 0.0
+config Reliability.node[*].lossProbability 0.7
 config record-eventlog true
 config sim-time-limit 240s
 config repeat 5
@@ -101,48 +101,48 @@ par Reliability.node[0] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[0] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[0] lossProbability 0
-scalar Reliability.node[0] #sent 159
-scalar Reliability.node[0] #received 158
+par Reliability.node[0] lossProbability 0.7
+scalar Reliability.node[0] #sent 163
+scalar Reliability.node[0] #received 17
 par Reliability.node[1] typename "\"Txc2\""
 par Reliability.node[1] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[1] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[1] lossProbability 0
-scalar Reliability.node[1] #sent 477
-scalar Reliability.node[1] #received 475
+par Reliability.node[1] lossProbability 0.7
+scalar Reliability.node[1] #sent 144
+scalar Reliability.node[1] #received 58
 par Reliability.node[2] typename "\"Txc2\""
 par Reliability.node[2] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[2] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[2] lossProbability 0
-scalar Reliability.node[2] #sent 316
-scalar Reliability.node[2] #received 316
+par Reliability.node[2] lossProbability 0.7
+scalar Reliability.node[2] #sent 46
+scalar Reliability.node[2] #received 24
 par Reliability.node[3] typename "\"Txc2\""
 par Reliability.node[3] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[3] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[3] lossProbability 0
-scalar Reliability.node[3] #sent 318
-scalar Reliability.node[3] #received 317
+par Reliability.node[3] lossProbability 0.7
+scalar Reliability.node[3] #sent 28
+scalar Reliability.node[3] #received 15
 par Reliability.node[4] typename "\"Txc2\""
 par Reliability.node[4] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[4] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[4] lossProbability 0
-scalar Reliability.node[4] #sent 474
-scalar Reliability.node[4] #received 316
+par Reliability.node[4] lossProbability 0.7
+scalar Reliability.node[4] #sent 33
+scalar Reliability.node[4] #received 12
 par Reliability.node[5] typename "\"Txc2\""
 par Reliability.node[5] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[5] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[5] lossProbability 0
+par Reliability.node[5] lossProbability 0.7
 scalar Reliability.node[5] #sent 0
-scalar Reliability.node[5] #received 158
+scalar Reliability.node[5] #received 11
 par Reliability typename "\"Reliability\""
 

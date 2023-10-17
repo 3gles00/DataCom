@@ -8,14 +8,13 @@ using namespace std;
 
 class Txc2 : public cSimpleModule{
     private:
-        // cMessage *event = nullptr;
-        // cMessage *multihopMsg = nullptr;
-        long msgCounter;
+        cMessage *event = nullptr;
+        cMessage *multihopMsg = nullptr;
         long numSent;
         long numReceived;
+        long msgCounter;
         vector<long> duplicatePackageList;
         double lossProbability;
-        // double transmissionTime;
         cOutVector txVector;
         cOutVector rxVector;
     public:
@@ -31,74 +30,89 @@ Define_Module(Txc2);
 
 Txc2::~Txc2(){
     duplicatePackageList.clear();
+    cancelAndDelete(event);
+    delete multihopMsg;
 }
 
 void Txc2::initialize(){
-    
     msgCounter = 0;
     numReceived = 0;
     numSent = 0;
     lossProbability = par("lossProbability");
-    // transmissionTime = par("transmissionTime");
     txVector.setName("txVector");
     rxVector.setName("rxVector");
+    event = new cMessage("event");
+
+    WATCH(msgCounter);
+    WATCH(numSent);
+    WATCH(numReceived);
     
     // Start messaging if I an the first node
     if(getIndex() == 0){
-        numSent++;
-        msgCounter++;
         EV << "Scheduling first sent to a random time\n";
         char msgname[20];
         sprintf(msgname, "DATA-%ld", msgCounter);
-        cMessage *msg = new cMessage(msgname);
-        scheduleAt(par("delayTime"), msg);
-        txVector.record(numSent);
+        multihopMsg = new cMessage(msgname);
+        scheduleAt(simTime() + par("delayTime"), event);
+        duplicatePackageList.push_back(multihopMsg->getTreeId());
+
     }
 }
 
 void Txc2::handleMessage(cMessage *msg){
 
-    // Forwarding Message
-    if(getIndex() == 5){
-        // Message arrived
-        EV << "Message " << msg << " arrived\n";
-        numReceived++;
-        rxVector.record(numReceived);
-        delete msg;
+    if(msg == event){
+        forwardMessage(multihopMsg);
+        txVector.record(numSent);
+        delete multihopMsg;
+        multihopMsg = nullptr;
+
+
+        if(getIndex() == 0){
+            //Planning new Message
+            EV << "Scheduling next event\n";
+            msgCounter++;
+            char msgname[20];
+            sprintf(msgname, "DATA-%ld", msgCounter);
+            multihopMsg = new cMessage(msgname);
+            txVector.record(numSent);
+            scheduleAt(simTime() + par("transmissionTime"), event);
+            duplicatePackageList.push_back(multihopMsg->getTreeId());
+        }
     }
     else{
-        if(lossProbability < uniform(0, 1)){
-            if(std::find(duplicatePackageList.begin(), duplicatePackageList.end(),
-                msg->getTreeId()) != duplicatePackageList.end()){
-                EV << "This is a duplicate package. Deleting.\n";
-            }
-            else{
-                EV << "This is the first time we receive this message.\n";
-                duplicatePackageList.push_back(msg->getTreeId());
-                numReceived++;
-                msgCounter++;
-                forwardMessage(msg);
-            }
-            delete msg;
+        if(getIndex() == 5){
+            // Message arrived
+            EV << "Message " << msg << " arrived\n";
+            numReceived++;
             rxVector.record(numReceived);
-            txVector.record(numSent);
+            delete msg;
         }
         else{
-            EV << "Lost Transmission\n";
-            delete msg;
+            // Handle message
+            if(lossProbability < uniform(0, 1)){
+                if(find(duplicatePackageList.begin(), duplicatePackageList.end(),
+                    msg->getTreeId()) != duplicatePackageList.end()){
+                    EV << "This is a duplicate package. Deleting.\n";
+                    numReceived++;
+                    rxVector.record(numReceived);
+                    delete msg;
+                }
+                else{
+                    // Forwarding Message
+                    EV << "This is the first time we receive this message.\n";
+                    duplicatePackageList.push_back(msg->getTreeId());
+                    forwardMessage(msg);
+                    numReceived++;
+                    rxVector.record(numReceived);
+                    delete msg;
+                }   
+            }
+            else{
+                EV << "Lost Transmission\n";
+                delete msg;
+            }
         }
-    }
-
-    //Planning new Message
-    if(getIndex() == 0){
-        msgCounter++;
-        numSent++;
-        EV << "Scheduling next event\n";
-        char msgname[20];
-        sprintf(msgname, "DATA-%ld", numSent);
-        cMessage *newMsg = new cMessage(msgname);
-        scheduleAt(simTime() + par("transmissionTime"), newMsg);
-        txVector.record(numSent);   
     }
 }
 
@@ -108,17 +122,17 @@ void Txc2::forwardMessage(cMessage *msg){
     // using our higher-numbered gate
     int n = gateSize("gate");
     for(int i = 0; i < n; i++){
-        sendDelayed(msg -> dup(), simTime() + par("delayTime"), "gate$o", i);
+        sendDelayed(msg -> dup(), par("delayTime"), "gate$o", i);
         numSent++;
+        txVector.record(numSent);
     }
 }
 
 void Txc2::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
-	EV << "msgCounter: " << msgCounter << endl;
 
 	recordScalar("#sent", numSent);
 	recordScalar("#received", numReceived);
-	recordScalar("#counter", msgCounter);
 }
+
