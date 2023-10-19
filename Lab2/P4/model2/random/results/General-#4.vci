@@ -1,0 +1,54 @@
+file 68140 1697738370                                           
+version 3
+run General-4-20231019-19:59:30-65822
+attr configname General
+attr datetime 20231019-19:59:30
+attr datetimef 20231019-195930
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 65822
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[4] rxVector ETV
+vector 6 Multihop.node[4] txVector ETV
+vector 7 Multihop.node[3] rxVector ETV
+vector 8 Multihop.node[3] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+vector 10 Multihop.node[5] txVector ETV
+vector 11 Multihop.node[6] rxVector ETV
+vector 12 Multihop.node[6] e2eVector ETV
+0	1176 17908 0 1979 0 998.82145973892 663 1 663 220116 97364644
+1	19084 8187 2 1974 0.246547781036 994.622954262767 304 1 304 46360 9411080
+2	27271 8187 2 1974 0.246547781036 994.622954262767 304 1 304 46360 9411080
+3	35458 3021 3 1944 0.402362819989 975.045827297465 115 1 115 6670 513590
+4	38479 3021 3 1944 0.402362819989 975.045827297465 115 1 115 6670 513590
+5	41500 6051 11 1959 5.220748993633 984.265335688748 226 1 226 25651 3873301
+6	47551 6051 11 1959 5.220748993633 984.265335688748 226 1 226 25651 3873301
+7	53602 3445 37 1960 21.997183949971 984.30993385587 130 1 130 8515 740805
+8	57047 3445 37 1960 21.997183949971 984.30993385587 130 1 130 8515 740805
+9	60492 2549 38 1961 22.084001955167 984.505759623501 97 1 97 4753 308945
+10	63041 2646 38 1961 22.084001955167 984.505759623501 97 1 97 4753 308945
+11	65687 998 39 1962 22.234468700684 984.574417660642 37 1 37 703 17575
+12	66685 1454 39 1962 22.234468700684 984.574417660642 37 1.519170327316 3.582173167829 79.355129125988 176.36724025433
+

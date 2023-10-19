@@ -1,6 +1,7 @@
 simple Txc1{
     parameters:
         volatile double delayTime @unit(s);
+        volatile double transmissionTime @unit(s);
         volatile double lossProbability;
         @signal[transmissionSignal](type="long");
 		@statistic[transmissionSignal](title="tx_t";source="transmissionSignal";record=vector);
@@ -24,6 +25,7 @@ network Multihop{
 simple Txc2{
     parameters:
         volatile double delayTime @unit(s);
+        volatile double transmissionTime @unit(s);
         volatile double lossProbability;
         @signal[transmissionSignal](type="long");
 		@statistic[transmissionSignal](title="tx_t";source="transmissionSignal";record=vector);

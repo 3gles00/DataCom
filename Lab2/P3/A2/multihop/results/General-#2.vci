@@ -1,0 +1,52 @@
+file 81321 1697723660                                           
+version 3
+run General-2-20231019-15:54:20-24860
+attr configname General
+attr datetime 20231019-15:54:20
+attr datetimef 20231019-155420
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 24860
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[0] rxVector ETV
+vector 6 Reliability.node[4] txVector ETV
+vector 7 Reliability.node[4] rxVector ETV
+vector 8 Reliability.node[5] rxVector ETV
+vector 9 Reliability.node[5] e2eVector ETV
+vector 10 Reliability.node[2] txVector ETV
+vector 11 Reliability.node[2] rxVector ETV
+0	1186 12516 1 1571 0.092839031499 239.287477528929 480 1 160 38640 4134480
+1	13702 11097 2 1572 0.238004626979 239.52291928579 420 1 420 88410 24784270
+2	24799 8780 2 1576 0.238004626979 239.955099190852 333 1 333 55611 12364179
+3	33579 6354 3 1575 0.430715881687 239.820233456128 242 1 242 29403 4753485
+4	39933 5357 3 1575 0.430715881687 239.820233456128 205 1 205 21115 2892755
+5	45290 2805 4 1573 0.452440497408 239.72926589063 109 1 109 5995 437635
+6	48095 9342 6 1577 0.60161780458 239.987911968644 354 1 354 62835 14850005
+7	57437 5332 6 1578 0.60161780458 239.997907015278 204 1 204 20910 2850730
+8	62769 2488 8 1565 0.734408407913 236.355421817327 97 1 97 4753 308945
+9	65257 3652 8 1565 0.734408407913 236.355421817327 97 0.734408407913 3.01620437312 220.32777510716 513.72743543986
+10	68909 6706 10 1574 0.84440171555 239.782921204927 246 1 246 30381 4992611
+11	75615 5705 10 1574 0.84440171555 239.782921204927 210 1 210 22155 3109085
+

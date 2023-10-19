@@ -1,0 +1,65 @@
+file 70360 1697734678                                           
+version 3
+run General-3-20231019-18:57:58-54425
+attr configname General
+attr datetime 20231019-18:57:58
+attr datetimef 20231019-185758
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 54425
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[0].lossProbability 0.3
+config Multihop.node[1].lossProbability 0.3
+config Multihop.node[2].lossProbability 0.3
+config Multihop.node[3].lossProbability 0.3/2
+config Multihop.node[4].lossProbability 0.3/2
+config Multihop.node[5].lossProbability 0.3*2
+config Multihop.node[6].lossProbability 0.3*2
+config Multihop.node[7].lossProbability 0.3*3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[2] rxVector ETV
+vector 2 Multihop.node[2] txVector ETV
+vector 3 Multihop.node[4] rxVector ETV
+vector 4 Multihop.node[4] txVector ETV
+vector 5 Multihop.node[6] rxVector ETV
+vector 6 Multihop.node[6] txVector ETV
+vector 7 Multihop.node[1] rxVector ETV
+vector 8 Multihop.node[1] txVector ETV
+vector 9 Multihop.node[3] rxVector ETV
+vector 10 Multihop.node[3] txVector ETV
+vector 11 Multihop.node[5] rxVector ETV
+vector 12 Multihop.node[5] txVector ETV
+vector 13 Multihop.node[7] rxVector ETV
+vector 14 Multihop.node[7] e2eVector ETV
+0	1574 18050 0 2076 0 998.771523772577 667 1 667 222778 99136210
+1	19624 8583 4 2077 1.288418250771 998.96147398298 319 1 319 51040 10871520
+2	28207 8583 4 2077 1.288418250771 998.96147398298 319 1 319 51040 10871520
+3	36790 10021 10 2080 5.145871867503 999.332340509428 372 1 372 69378 17228870
+4	46811 10021 10 2080 5.145871867503 999.332340509428 372 1 372 69378 17228870
+5	56832 2013 11 2079 5.233113831354 999.196695640608 77 1 77 3003 155155
+6	58845 2013 11 2079 5.233113831354 999.196695640608 77 1 77 3003 155155
+7	60858 3317 13 2043 5.530884776619 980.119206525061 126 1 126 8001 674751
+8	64175 3317 13 2043 5.530884776619 980.119206525061 126 1 126 8001 674751
+9	67492 1192 14 1947 5.600142741183 933.360919037037 46 1 46 1081 33511
+10	68684 1238 14 1947 5.600142741183 933.360919037037 46 1 46 1081 33511
+11	69922 185 466 1948 226.911211952984 933.562788714016 7 1 7 28 140
+12	70107 185 466 1948 226.911211952984 933.562788714016 7 1 7 28 140
+13	70292 27 2052 2052 983.089883098087 983.089883098087 1 1 1 1 1
+14	70319 40 2052 2052 983.089883098087 983.089883098087 1 2.341232517604 2.341232517604 2.341232517604 5.4813697014864
+

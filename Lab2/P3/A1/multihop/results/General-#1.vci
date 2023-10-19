@@ -1,0 +1,57 @@
+file 40619 1697653152                                           
+version 3
+run General-1-20231018-20:19:12-22348
+attr configname General
+attr datetime 20231018-20:19:12
+attr datetimef 20231018-201912
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 22348
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[0].lossProbability 0.5
+config Reliability.node[1].lossProbability 0.6
+config Reliability.node[2].lossProbability 0.7
+config Reliability.node[3].lossProbability 0.1
+config Reliability.node[4].lossProbability 0.2
+config Reliability.node[5].lossProbability 0.1
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[0] rxVector ETV
+vector 4 Reliability.node[3] txVector ETV
+vector 5 Reliability.node[3] rxVector ETV
+vector 6 Reliability.node[4] txVector ETV
+vector 7 Reliability.node[4] rxVector ETV
+vector 8 Reliability.node[2] txVector ETV
+vector 9 Reliability.node[2] rxVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+vector 11 Reliability.node[5] e2eVector ETV
+0	1421 12321 1 876 0.089234179703 238.906301378852 480 1 160 38640 4134480
+1	13742 5490 2 877 0.298699293248 238.967647487244 213 1 213 22791 3243919
+2	19232 2736 2 877 0.298699293248 238.967647487244 108 1 108 5886 425754
+3	21968 875 3 870 0.318721025653 237.206864608075 35 1 35 630 14910
+4	22843 3312 5 880 0.37614248112 239.135438698407 130 1 130 8515 740805
+5	26155 2843 5 880 0.37614248112 239.135438698407 112 1 112 6328 474600
+6	28998 4074 7 871 0.471492819087 237.216110113184 159 1 159 12720 1352560
+7	33072 1790 7 871 0.471492819087 237.216110113184 71 1 71 2556 121836
+8	34862 1515 8 845 0.557149356852 231.917983643944 60 1 60 1830 73810
+9	36377 830 8 845 0.557149356852 231.917983643944 33 1 33 561 12529
+10	37207 1386 9 873 0.566878638132 237.236593954898 53 1 53 1431 51039
+11	38593 2025 9 873 0.566878638132 237.236593954898 53 0.566878638132 2.575263552042 102.53955307442 205.45320601413
+

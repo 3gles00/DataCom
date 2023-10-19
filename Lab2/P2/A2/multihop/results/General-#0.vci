@@ -1,9 +1,9 @@
-file 319308 1696419243                                          
+file 9104 1697650026                                            
 version 3
-run General-0-20231004-13:31:55-12089
+run General-0-20231018-19:27:06-20109
 attr configname General
-attr datetime 20231004-13:31:55
-attr datetimef 20231004-133155
+attr datetime 20231018-19:27:06
+attr datetimef 20231018-192706
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 12089
+attr processid 20109
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -20,14 +20,15 @@ attr seedset 0
 config network Multihop
 config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
 config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
-config Multihop.node[0].lossProbability "uniform(0, 0.2)"
-config Multihop.node[1].lossProbability "uniform(0, 0.2)"
-config Multihop.node[2].lossProbability "uniform(0, 0.2)"
-config Multihop.node[3].lossProbability "uniform(0, 0.2)"
-config Multihop.node[4].lossProbability 0.9
-config Multihop.node[5].lossProbability 0.9
+config Multihop.node[0].lossProbability 0.5
+config Multihop.node[1].lossProbability 0.6
+config Multihop.node[2].lossProbability 0.7
+config Multihop.node[3].lossProbability 0.1
+config Multihop.node[4].lossProbability 0.2
+config Multihop.node[5].lossProbability 0.1
 config record-eventlog true
 config sim-time-limit 240s
+config repeat 5
 
 vector 0 Multihop.node[0] txVector ETV
 vector 1 Multihop.node[1] rxVector ETV
@@ -39,14 +40,14 @@ vector 6 Multihop.node[3] txVector ETV
 vector 7 Multihop.node[4] rxVector ETV
 vector 8 Multihop.node[4] txVector ETV
 vector 9 Multihop.node[5] rxVector ETV
-0	1314 63762 0 8872 0 239.836111440986 2292 1 2292 2627778 4016120710
-1	65076 47800 2 8877 0.241430117656 239.951283036847 1727 1 1727 1492128 1718434080
-2	112876 47800 2 8877 0.241430117656 239.951283036847 1727 1 1727 1492128 1718434080
-3	160676 39823 4 8875 0.35120018192 239.907798362246 1445 1 1445 1044735 1006776295
-4	200499 39823 4 8875 0.35120018192 239.907798362246 1445 1 1445 1044735 1006776295
-5	240322 34801 7 8871 0.47343542614 239.812168347677 1267 1 1267 803278 678769910
-6	275123 34801 7 8871 0.47343542614 239.812168347677 1267 1 1267 803278 678769910
-7	309924 3127 66 8756 2.532678576529 236.67641015367 119 1 119 7140 568820
-8	313051 3127 66 8756 2.532678576529 236.67641015367 119 1 119 7140 568820
-9	316178 3129 72 8761 2.670168891125 236.783135625928 119 1 119 7140 568820
+0	1274 4109 0 318 0 239.034205179034 162 1 162 13203 1430325
+1	5383 919 2 316 0.360160544783 238.05512912317 37 1 37 703 17575
+2	6302 919 2 316 0.360160544783 238.05512912317 37 1 37 703 17575
+3	7221 346 18 302 15.761377267904 226.201861365069 14 1 14 105 1015
+4	7567 346 18 302 15.761377267904 226.201861365069 14 1 14 105 1015
+5	7913 268 19 303 15.898043915614 226.377146409971 11 1 11 66 506
+6	8181 268 19 303 15.898043915614 226.377146409971 11 1 11 66 506
+7	8449 218 20 304 16.173360493317 226.637032237029 9 1 9 45 285
+8	8667 218 20 304 16.173360493317 226.637032237029 9 1 9 45 285
+9	8885 218 21 305 16.37334602092 226.825192995928 9 1 9 45 285
 

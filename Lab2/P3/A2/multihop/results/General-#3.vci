@@ -1,0 +1,52 @@
+file 76353 1697723660                                           
+version 3
+run General-3-20231019-15:54:20-24860
+attr configname General
+attr datetime 20231019-15:54:20
+attr datetimef 20231019-155420
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 24860
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[2] txVector ETV
+vector 4 Reliability.node[2] rxVector ETV
+vector 5 Reliability.node[0] rxVector ETV
+vector 6 Reliability.node[3] txVector ETV
+vector 7 Reliability.node[3] rxVector ETV
+vector 8 Reliability.node[4] txVector ETV
+vector 9 Reliability.node[4] rxVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+vector 11 Reliability.node[5] e2eVector ETV
+0	1186 12567 1 1495 0.114651601831 239.885982166115 483 1 161 39123 4212243
+1	13753 9987 2 1482 0.238089329092 237.631097244598 378 1 378 71631 18074889
+2	23740 8120 2 1482 0.238089329092 237.631097244598 308 1 308 47586 9786854
+3	31860 6034 3 1483 0.371141759152 237.776240018891 230 1 230 26565 4082155
+4	37894 4972 3 1490 0.371141759152 238.174447463771 190 1 190 18145 2304415
+5	42866 2750 4 1485 0.403361230375 237.90831273622 107 1 107 5778 414090
+6	45616 6190 14 1484 3.395260822207 237.841169938216 236 1 236 27966 4409306
+7	51806 5021 14 1491 3.395260822207 238.197508356349 192 1 192 18528 2377760
+8	56827 8706 16 1488 3.498995421869 237.992462258371 330 1 330 54615 12033505
+9	65533 4676 16 1488 3.498995421869 237.992462258371 179 1 179 16110 1927830
+10	70209 2509 20 1492 3.715177698049 238.253197850421 94 1 94 4465 281295
+11	72718 3634 20 1492 3.715177698049 238.253197850421 94 1.756796061536 3.022530679244 220.06613552793 525.17929576359
+

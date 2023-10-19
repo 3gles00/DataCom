@@ -1,0 +1,52 @@
+file 312361 1697737639                                          
+version 3
+run General-3-20231019-19:47:19-63521
+attr configname General
+attr datetime 20231019-19:47:19
+attr datetimef 20231019-194719
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 63521
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[2] txVector ETV
+vector 4 Reliability.node[2] rxVector ETV
+vector 5 Reliability.node[4] txVector ETV
+vector 6 Reliability.node[4] rxVector ETV
+vector 7 Reliability.node[3] txVector ETV
+vector 8 Reliability.node[3] rxVector ETV
+vector 9 Reliability.node[5] rxVector ETV
+vector 10 Reliability.node[5] e2eVector ETV
+vector 11 Reliability.node[0] rxVector ETV
+0	1187 54633 1 6265 0.114651601831 998.812576324285 1992 1 664 662340 293416620
+1	55820 39663 2 6266 0.148089329092 998.919354870731 1425 1 1425 1016025 965562425
+2	95483 29138 2 6273 0.148089329092 999.201121711633 1057 1 1057 559153 394202865
+3	124621 33432 3 6268 0.191141759152 999.107729697919 1206 1 1206 727821 585410691
+4	158053 23952 3 6276 0.191141759152 999.324322861133 871 1 871 379756 220638236
+5	182005 30618 13 6275 1.939214306271 999.244604074727 1110 1 1110 616605 456493235
+6	212623 15784 13 6275 1.939214306271 999.244604074727 576 1 576 166176 63866976
+7	228407 33495 16 6269 2.021592043719 999.115363770471 1209 1 1209 731445 589788485
+8	261902 23828 16 6271 2.021592043719 999.148455299393 866 1 866 375411 216862421
+9	285730 6991 18 6277 2.071478240376 999.347427021442 257 1 257 33153 5691265
+10	292721 10188 18 6277 2.071478240376 999.347427021442 257 1.2101805452679 2.64581672306 508.55111164353 1030.792093977
+11	302909 9451 27 6267 4.570565909582 998.96861723097 334 1 334 55945 12475735
+

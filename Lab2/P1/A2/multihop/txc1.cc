@@ -93,7 +93,7 @@ void Txc1::forwardMessage(cMessage *msg){
     int n = gateSize("gate");
     int k = n - 1;
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
-    sendDelayed(msg, exponential(0.01), "gate$o", k);
+    sendDelayed(msg, exponential(0.05), "gate$o", k);
 }
 
 void Txc1::finish(){

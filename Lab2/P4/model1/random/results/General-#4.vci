@@ -1,0 +1,50 @@
+file 69203 1697736760                                           
+version 3
+run General-4-20231019-19:32:40-60750
+attr configname General
+attr datetime 20231019-19:32:40
+attr datetimef 20231019-193240
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 60750
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[3] rxVector ETV
+vector 6 Multihop.node[3] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+vector 10 Multihop.node[5] e2eVector ETV
+0	1096 17941 0 1981 0 999.684567780613 664 1 664 220780 97805540
+1	19037 8466 2 1976 0.246547781036 997.123258534923 315 1 315 49770 10468290
+2	27503 8466 2 1976 0.246547781036 997.123258534923 315 1 315 49770 10468290
+3	35969 5236 3 1977 0.402362819989 997.302391633568 196 1 196 19306 2529086
+4	41205 5236 3 1977 0.402362819989 997.302391633568 196 1 196 19306 2529086
+5	46441 5942 11 1962 5.220748993633 989.124123209796 222 1 222 24753 3671695
+6	52383 5942 11 1962 5.220748993633 989.124123209796 222 1 222 24753 3671695
+7	58325 3708 27 1978 13.425146985524 997.486690435055 140 1 140 9870 924490
+8	62033 3708 27 1978 13.425146985524 997.486690435055 140 1 140 9870 924490
+9	65741 1381 38 1974 20.975808568588 995.951954624785 53 1 53 1431 51039
+10	67122 2080 38 1974 20.975808568588 995.951954624785 53 1.323268339386 2.835924333201 107.19108124958 223.35385069891
+

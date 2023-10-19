@@ -1,0 +1,52 @@
+file 72688 1697723660                                           
+version 3
+run General-4-20231019-15:54:20-24860
+attr configname General
+attr datetime 20231019-15:54:20
+attr datetimef 20231019-155420
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 24860
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.2
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[0] rxVector ETV
+vector 6 Reliability.node[4] txVector ETV
+vector 7 Reliability.node[4] rxVector ETV
+vector 8 Reliability.node[2] txVector ETV
+vector 9 Reliability.node[2] rxVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+vector 11 Reliability.node[5] e2eVector ETV
+0	1186 12468 1 1428 0.193735669288 238.859268732755 480 1 160 38640 4134480
+1	13654 9762 4 1429 2.035777949758 239.056551101901 369 1 369 68265 16815945
+2	23416 7861 4 1436 2.035777949758 239.51176889437 298 1 298 44551 8865649
+3	31277 5876 5 1430 2.259313628841 239.172950025303 224 1 224 25200 3771600
+4	37153 4658 5 1439 2.259313628841 239.707308920212 179 1 179 16110 1927830
+5	41811 2510 6 1433 2.2614947134 239.340139486992 98 1 98 4851 318549
+6	44321 8067 9 1435 2.55480577524 239.454030563161 306 1 306 46971 9597741
+7	52388 4458 9 1435 2.55480577524 239.454030563161 171 1 171 14706 1681386
+8	56846 5772 20 1431 4.339127109893 239.221404622388 220 1 220 24310 3573570
+9	62618 4786 20 1438 4.339127109893 239.689575182558 183 1 183 16836 2059604
+10	67404 2156 23 1406 4.512500763356 233.44481662559 81 1 81 3321 180441
+11	69560 3127 23 1406 4.512500763356 233.44481662559 81 1.645662113153 2.88183002387 186.56293117681 438.70930268276
+

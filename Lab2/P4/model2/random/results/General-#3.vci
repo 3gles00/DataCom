@@ -1,0 +1,54 @@
+file 77627 1697738370                                           
+version 3
+run General-3-20231019-19:59:30-65822
+attr configname General
+attr datetime 20231019-19:59:30
+attr datetimef 20231019-195930
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 65822
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[4] rxVector ETV
+vector 4 Multihop.node[4] txVector ETV
+vector 5 Multihop.node[5] rxVector ETV
+vector 6 Multihop.node[5] txVector ETV
+vector 7 Multihop.node[6] rxVector ETV
+vector 8 Multihop.node[6] e2eVector ETV
+vector 9 Multihop.node[2] rxVector ETV
+vector 10 Multihop.node[2] txVector ETV
+vector 11 Multihop.node[3] rxVector ETV
+vector 12 Multihop.node[3] txVector ETV
+0	1176 18201 0 2189 0 999.804670243595 672 1 672 226128 101380720
+1	19377 9102 4 2182 1.313545634032 998.469630734341 338 1 338 57291 12928669
+2	28479 9102 4 2182 1.313545634032 998.469630734341 338 1 338 57291 12928669
+3	37581 7929 12 2186 5.867790917146 998.933369447531 295 1 295 43660 8601020
+4	45510 7929 12 2186 5.867790917146 998.933369447531 295 1 295 43660 8601020
+5	53439 2995 13 2161 5.981391742157 990.92918113221 114 1 114 6555 500365
+6	56434 2995 13 2161 5.981391742157 990.92918113221 114 1 114 6555 500365
+7	59429 850 14 2086 6.005948299963 958.253908218102 33 1 33 561 12529
+8	60279 1257 14 2086 6.005948299963 958.253908218102 33 1.410724199263 3.132156682351 70.197543357194 155.86177415345
+9	61536 4032 20 2187 8.630833098888 999.04560289393 152 1 152 11628 1182180
+10	65568 4184 20 2187 8.630833098888 999.04560289393 152 1 152 11628 1182180
+11	69752 3937 29 2172 11.917293555583 991.764186484132 143 1 143 10296 984984
+12	73689 3937 29 2172 11.917293555583 991.764186484132 143 1 143 10296 984984
+

@@ -1,0 +1,56 @@
+file 380596 1697739102                                          
+version 3
+run General-2-20231019-20:11:41-68151
+attr configname General
+attr datetime 20231019-20:11:41
+attr datetimef 20231019-201141
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 68151
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[0] rxVector ETV
+vector 6 Reliability.node[5] txVector ETV
+vector 7 Reliability.node[5] rxVector ETV
+vector 8 Reliability.node[4] txVector ETV
+vector 9 Reliability.node[4] rxVector ETV
+vector 10 Reliability.node[2] txVector ETV
+vector 11 Reliability.node[2] rxVector ETV
+vector 12 Reliability.node[6] rxVector ETV
+vector 13 Reliability.node[6] e2eVector ETV
+0	1273 54648 1 7728 0.092839031499 998.193666194581 1989 1 663 660348 292093932
+1	55921 49289 2 7729 0.148004626979 998.323470246046 1760 1 1760 1549680 1818807760
+2	105210 34701 2 7736 0.148004626979 998.498585173198 1250 1 1250 781875 651823125
+3	139911 32994 3 7731 0.250715881687 998.401008815087 1191 1 1191 709836 563846396
+4	172905 22644 3 7742 0.250715881687 998.615787703722 823 1 823 339076 186152724
+5	195549 8261 5 7716 0.272440497408 997.354198273261 303 1 303 46056 9318664
+6	203810 29631 6 7734 0.300056950036 998.497293957783 1074 1 1074 577275 413521325
+7	233441 15083 6 7741 0.300056950036 998.56419256146 550 1 550 151525 55609675
+8	248524 45513 8 7730 0.333479497548 998.36786019432 1628 1 1628 1326006 1439600514
+9	294037 30032 8 7744 0.333479497548 998.653149971179 1087 1 1087 591328 428712800
+10	324069 21840 10 7732 0.34807344304 998.441695231494 766 1 766 293761 150111871
+11	345909 16994 10 7739 0.34807344304 998.529972915516 597 1 597 178503 71103695
+12	362903 7354 12 7726 0.412240373854 997.594678132878 261 1 261 34191 5960631
+13	370257 10338 12 7726 0.412240373854 997.594678132878 261 0.412240373854 2.697064086292 509.39875992671 1023.7225861265
+

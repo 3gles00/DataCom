@@ -1,0 +1,53 @@
+file 8260 1697650026                                            
+version 3
+run General-2-20231018-19:27:06-20109
+attr configname General
+attr datetime 20231018-19:27:06
+attr datetimef 20231018-192706
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 20109
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[0].lossProbability 0.5
+config Multihop.node[1].lossProbability 0.6
+config Multihop.node[2].lossProbability 0.7
+config Multihop.node[3].lossProbability 0.1
+config Multihop.node[4].lossProbability 0.2
+config Multihop.node[5].lossProbability 0.1
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[2] rxVector ETV
+vector 4 Multihop.node[2] txVector ETV
+vector 5 Multihop.node[3] rxVector ETV
+vector 6 Multihop.node[3] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+0	1274 4046 0 298 0 239.32638782335 160 1 160 12880 1378160
+1	5320 792 15 281 12.870456412121 227.279399470397 32 1 32 528 11440
+2	6112 792 15 281 12.870456412121 227.279399470397 32 1 32 528 11440
+3	6904 214 16 282 13.029571047601 227.458917917981 9 1 9 45 285
+4	7118 214 16 282 13.029571047601 227.458917917981 9 1 9 45 285
+5	7332 213 17 283 13.243350437727 227.75332199108 9 1 9 45 285
+6	7545 213 17 283 13.243350437727 227.75332199108 9 1 9 45 285
+7	7758 167 18 284 13.430738925902 227.964475123213 7 1 7 28 140
+8	7925 167 18 284 13.430738925902 227.964475123213 7 1 7 28 140
+9	8092 167 19 285 13.574366004419 228.151006161446 7 1 7 28 140
+

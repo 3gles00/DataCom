@@ -1,50 +1,65 @@
-file 338484 1696126466                                          
-version 2
-run General-0-20231001-02:14:22-12959
+file 70308 1697734678                                           
+version 3
+run General-0-20231019-18:57:58-54425
 attr configname General
-attr datetime 20231001-02:14:22
+attr datetime 20231019-18:57:58
+attr datetimef 20231019-185758
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
+attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Multihop
-attr processid 12959
+attr processid 54425
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-param Multihop.node[*].transmissionTime "uniform(1s, 2s)"
-param Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
-param Multihop.node[*].lossProbability 0.2
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[0].lossProbability 0.3
+config Multihop.node[1].lossProbability 0.3
+config Multihop.node[2].lossProbability 0.3
+config Multihop.node[3].lossProbability 0.3/2
+config Multihop.node[4].lossProbability 0.3/2
+config Multihop.node[5].lossProbability 0.3*2
+config Multihop.node[6].lossProbability 0.3*2
+config Multihop.node[7].lossProbability 0.3*3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
 
 vector 0 Multihop.node[0] txVector ETV
 vector 1 Multihop.node[2] rxVector ETV
 vector 2 Multihop.node[2] txVector ETV
 vector 3 Multihop.node[4] rxVector ETV
 vector 4 Multihop.node[4] txVector ETV
-vector 5 Multihop.node[6] rxVector ETV
-vector 6 Multihop.node[6] txVector ETV
-vector 7 Multihop.node[7] rxVector ETV
-vector 8 Multihop.node[1] rxVector ETV
-vector 9 Multihop.node[1] txVector ETV
-vector 10 Multihop.node[3] rxVector ETV
-vector 11 Multihop.node[3] txVector ETV
-vector 12 Multihop.node[5] rxVector ETV
-vector 13 Multihop.node[5] txVector ETV
-0	1062 62960 0 8788 0 239.862557391176 2265 1 2265 2566245 3875885365
-1	64022 20240 2 8789 0.143790018797 239.862981299505 745 1 745 277885 138108845
-2	84262 20240 2 8789 0.143790018797 239.862981299505 745 1 745 277885 138108845
-3	104502 37002 3 8792 0.159300503664 239.901674026305 1346 1 1346 906531 813762661
-4	141504 37002 3 8792 0.159300503664 239.901674026305 1346 1 1346 906531 813762661
-5	178506 20052 4 8794 0.174151785301 239.915983182851 738 1 738 272691 134254869
-6	198558 20052 4 8794 0.174151785301 239.915983182851 738 1 738 272691 134254869
-7	218610 15631 5 8796 0.206387029521 239.92716194115 578 1 578 167331 64533989
-8	234241 33227 7 8790 0.253409506035 239.8840880301 1214 1 1214 737505 597133215
-9	267468 33227 7 8790 0.253409506035 239.8840880301 1214 1 1214 737505 597133215
-10	300695 13450 14 8784 0.418850697734 239.77042621712 480 1 480 115440 36979280
-11	314145 13450 14 8784 0.418850697734 239.77042621712 480 1 480 115440 36979280
-12	327595 5444 16 8785 0.444990718483 239.784906898568 197 1 197 19503 2567895
-13	333039 5444 16 8785 0.444990718483 239.784906898568 197 1 197 19503 2567895
+vector 5 Multihop.node[1] rxVector ETV
+vector 6 Multihop.node[1] txVector ETV
+vector 7 Multihop.node[6] rxVector ETV
+vector 8 Multihop.node[6] txVector ETV
+vector 9 Multihop.node[3] rxVector ETV
+vector 10 Multihop.node[3] txVector ETV
+vector 11 Multihop.node[7] rxVector ETV
+vector 12 Multihop.node[7] e2eVector ETV
+vector 13 Multihop.node[5] rxVector ETV
+vector 14 Multihop.node[5] txVector ETV
+0	1574 18079 0 2072 0 999.747244477823 668 1 668 223446 99582434
+1	19653 8613 2 2073 0.24879960581 999.902564057369 320 1 320 51360 10973920
+2	28266 8613 2 2073 0.24879960581 999.902564057369 320 1 320 51360 10973920
+3	36879 9362 3 2074 0.429777435889 999.985077127147 348 1 348 60726 14108674
+4	46241 9362 3 2074 0.429777435889 999.985077127147 348 1 348 60726 14108674
+5	55603 3206 23 2053 14.917565260687 983.19748460173 122 1 122 7503 612745
+6	58809 3206 23 2053 14.917565260687 983.19748460173 122 1 122 7503 612745
+7	62015 2250 30 2044 18.273621393087 980.969080753167 86 1 86 3741 215731
+8	64265 2250 30 2044 18.273621393087 980.969080753167 86 1 86 3741 215731
+9	66515 1382 91 2035 43.970693341944 980.081995240499 53 1 53 1431 51039
+10	67897 1435 91 2035 43.970693341944 980.081995240499 53 1 53 1431 51039
+11	69332 264 210 1882 94.755398669101 917.973541846556 10 1 10 55 385
+12	69596 393 210 1882 94.755398669101 917.973541846556 10 1.786558203015 3.731130470238 22.791267971649 55.072474909301
+13	69989 159 379 1815 189.302529507359 893.97879422762 6 1 6 21 91
+14	70148 159 379 1815 189.302529507359 893.97879422762 6 1 6 21 91
 
