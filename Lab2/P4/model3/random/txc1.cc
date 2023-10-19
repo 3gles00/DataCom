@@ -9,8 +9,12 @@ class Txc1 : public cSimpleModule{
         long numSent;
         long numReceived;
         double lossProbability;
+        double avgIpg;
+        double avgEndToEndDelay;
+        double lastRx;
         cOutVector txVector;
         cOutVector rxVector;
+        cOutVector e2eVector;
     public:
         virtual ~Txc1();
     protected:
@@ -32,7 +36,15 @@ void Txc1::initialize(){
     lossProbability = par("lossProbability");
     txVector.setName("txVector");
     rxVector.setName("rxVector");
+    e2eVector.setName("e2eVector");
+    avgIpg = 0;
+    avgEndToEndDelay = 0;
+    lastRx = 0;
     
+    WATCH(msgCounter);
+    WATCH(numSent);
+    WATCH(numReceived);
+
     // Start messaging if I an the first node
     if(getIndex() == 0){
         numSent++;
@@ -48,31 +60,6 @@ void Txc1::initialize(){
 
 void Txc1::handleMessage(cMessage *msg){
 
-    // Forwarding Message
-    if(getIndex() == 5){
-        // Message arrived
-        EV << "Message " << msg << " arrived\n";
-        numReceived++;
-        rxVector.record(numReceived);
-        delete msg; 
-    }
-    else{
-        if(lossProbability <= uniform(0, 1)){
-            if(getIndex() != 0){
-                numReceived++;
-                numSent++;
-                msgCounter++;
-                rxVector.record(numReceived);
-                txVector.record(numSent);
-            }
-            forwardMessage(msg);
-        }
-        else{
-            EV << "Lost Transmission\n";
-            delete msg;
-        }
-    }
-
     //Planning new Message
     if(getIndex() == 0){
         msgCounter++;
@@ -84,6 +71,37 @@ void Txc1::handleMessage(cMessage *msg){
         scheduleAt(simTime() + par("transmissionTime"), newMsg);
         txVector.record(numSent);
     }
+
+    // Forwarding Message
+    if(lossProbability <= uniform(0, 1)){
+        if(getIndex() == 7){
+            // Message arrived
+            EV << "Message " << msg << " arrived\n";
+            numReceived++;
+            rxVector.record(numReceived);
+            double latency = simTime().dbl() - msg -> getCreationTime().dbl();
+            e2eVector.record(latency);
+            avgEndToEndDelay += latency;
+            double ipg = simTime().dbl() - lastRx;
+            avgIpg += ipg;
+            lastRx = simTime().dbl();
+            delete msg; 
+        }
+        else{
+            if(getIndex() != 0){
+                numReceived++;
+                numSent++;
+                msgCounter++;
+                rxVector.record(numReceived);
+                txVector.record(numSent);
+            }
+            forwardMessage(msg);
+        }
+    }
+    else{
+        EV << "Lost Transmission\n";
+        delete msg;
+    }
 }
 
 void Txc1::forwardMessage(cMessage *msg){
@@ -91,7 +109,8 @@ void Txc1::forwardMessage(cMessage *msg){
     // a lower number out of the two we have, So we forward 
     // using our higher-numbered gate
     int n = gateSize("gate");
-    int k = n - 1;
+    int k = n-1;
+    if(n > 1) k = intuniform(1, n-1); 
     EV << "Forwarding message " << msg << " on gate " << k << "\n";
     sendDelayed(msg, par("delayTime"), "gate$o", k);
 }
@@ -99,9 +118,14 @@ void Txc1::forwardMessage(cMessage *msg){
 void Txc1::finish(){
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
-	// EV << "msgCounter: " << msgCounter << endl;
+        if(getIndex() == 7){
+        if(numReceived > 1) avgIpg = avgIpg/numReceived;
+        EV << "IPG: " << avgIpg << endl;
+        EV << "Latency: " << avgEndToEndDelay/numReceived << endl;
+    }
 
 	recordScalar("#sent", numSent);
 	recordScalar("#received", numReceived);
-	// recordScalar("#counter", msgCounter);
+    recordScalar("#Latency ", avgEndToEndDelay/numReceived);
+    recordScalar("IPG ", avgIpg);
 }

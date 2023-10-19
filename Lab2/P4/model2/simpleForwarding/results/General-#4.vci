@@ -1,0 +1,56 @@
+file 404671 1697739102                                          
+version 3
+run General-4-20231019-20:11:42-68151
+attr configname General
+attr datetime 20231019-20:11:42
+attr datetimef 20231019-201142
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 68151
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[2] txVector ETV
+vector 6 Reliability.node[2] rxVector ETV
+vector 7 Reliability.node[4] txVector ETV
+vector 8 Reliability.node[4] rxVector ETV
+vector 9 Reliability.node[5] txVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+vector 11 Reliability.node[6] rxVector ETV
+vector 12 Reliability.node[6] e2eVector ETV
+vector 13 Reliability.node[0] rxVector ETV
+0	1273 55395 1 8195 0.193735669288 999.573866831295 2013 1 671 676368 302787408
+1	56668 51589 4 8196 1.945777949758 999.761693224195 1840 1 1840 1693720 2078194440
+2	108257 36927 4 8196 1.945777949758 999.761693224195 1328 1 1328 882456 781561864
+3	145184 35385 6 8197 2.079313628841 999.856971773643 1275 1 1275 813450 691703650
+4	180569 24448 6 8197 2.079313628841 999.856971773643 889 1 889 395605 234593765
+5	205017 23044 8 8199 2.098346426382 999.948369640173 838 1 838 351541 196511419
+6	228061 17136 8 8199 2.098346426382 999.948369640173 624 1 624 195000 81185000
+7	245197 48697 9 8182 2.100497377668 998.709639016663 1740 1 1740 1514670 1757522090
+8	293894 32763 9 8185 2.100497377668 998.738832431913 1183 1 1183 700336 552565104
+9	326657 32343 15 8181 2.232013474323 998.706180084325 1170 1 1170 685035 534555645
+10	359000 17253 15 8181 2.232013474323 998.706180084325 607 1 607 184528 74733840
+11	376253 8013 19 8125 2.36839328953 985.81486259547 284 1 284 40470 7675810
+12	384266 11266 19 8125 2.36839328953 985.81486259547 284 1.253782453309 2.6316608340201 556.83165580166 1120.4055872387
+13	395532 9138 44 8200 6.233724213692 999.950570537039 323 1 323 52326 11284974
+

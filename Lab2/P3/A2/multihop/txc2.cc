@@ -15,8 +15,12 @@ class Txc2 : public cSimpleModule{
         long msgCounter;
         vector<long> duplicatePackageList;
         double lossProbability;
+        double avgIpg;
+        double avgEndToEndDelay;
+        double lastRx;
         cOutVector txVector;
         cOutVector rxVector;
+        cOutVector e2eVector;
     public:
         virtual ~Txc2();
     protected:
@@ -41,7 +45,11 @@ void Txc2::initialize(){
     lossProbability = par("lossProbability");
     txVector.setName("txVector");
     rxVector.setName("rxVector");
+    e2eVector.setName("e2eVector");
     event = new cMessage("event");
+    avgIpg = 0;
+    avgEndToEndDelay = 0;
+    lastRx = 0;
 
     WATCH(msgCounter);
     WATCH(numSent);
@@ -60,13 +68,12 @@ void Txc2::initialize(){
 }
 
 void Txc2::handleMessage(cMessage *msg){
-
     if(msg == event){
+        EV << "Timeout is over. Sending message";
         forwardMessage(multihopMsg);
         txVector.record(numSent);
         delete multihopMsg;
         multihopMsg = nullptr;
-
 
         if(getIndex() == 0){
             //Planning new Message
@@ -81,16 +88,22 @@ void Txc2::handleMessage(cMessage *msg){
         }
     }
     else{
-        if(getIndex() == 5){
-            // Message arrived
-            EV << "Message " << msg << " arrived\n";
-            numReceived++;
-            rxVector.record(numReceived);
-            delete msg;
-        }
-        else{
+        if(lossProbability < uniform(0, 1)){
+            if(getIndex() == 5){
+                // Message arrived
+                EV << "Message " << msg << " arrived\n";
+                numReceived++;
+                rxVector.record(numReceived);
+                double latency = simTime().dbl() - msg -> getCreationTime().dbl();
+                e2eVector.record(latency);
+                avgEndToEndDelay += latency;
+                double ipg = simTime().dbl() - lastRx;
+                avgIpg += ipg;
+                lastRx = simTime().dbl();
+                delete msg;
+            }
+            else{
             // Handle message
-            if(lossProbability < uniform(0, 1)){
                 if(find(duplicatePackageList.begin(), duplicatePackageList.end(),
                     msg->getTreeId()) != duplicatePackageList.end()){
                     EV << "This is a duplicate package. Deleting.\n";
@@ -108,10 +121,10 @@ void Txc2::handleMessage(cMessage *msg){
                     delete msg;
                 }   
             }
-            else{
-                EV << "Lost Transmission\n";
-                delete msg;
-            }
+        }
+        else{
+            EV << "Lost Transmission\n";
+            delete msg;
         }
     }
 }
@@ -129,10 +142,18 @@ void Txc2::forwardMessage(cMessage *msg){
 }
 
 void Txc2::finish(){
+
 	EV << "Sent: " << numSent << endl;
 	EV << "Received: " << numReceived << endl;
+    if(getIndex() == 5){
+        if(numReceived > 1) avgIpg = avgIpg/numReceived;
+        EV << "IPG: " << avgIpg << endl;
+        EV << "Latency: " << avgEndToEndDelay/numReceived << endl;
+    }
 
-	recordScalar("#sent", numSent);
-	recordScalar("#received", numReceived);
+	recordScalar("#Sent", numSent);
+	recordScalar("#Received", numReceived);
+    recordScalar("#Latency ", avgEndToEndDelay/numReceived);
+    recordScalar("IPG ", avgIpg);
 }
 

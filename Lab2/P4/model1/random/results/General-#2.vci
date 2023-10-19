@@ -1,0 +1,50 @@
+file 63446 1697736760                                           
+version 3
+run General-2-20231019-19:32:40-60750
+attr configname General
+attr datetime 20231019-19:32:40
+attr datetimef 20231019-193240
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 60750
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Multihop.node[0] txVector ETV
+vector 1 Multihop.node[1] rxVector ETV
+vector 2 Multihop.node[1] txVector ETV
+vector 3 Multihop.node[3] rxVector ETV
+vector 4 Multihop.node[3] txVector ETV
+vector 5 Multihop.node[2] rxVector ETV
+vector 6 Multihop.node[2] txVector ETV
+vector 7 Multihop.node[4] rxVector ETV
+vector 8 Multihop.node[4] txVector ETV
+vector 9 Multihop.node[5] rxVector ETV
+vector 10 Multihop.node[5] e2eVector ETV
+0	1096 17937 0 1899 0 999.918482294098 664 1 664 220780 97805540
+1	19033 8337 3 1893 1.477989929033 996.822776893679 310 1 310 48205 9978435
+2	27370 8337 3 1893 1.477989929033 996.822776893679 310 1 310 48205 9978435
+3	35707 4914 4 1896 1.57785981133 997.273186959787 185 1 185 17205 2127685
+4	40621 4914 4 1896 1.57785981133 997.273186959787 185 1 185 17205 2127685
+5	45535 4122 28 1888 18.779054561543 992.302923386384 155 1 155 12090 1253330
+6	49657 4122 28 1888 18.779054561543 992.302923386384 155 1 155 12090 1253330
+7	53779 3295 30 1895 19.039360112361 997.152768490698 125 1 125 7875 658875
+8	57074 3295 30 1895 19.039360112361 997.152768490698 125 1 125 7875 658875
+9	60369 1224 31 1869 19.175835754168 981.476233660456 47 1 47 1128 35720
+10	61593 1852 31 1869 19.175835754168 981.476233660456 47 1.510770075831 2.791337382498 97.93593066888 208.5082118778
+

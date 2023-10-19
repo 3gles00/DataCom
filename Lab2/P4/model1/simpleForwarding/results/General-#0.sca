@@ -1,8 +1,8 @@
 version 3
-run General-0-20231011-15:53:16-10640
+run General-0-20231019-19:47:19-63521
 attr configname General
-attr datetime 20231011-15:53:16
-attr datetimef 20231011-155316
+attr datetime 20231019-19:47:19
+attr datetimef 20231019-194719
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Reliability
-attr processid 10640
+attr processid 63521
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -19,9 +19,9 @@ attr seedset 0
 config network Reliability
 config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
 config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
-config Reliability.node[*].lossProbability 0.2
+config Reliability.node[*].lossProbability 0.3
 config record-eventlog true
-config sim-time-limit 240s
+config sim-time-limit 1000s
 config repeat 5
 
 par Reliability.node[0].gate$o[0].channel typename "\"ned.DelayChannel\""
@@ -113,54 +113,60 @@ par Reliability.node[0] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[0] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[0] lossProbability 0.2
-scalar Reliability.node[0] #sent 16401
-scalar Reliability.node[0] #received 7239
-scalar Reliability.node[0] #counter 16401
+par Reliability.node[0] lossProbability 0.3
+scalar Reliability.node[0] #Sent 665
+scalar Reliability.node[0] #Received 321
+scalar Reliability.node[0] "#Latency " 0
+scalar Reliability.node[0] "IPG " 0
 par Reliability.node[1] typename "\"Txc2\""
 par Reliability.node[1] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[1] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[1] lossProbability 0.2
-scalar Reliability.node[1] #sent 2412
-scalar Reliability.node[1] #received 804
-scalar Reliability.node[1] #counter 804
+par Reliability.node[1] lossProbability 0.3
+scalar Reliability.node[1] #Sent 1350
+scalar Reliability.node[1] #Received 1022
+scalar Reliability.node[1] "#Latency " 0
+scalar Reliability.node[1] "IPG " 0
 par Reliability.node[2] typename "\"Txc2\""
 par Reliability.node[2] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[2] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[2] lossProbability 0.2
-scalar Reliability.node[2] #sent 438
-scalar Reliability.node[2] #received 146
-scalar Reliability.node[2] #counter 146
+par Reliability.node[2] lossProbability 0.3
+scalar Reliability.node[2] #Sent 1215
+scalar Reliability.node[2] #Received 867
+scalar Reliability.node[2] "#Latency " 0
+scalar Reliability.node[2] "IPG " 0
 par Reliability.node[3] typename "\"Txc2\""
 par Reliability.node[3] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[3] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[3] lossProbability 0.2
-scalar Reliability.node[3] #sent 462
-scalar Reliability.node[3] #received 154
-scalar Reliability.node[3] #counter 154
+par Reliability.node[3] lossProbability 0.3
+scalar Reliability.node[3] #Sent 1203
+scalar Reliability.node[3] #Received 827
+scalar Reliability.node[3] "#Latency " 0
+scalar Reliability.node[3] "IPG " 0
 par Reliability.node[4] typename "\"Txc2\""
 par Reliability.node[4] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[4] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[4] lossProbability 0.2
-scalar Reliability.node[4] #sent 111
-scalar Reliability.node[4] #received 37
-scalar Reliability.node[4] #counter 37
+par Reliability.node[4] lossProbability 0.3
+scalar Reliability.node[4] #Sent 1125
+scalar Reliability.node[4] #Received 577
+scalar Reliability.node[4] "#Latency " 0
+scalar Reliability.node[4] "IPG " 0
 par Reliability.node[5] typename "\"Txc2\""
 par Reliability.node[5] delayTime "uniform(0.01s, 0.2s)"
 attr unit s
 par Reliability.node[5] transmissionTime "uniform(1s, 2s)"
 attr unit s
-par Reliability.node[5] lossProbability 0.2
-scalar Reliability.node[5] #sent 0
-scalar Reliability.node[5] #received 11
-scalar Reliability.node[5] #counter 0
+par Reliability.node[5] lossProbability 0.3
+scalar Reliability.node[5] #Sent 0
+scalar Reliability.node[5] #Received 268
+scalar Reliability.node[5] "#Latency " 1.9476488947675
+scalar Reliability.node[5] "IPG " 3.7045306888995
 par Reliability typename "\"Reliability\""
 

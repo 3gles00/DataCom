@@ -1,0 +1,56 @@
+file 404898 1697739101                                          
+version 3
+run General-1-20231019-20:11:41-68151
+attr configname General
+attr datetime 20231019-20:11:41
+attr datetimef 20231019-201141
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 68151
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[4] txVector ETV
+vector 4 Reliability.node[4] rxVector ETV
+vector 5 Reliability.node[3] txVector ETV
+vector 6 Reliability.node[3] rxVector ETV
+vector 7 Reliability.node[2] txVector ETV
+vector 8 Reliability.node[2] rxVector ETV
+vector 9 Reliability.node[5] txVector ETV
+vector 10 Reliability.node[5] rxVector ETV
+vector 11 Reliability.node[6] rxVector ETV
+vector 12 Reliability.node[6] e2eVector ETV
+vector 13 Reliability.node[0] rxVector ETV
+0	1273 54720 1 8182 0.089234179703 999.916084661036 1992 1 664 662340 293416620
+1	55993 51469 2 8163 0.298699293248 996.936786531794 1836 1 1836 1686366 2064674106
+2	107462 37532 2 8170 0.298699293248 997.061684883644 1348 1 1348 909226 817394174
+3	144994 48797 6 8166 0.508516991173 997.004084951407 1740 1 1740 1514670 1757522090
+4	193791 33223 6 8169 0.508516991173 997.048310778112 1197 1 1197 717003 572407395
+5	227014 35586 8 8171 0.594173528938 997.114181147886 1281 1 1281 821121 701511041
+6	262600 25096 8 8171 0.594173528938 997.114181147886 912 1 912 416328 253266200
+7	287696 22782 9 8164 0.602220031814 996.974046661313 828 1 828 343206 189564114
+8	310478 17294 9 8168 0.602220031814 997.041018939749 629 1 629 198135 83150655
+9	327772 32403 11 8173 0.693820487558 997.131627484264 1170 1 1170 685035 534555645
+10	360175 17181 11 8174 0.693820487558 997.149250703966 604 1 604 182710 73632130
+11	377356 7740 13 8175 0.719024130792 997.155250461977 274 1 274 37675 6894525
+12	385096 10888 13 8175 0.719024130792 997.155250461977 274 0.719024130792 2.628025521681 541.45840499871 1096.0882728282
+13	395984 8913 29 8165 4.120550117316 996.981747608713 315 1 315 49770 10468290
+

@@ -1,0 +1,52 @@
+file 308814 1697737639                                          
+version 3
+run General-2-20231019-19:47:19-63521
+attr configname General
+attr datetime 20231019-19:47:19
+attr datetimef 20231019-194719
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 63521
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[4] txVector ETV
+vector 6 Reliability.node[4] rxVector ETV
+vector 7 Reliability.node[2] txVector ETV
+vector 8 Reliability.node[2] rxVector ETV
+vector 9 Reliability.node[5] rxVector ETV
+vector 10 Reliability.node[5] e2eVector ETV
+vector 11 Reliability.node[0] rxVector ETV
+0	1187 54681 1 6262 0.092839031499 999.021029050259 1992 1 664 662340 293416620
+1	55868 38919 2 6249 0.148004626979 997.446838840995 1401 1 1401 982101 917609701
+2	94787 28469 2 6259 0.148004626979 997.792571089909 1035 1 1035 536130 370108410
+3	123256 33438 3 6253 0.250715881687 997.58386705337 1209 1 1209 731445 589788485
+4	156694 23257 3 6261 0.250715881687 997.828146336676 848 1 848 359976 203626424
+5	179951 30000 6 6256 0.333479497548 997.641744469073 1089 1 1089 593505 431082465
+6	209951 15250 6 6256 0.333479497548 997.641744469073 557 1 557 155403 57758115
+7	225201 34206 7 6250 0.34807344304 997.471059226963 1236 1 1236 764466 630174806
+8	259407 24386 7 6257 0.34807344304 997.729538354081 888 1 888 394716 233803444
+9	283793 6512 10 6260 0.410413886231 997.821394730377 240 1 240 28920 4636840
+10	290305 9505 10 6260 0.410413886231 997.821394730377 240 0.410413886231 2.607827203784 463.65588472733 920.8072353046
+11	299810 9003 17 6230 1.242923468834 992.692537438859 319 1 319 51040 10871520
+

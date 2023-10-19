@@ -1,9 +1,9 @@
-file 5584 1697241299                                            
+file 99528 1697735635                                           
 version 3
-run General-0-20231014-01:53:47-39191
+run General-0-20231019-19:13:55-57309
 attr configname General
-attr datetime 20231014-01:53:47
-attr datetimef 20231014-015347
+attr datetime 20231019-19:13:55
+attr datetimef 20231019-191355
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Reliability
-attr processid 39191
+attr processid 57309
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -20,39 +20,48 @@ attr seedset 0
 config network Reliability
 config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
 config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
-config Reliability.node[*].lossProbability 0.2
+config Reliability.node[0].lossProbability 0.3
+config Reliability.node[1].lossProbability 0.3
+config Reliability.node[2].lossProbability 0.3
+config Reliability.node[3].lossProbability 0.3/2
+config Reliability.node[4].lossProbability 0.3/2
+config Reliability.node[5].lossProbability 0.3*2
+config Reliability.node[6].lossProbability 0.3*2
+config Reliability.node[7].lossProbability 0.3*3
 config record-eventlog true
 config sim-time-limit 240s
 config repeat 5
 
 vector 0 Reliability.node[0] txVector ETV
-vector 1 Reliability.node[0] rxVector ETV
+vector 1 Reliability.node[1] txVector ETV
 vector 2 Reliability.node[1] rxVector ETV
-vector 3 Reliability.node[1] txVector ETV
+vector 3 Reliability.node[2] txVector ETV
 vector 4 Reliability.node[2] rxVector ETV
-vector 5 Reliability.node[2] txVector ETV
-vector 6 Reliability.node[4] rxVector ETV
+vector 5 Reliability.node[3] txVector ETV
+vector 6 Reliability.node[3] rxVector ETV
 vector 7 Reliability.node[4] txVector ETV
-vector 8 Reliability.node[3] rxVector ETV
-vector 9 Reliability.node[3] txVector ETV
-vector 10 Reliability.node[6] rxVector ETV
-vector 11 Reliability.node[6] txVector ETV
-vector 12 Reliability.node[5] rxVector ETV
-vector 13 Reliability.node[7] rxVector ETV
-vector 14 Reliability.node[7] txVector ETV
-0	1314 1908 0 84 0 12.850179971071 83 1 106 4396 310870
-1	3222 847 1 84 0.114274565438 12.850179971071 37 1 30 559 11247
-2	4069 176 2 76 0.384435110221 11.765285975991 8 1 6 23 93
-3	4245 179 2 76 0.384435110221 11.765285975991 8 3 18 69 837
-4	4424 199 3 75 0.408959622253 11.762696906966 9 1 8 37 205
-5	4623 203 3 75 0.408959622253 11.762696906966 9 2 16 74 820
-6	4826 153 4 73 0.869364631832 11.559104365832 7 1 4 14 36
-7	4979 154 4 73 0.869364631832 11.559104365832 7 3 12 42 324
-8	5133 110 7 71 0.949848050521 11.470694206978 5 1 4 11 31
-9	5243 111 7 71 0.949848050521 11.470694206978 5 3 12 33 279
-10	5354 69 10 38 1.769504729052 7.282622111676 3 1 1 3 3
-11	5423 69 10 38 1.769504729052 7.282622111676 3 3 3 9 27
-12	5492 45 15 36 2.07400815907 7.168174048388 2 1 2 3 5
-13	5537 23 19 19 3.562850953937 3.562850953937 1 1 1 1 1
-14	5560 23 19 19 3.562850953937 3.562850953937 1 2 2 2 4
+vector 8 Reliability.node[4] rxVector ETV
+vector 9 Reliability.node[0] rxVector ETV
+vector 10 Reliability.node[6] txVector ETV
+vector 11 Reliability.node[6] rxVector ETV
+vector 12 Reliability.node[5] txVector ETV
+vector 13 Reliability.node[5] rxVector ETV
+vector 14 Reliability.node[7] rxVector ETV
+vector 15 Reliability.node[7] e2eVector ETV
+0	1697 16894 1 2175 0.114274565438 238.598719921967 636 1 318 101601 21590239
+1	18591 10644 2 2182 0.246915042552 239.011517759314 399 1 399 79800 21253400
+2	29235 7959 2 2182 0.246915042552 239.011517759314 299 1 299 44850 8955050
+3	37194 6998 3 2177 0.270160544783 238.729516138204 264 1 264 34980 6168140
+4	44192 5469 3 2180 0.270160544783 238.919102767352 207 1 207 21528 2978040
+5	49661 9273 4 2183 0.370442846255 239.014723114185 348 1 348 60726 14108674
+6	58934 5450 4 2189 0.370442846255 239.160788107083 206 1 206 21321 2935191
+7	64384 10389 6 2179 0.412880426651 238.855326707719 390 1 390 76245 19849115
+8	74773 7387 6 2190 0.412880426651 239.172821728607 278 1 278 38781 7200339
+9	82160 4646 8 2186 0.429924710323 239.09890653182 177 1 177 15753 1864105
+10	86806 6042 13 2181 0.523636797866 238.956398076131 219 1 219 24090 3525170
+11	92848 2432 13 2181 0.523636797866 238.956398076131 90 1 90 4095 247065
+12	95280 2533 64 2149 7.049026048589 235.544672994353 94 1 94 4465 281295
+13	97813 1262 64 2149 7.049026048589 235.544672994353 47 1 47 1128 35720
+14	99075 181 394 1567 43.072256334665 175.886032053384 7 1 7 28 140
+15	99256 271 394 1567 43.072256334665 175.886032053384 7 1.568115348727 2.539708112641 13.716334574096 27.55540542604
 

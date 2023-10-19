@@ -1,0 +1,67 @@
+file 100485 1697735635                                          
+version 3
+run General-3-20231019-19:13:55-57309
+attr configname General
+attr datetime 20231019-19:13:55
+attr datetimef 20231019-191355
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Reliability
+attr processid 57309
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config network Reliability
+config Reliability.node[*].transmissionTime "uniform(1s, 2s)"
+config Reliability.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Reliability.node[0].lossProbability 0.3
+config Reliability.node[1].lossProbability 0.3
+config Reliability.node[2].lossProbability 0.3
+config Reliability.node[3].lossProbability 0.3/2
+config Reliability.node[4].lossProbability 0.3/2
+config Reliability.node[5].lossProbability 0.3*2
+config Reliability.node[6].lossProbability 0.3*2
+config Reliability.node[7].lossProbability 0.3*3
+config record-eventlog true
+config sim-time-limit 240s
+config repeat 5
+
+vector 0 Reliability.node[0] txVector ETV
+vector 1 Reliability.node[1] txVector ETV
+vector 2 Reliability.node[1] rxVector ETV
+vector 3 Reliability.node[3] txVector ETV
+vector 4 Reliability.node[3] rxVector ETV
+vector 5 Reliability.node[4] txVector ETV
+vector 6 Reliability.node[4] rxVector ETV
+vector 7 Reliability.node[0] rxVector ETV
+vector 8 Reliability.node[2] txVector ETV
+vector 9 Reliability.node[2] rxVector ETV
+vector 10 Reliability.node[6] txVector ETV
+vector 11 Reliability.node[6] rxVector ETV
+vector 12 Reliability.node[5] txVector ETV
+vector 13 Reliability.node[5] rxVector ETV
+vector 14 Reliability.node[7] rxVector ETV
+vector 15 Reliability.node[7] e2eVector ETV
+0	1697 17138 1 2195 0.114651601831 239.132150451258 644 1 322 104167 22413293
+1	18835 10587 5 2196 2.071657888316 239.295832016595 396 1 396 78606 20778186
+2	29422 7405 5 2203 2.071657888316 239.418654119518 279 1 279 39060 7278180
+3	36827 9345 7 2197 2.095220010268 239.319143155395 351 1 351 61776 14476176
+4	46172 5805 7 2209 2.095220010268 239.677747588084 219 1 219 24090 3525170
+5	51977 10635 8 2200 2.115519098353 239.382933348453 399 1 399 79800 21253400
+6	62612 7691 8 2200 2.115519098353 239.382933348453 289 1 289 41905 8087665
+7	70303 4677 14 2206 2.261953575629 239.500800534092 177 1 177 15753 1864105
+8	74980 6770 15 2179 2.267535593214 238.225862749397 254 1 254 32385 5494655
+9	81750 5136 15 2179 2.267535593214 238.225862749397 194 1 194 18915 2452645
+10	86886 6090 24 2205 4.190610586818 239.488411865452 222 1 222 24753 3671695
+11	92976 2463 24 2205 4.190610586818 239.488411865452 92 1 92 4278 263810
+12	95439 2806 29 2186 4.261564595752 238.404424203568 104 1 104 5460 380380
+13	98245 1396 29 2186 4.261564595752 238.404424203568 52 1 52 1378 48230
+14	99641 339 85 2026 9.825596956579 222.5375265301 13 1 13 91 819
+15	99980 504 85 2026 9.825596956579 222.5375265301 13 1.641792021988 2.350990185255 26.538480583717 54.69166211425
+

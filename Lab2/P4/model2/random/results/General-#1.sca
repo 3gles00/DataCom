@@ -1,0 +1,206 @@
+version 3
+run General-1-20231019-19:59:30-65822
+attr configname General
+attr datetime 20231019-19:59:30
+attr datetimef 20231019-195930
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Multihop
+attr processid 65822
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config network Multihop
+config Multihop.node[*].transmissionTime "uniform(1s, 2s)"
+config Multihop.node[*].delayTime "uniform(0.01s, 0.2s)"
+config Multihop.node[*].lossProbability 0.3
+config record-eventlog true
+config sim-time-limit 1000s
+config repeat 5
+
+par Multihop.node[0].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[0].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[1].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[1].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[1].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Multihop.node[1].gate$o[1].channel disabled false
+attr mutable ""
+par Multihop.node[1].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[2].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[2].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[1].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Multihop.node[1].gate$o[2].channel disabled false
+attr mutable ""
+par Multihop.node[1].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[3].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[3].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[3].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[1].gate$o[3].channel typename "\"ned.DelayChannel\""
+par Multihop.node[1].gate$o[3].channel disabled false
+attr mutable ""
+par Multihop.node[1].gate$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[4].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[4].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[4].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[2].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Multihop.node[2].gate$o[1].channel disabled false
+attr mutable ""
+par Multihop.node[2].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[4].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Multihop.node[4].gate$o[1].channel disabled false
+attr mutable ""
+par Multihop.node[4].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[3].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Multihop.node[3].gate$o[1].channel disabled false
+attr mutable ""
+par Multihop.node[3].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[4].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Multihop.node[4].gate$o[2].channel disabled false
+attr mutable ""
+par Multihop.node[4].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[3].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Multihop.node[3].gate$o[2].channel disabled false
+attr mutable ""
+par Multihop.node[3].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[5].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[5].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[5].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[4].gate$o[3].channel typename "\"ned.DelayChannel\""
+par Multihop.node[4].gate$o[3].channel disabled false
+attr mutable ""
+par Multihop.node[4].gate$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[5].gate$o[1].channel typename "\"ned.DelayChannel\""
+par Multihop.node[5].gate$o[1].channel disabled false
+attr mutable ""
+par Multihop.node[5].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[5].gate$o[2].channel typename "\"ned.DelayChannel\""
+par Multihop.node[5].gate$o[2].channel disabled false
+attr mutable ""
+par Multihop.node[5].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[6].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Multihop.node[6].gate$o[0].channel disabled false
+attr mutable ""
+par Multihop.node[6].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par Multihop.node[0] typename "\"Txc1\""
+par Multihop.node[0] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[0] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[0] lossProbability 0.3
+scalar Multihop.node[0] #sent 660
+scalar Multihop.node[0] #received 0
+scalar Multihop.node[0] "#Latency " -nan
+scalar Multihop.node[0] "IPG " 0
+par Multihop.node[1] typename "\"Txc1\""
+par Multihop.node[1] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[1] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[1] lossProbability 0.3
+scalar Multihop.node[1] #sent 319
+scalar Multihop.node[1] #received 319
+scalar Multihop.node[1] "#Latency " 0
+scalar Multihop.node[1] "IPG " 0
+par Multihop.node[2] typename "\"Txc1\""
+par Multihop.node[2] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[2] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[2] lossProbability 0.3
+scalar Multihop.node[2] #sent 123
+scalar Multihop.node[2] #received 123
+scalar Multihop.node[2] "#Latency " 0
+scalar Multihop.node[2] "IPG " 0
+par Multihop.node[3] typename "\"Txc1\""
+par Multihop.node[3] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[3] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[3] lossProbability 0.3
+scalar Multihop.node[3] #sent 111
+scalar Multihop.node[3] #received 111
+scalar Multihop.node[3] "#Latency " 0
+scalar Multihop.node[3] "IPG " 0
+par Multihop.node[4] typename "\"Txc1\""
+par Multihop.node[4] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[4] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[4] lossProbability 0.3
+scalar Multihop.node[4] #sent 226
+scalar Multihop.node[4] #received 226
+scalar Multihop.node[4] "#Latency " 0
+scalar Multihop.node[4] "IPG " 0
+par Multihop.node[5] typename "\"Txc1\""
+par Multihop.node[5] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[5] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[5] lossProbability 0.3
+scalar Multihop.node[5] #sent 82
+scalar Multihop.node[5] #received 82
+scalar Multihop.node[5] "#Latency " 0
+scalar Multihop.node[5] "IPG " 0
+par Multihop.node[6] typename "\"Txc1\""
+par Multihop.node[6] delayTime "uniform(0.01s, 0.2s)"
+attr unit s
+par Multihop.node[6] transmissionTime "uniform(1s, 2s)"
+attr unit s
+par Multihop.node[6] lossProbability 0.3
+scalar Multihop.node[6] #sent 0
+scalar Multihop.node[6] #received 29
+scalar Multihop.node[6] "#Latency " 2.1737125603053
+scalar Multihop.node[6] "IPG " 33.92834893185
+par Multihop typename "\"Multihop\""
+
